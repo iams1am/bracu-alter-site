@@ -48,11 +48,11 @@
       <div class="footer-col">
         <h4 class="footer-heading">Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/agv/">AGV</a></li>
-          <li><a href="/achievements/">Achievements</a></li>
-          <li><a href="/robocup/">RoboCup</a></li>
+          <li><a href="{{ .Site.Home.RelPermalink }}">Home</a></li>
+          <li><a href="{{ "about/" | relURL }}">About</a></li>
+          <li><a href="{{ "agv/" | relURL }}">AGV</a></li>
+          <li><a href="{{ "achievements/" | relURL }}">Achievements</a></li>
+          <li><a href="{{ "robocup/" | relURL }}">RoboCup</a></li>
         </ul>
       </div>
 
@@ -60,11 +60,11 @@
       <div class="footer-col">
         <h4 class="footer-heading">Resources</h4>
         <ul class="footer-links">
-          <li><a href="/publications/">Publications</a></li>
-          <li><a href="/missions/">Missions</a></li>
-          <li><a href="/sponsors/">Sponsors</a></li>
-          <li><a href="/team/">Team</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="{{ "publications/" | relURL }}">Publications</a></li>
+          <li><a href="{{ "missions/" | relURL }}">Missions</a></li>
+          <li><a href="{{ "sponsors/" | relURL }}">Sponsors</a></li>
+          <li><a href="{{ "team/" | relURL }}">Team</a></li>
+          <li><a href="{{ "contact/" | relURL }}">Contact</a></li>
         </ul>
       </div>
 
@@ -101,7 +101,7 @@
     </div>
 
     <!-- Rover Animation -->
-    <a href="/try-rover/" class="footer-rover-link" aria-label="Go to Gamified rover game">
+    <a href="{{ "try-rover/" | relURL }}" class="footer-rover-link" aria-label="Go to Gamified rover game">
       <div class="footer-rover-track">
         <div class="footer-rover">
           <img src="{{ "images/posts/pic3.png" | relURL }}" alt="ALTER Rover" class="footer-rover-img">

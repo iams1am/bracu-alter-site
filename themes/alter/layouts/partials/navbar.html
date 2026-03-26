@@ -1,67 +1,67 @@
 <header class="navbar">
   <div class="nav-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}">
       <img src="{{ "images/posts/pic3.png" | relURL }}" alt="BRACU ALTER" class="brand-logo">
       <span>BRACU ALTER</span>
     </a>
 
     <ul class="nav-links">
       <li class="nav-item dropdown" id="nav-about">
-        <a class="nav-link" href="/about/">About</a>
+        <a class="nav-link" href="{{ "about/" | relURL }}">About</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/about/">About Us</a>
-          <a class="dropdown-item" href="/achievements/">Achievements</a>
-          <a class="dropdown-item" href="/try-rover/">Gamified</a>
+          <a class="dropdown-item" href="{{ "about/" | relURL }}">About Us</a>
+          <a class="dropdown-item" href="{{ "achievements/" | relURL }}">Achievements</a>
+          <a class="dropdown-item" href="{{ "try-rover/" | relURL }}">Gamified</a>
         </div>
       </li>
 
       <li class="nav-item dropdown" id="nav-agv">
-        <a class="nav-link" href="/agv/">AGV</a>
+        <a class="nav-link" href="{{ "agv/" | relURL }}">AGV</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/agv/v1/">ALTER Rover V1</a>
-          <a class="dropdown-item" href="/agv/v2/">ALTER Rover V2</a>
-          <a class="dropdown-item" href="/agv/v3/">ALTER Rover V3</a>
-          <a class="dropdown-item" href="/agv/v4/">ALTER Rover V4</a>
+          <a class="dropdown-item" href="{{ "agv/v1/" | relURL }}">ALTER Rover V1</a>
+          <a class="dropdown-item" href="{{ "agv/v2/" | relURL }}">ALTER Rover V2</a>
+          <a class="dropdown-item" href="{{ "agv/v3/" | relURL }}">ALTER Rover V3</a>
+          <a class="dropdown-item" href="{{ "agv/v4/" | relURL }}">ALTER Rover V4</a>
         </div>
       </li>
 
       <li class="nav-item dropdown" id="nav-missions">
-        <a class="nav-link" href="/missions/">Missions</a>
+        <a class="nav-link" href="{{ "missions/" | relURL }}">Missions</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/missions/earthquake-response/">Earthquake Response</a>
-          <a class="dropdown-item" href="/missions/industrial-inspection/">Industrial Inspection</a>
-          <a class="dropdown-item" href="/missions/training-demo/">Training & Demos</a>
+          <a class="dropdown-item" href="{{ "missions/earthquake-response/" | relURL }}">Earthquake Response</a>
+          <a class="dropdown-item" href="{{ "missions/industrial-inspection/" | relURL }}">Industrial Inspection</a>
+          <a class="dropdown-item" href="{{ "missions/training-demo/" | relURL }}">Training & Demos</a>
         </div>
       </li>
 
       <li class="nav-item dropdown" id="nav-robocup">
-        <a class="nav-link" href="/robocup/">RoboCup</a>
+        <a class="nav-link" href="{{ "robocup/" | relURL }}">RoboCup</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/robocup/2026/">RoboCup 2026</a>
-          <a class="dropdown-item" href="/robocup/2025/">RoboCup 2025</a>
-          <a class="dropdown-item" href="/robocup/2024/">RoboCup 2024</a>
+          <a class="dropdown-item" href="{{ "robocup/2026/" | relURL }}">RoboCup 2026</a>
+          <a class="dropdown-item" href="{{ "robocup/2025/" | relURL }}">RoboCup 2025</a>
+          <a class="dropdown-item" href="{{ "robocup/2024/" | relURL }}">RoboCup 2024</a>
         </div>
       </li>
 
-      <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ "publications/" | relURL }}">Publications</a></li>
 
       <li class="nav-item dropdown" id="nav-team">
-        <a class="nav-link" href="/team/">Team</a>
+        <a class="nav-link" href="{{ "team/" | relURL }}">Team</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/team/2026/">2026</a>
-          <a class="dropdown-item" href="/team/2025/">2025</a>
-          <a class="dropdown-item" href="/team/2024/">2024</a>
-          <a class="dropdown-item" href="/team/2023/">2023</a>
+          <a class="dropdown-item" href="{{ "team/2026/" | relURL }}">2026</a>
+          <a class="dropdown-item" href="{{ "team/2025/" | relURL }}">2025</a>
+          <a class="dropdown-item" href="{{ "team/2024/" | relURL }}">2024</a>
+          <a class="dropdown-item" href="{{ "team/2023/" | relURL }}">2023</a>
         </div>
       </li>
 
-      <li class="nav-item"><a class="nav-link" href="/sponsors/">Sponsors</a></li>
-      <li class="nav-item"><a class="nav-link" href="/contact/">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ "sponsors/" | relURL }}">Sponsors</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{ "contact/" | relURL }}">Contact Us</a></li>
     </ul>
 
     <div class="theme-toggle">

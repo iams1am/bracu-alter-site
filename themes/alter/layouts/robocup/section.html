@@ -97,14 +97,14 @@
       <img src="{{ $p.teamImage | relURL }}" alt="BRACU ALTER Team {{ $p.year }}" loading="lazy">
     </div>
     <div class="rc-team-cta">
-      <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="/team/{{ $p.year }}/">Meet the {{ $p.year }} Team</a>
+      <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="{{ (printf "team/%s/" $p.year) | relURL }}">Meet the {{ $p.year }} Team</a>
     </div>
   </div>
 </section>
 
 <!-- BACK NAV -->
 <div class="rc-back-nav">
-  <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="/robocup/">Back to RoboCup</a>
+  <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="{{ "robocup/" | relURL }}">Back to RoboCup</a>
 </div>
 
 <script>

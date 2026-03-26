@@ -19,8 +19,8 @@
       <h1 class="hero-banner-title">{{ $h.hero.title }}</h1>
       <p class="hero-banner-subtitle">{{ $h.hero.subtitle }}</p>
       <div class="hero-actions">
-        <a class="btn" href="{{ $h.hero.primary.href }}">{{ $h.hero.primary.label }}</a>
-        <a class="btn btn-outline-white" href="{{ $h.hero.secondary.href }}">{{ $h.hero.secondary.label }}</a>
+        <a class="btn" href="{{ $h.hero.primary.href | relURL }}">{{ $h.hero.primary.label }}</a>
+        <a class="btn btn-outline-white" href="{{ $h.hero.secondary.href | relURL }}">{{ $h.hero.secondary.label }}</a>
       </div>
     </div>
     <!-- Stats bar pinned to bottom of hero -->
@@ -43,15 +43,15 @@
     <div class="container" style="position: relative; z-index: 2">
       <h2 class="neon-stroke-title reveal-title" style="text-align: center; margin-bottom: 32px; font-size: 2.5rem">Explore</h2>
       <div class="grid">
-        <a class="card banner-card reveal-child" href="/platforms/">
+        <a class="card banner-card reveal-child" href="{{ "platforms/" | relURL }}">
           <h3>Platforms</h3>
           <p class="muted">Rescue rovers and AGVs designed for disaster-response missions.</p>
         </a>
-        <a class="card banner-card reveal-child" href="/missions/">
+        <a class="card banner-card reveal-child" href="{{ "missions/" | relURL }}">
           <h3>Missions</h3>
           <p class="muted">Scenario-driven validation: earthquake response, inspection, and more.</p>
         </a>
-        <a class="card banner-card reveal-child" href="/publications/">
+        <a class="card banner-card reveal-child" href="{{ "publications/" | relURL }}">
           <h3>Publications</h3>
           <p class="muted">Reports and technical documents across autonomy, perception, and systems.</p>
         </a>
@@ -101,9 +101,9 @@
                 {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
               </div>
               <div class="rover-expand-links">
-                {{ range .links }}<a href="{{ .href }}">{{ .label }}</a>{{ end }}
+                {{ range .links }}<a href="{{ .href | relURL }}">{{ .label }}</a>{{ end }}
               </div>
-              <a class="rover-explore-btn" href="{{ .href }}">Explore {{ .name }} →</a>
+              <a class="rover-explore-btn" href="{{ .href | relURL }}">Explore {{ .name }} →</a>
             </div>
             <div class="poke-card-edge"></div>
           </div>
@@ -140,7 +140,7 @@
               <div class="rover-expand-badges">
                 {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
               </div>
-              <a class="rover-explore-btn" href="{{ .href }}">Meet the Team →</a>
+              <a class="rover-explore-btn" href="{{ .href | relURL }}">Meet the Team →</a>
             </div>
             <div class="poke-card-edge"></div>
           </div>
@@ -186,7 +186,7 @@
           <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0">{{ $h.cta.text }}</p>
         </div>
         <div>
-          <a class="btn" style="background: #FF4500; color: #fff; border: 2px solid #FF4500" href="{{ $h.cta.button.href }}">{{ $h.cta.button.label }}</a>
+          <a class="btn" style="background: #FF4500; color: #fff; border: 2px solid #FF4500" href="{{ $h.cta.button.href | relURL }}">{{ $h.cta.button.label }}</a>
         </div>
       </div>
     </div>
@@ -221,7 +221,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 32px" class="reveal-child">
-        <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="/achievements/">View All Achievements</a>
+        <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="{{ "achievements/" | relURL }}">View All Achievements</a>
       </div>
     </div>
   </section>
@@ -232,7 +232,7 @@
     <div class="container" style="position: relative; z-index: 2">
       <div class="row-head reveal-title">
         <h2 class="neon-stroke-title" style="font-size: 2.5rem">Latest News</h2>
-        <a class="smalllink" style="color: rgba(255,255,255,0.9); font-weight: 600" href="/posts/">View all →</a>
+        <a class="smalllink" style="color: rgba(255,255,255,0.9); font-weight: 600" href="{{ "posts/" | relURL }}">View all →</a>
       </div>
 
       <div class="postgrid">

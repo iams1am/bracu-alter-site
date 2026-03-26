@@ -83,7 +83,7 @@
         <form
           class="ct-form"
           name="contact"
-          action="/contact/"
+          action="{{ "contact/" | relURL }}"
           method="POST"
           data-netlify="true"
         >
@@ -140,7 +140,7 @@
       </div>
       <h3>Join Our Team</h3>
       <p>We're always looking for passionate students in robotics, AI, embedded systems, and mechanical engineering.</p>
-      <a href="/team/" class="ct-bottom-link">View Team</a>
+      <a href="{{ "team/" | relURL }}" class="ct-bottom-link">View Team</a>
     </div>
     <div class="ct-bottom-card">
       <div class="ct-bottom-icon">
@@ -148,7 +148,7 @@
       </div>
       <h3>Become a Sponsor</h3>
       <p>Support cutting-edge rescue robotics and help us compete on the global stage at RoboCup.</p>
-      <a href="/sponsors/" class="ct-bottom-link">Sponsorship Info</a>
+      <a href="{{ "sponsors/" | relURL }}" class="ct-bottom-link">Sponsorship Info</a>
     </div>
     <div class="ct-bottom-card">
       <div class="ct-bottom-icon">
@@ -156,7 +156,7 @@
       </div>
       <h3>Explore Our Rovers</h3>
       <p>See the technology behind our modular rescue rovers built for disaster response.</p>
-      <a href="/agv/" class="ct-bottom-link">View AGV</a>
+      <a href="{{ "agv/" | relURL }}" class="ct-bottom-link">View AGV</a>
     </div>
   </div>
 </section>

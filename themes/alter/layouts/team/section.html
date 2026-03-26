@@ -20,10 +20,10 @@
 <!-- YEAR TABS -->
 <nav class="tm-year-tabs">
   <div class="tm-year-tabs-inner">
-    <a class="tm-year-tab{{ if eq $activeYear "2026" }} active{{ end }}" href="/team/2026/">2026</a>
-    <a class="tm-year-tab{{ if eq $activeYear "2025" }} active{{ end }}" href="/team/2025/">2025</a>
-    <a class="tm-year-tab{{ if eq $activeYear "2024" }} active{{ end }}" href="/team/2024/">2024</a>
-    <a class="tm-year-tab{{ if eq $activeYear "2023" }} active{{ end }}" href="/team/2023/">2023</a>
+    <a class="tm-year-tab{{ if eq $activeYear "2026" }} active{{ end }}" href="{{ "team/2026/" | relURL }}">2026</a>
+    <a class="tm-year-tab{{ if eq $activeYear "2025" }} active{{ end }}" href="{{ "team/2025/" | relURL }}">2025</a>
+    <a class="tm-year-tab{{ if eq $activeYear "2024" }} active{{ end }}" href="{{ "team/2024/" | relURL }}">2024</a>
+    <a class="tm-year-tab{{ if eq $activeYear "2023" }} active{{ end }}" href="{{ "team/2023/" | relURL }}">2023</a>
   </div>
 </nav>
 
@@ -80,7 +80,7 @@
   <div class="tm-cta-inner">
     <h2>Join BRACU ALTER</h2>
     <p>We're always looking for passionate students interested in robotics, AI, and humanitarian engineering.</p>
-    <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="/contact/">Get in Touch</a>
+    <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="{{ "contact/" | relURL }}">Get in Touch</a>
   </div>
 </section>
 
