@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rescue Rovers on BRACU ALTER</title>
-    <link>http://localhost:53745/platforms/rover/</link>
+    <link>http://localhost:61930/platforms/rover/</link>
     <description>Recent content in Rescue Rovers on BRACU ALTER</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:53745/platforms/rover/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61930/platforms/rover/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

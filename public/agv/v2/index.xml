@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ALTER Rover V2 on BRACU ALTER</title>
-    <link>http://localhost:53745/agv/v2/</link>
+    <link>http://localhost:61930/agv/v2/</link>
     <description>Recent content in ALTER Rover V2 on BRACU ALTER</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:53745/agv/v2/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61930/agv/v2/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

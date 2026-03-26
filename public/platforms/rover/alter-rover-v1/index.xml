@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ALTER Rover V1 on BRACU ALTER</title>
-    <link>http://localhost:53745/platforms/rover/alter-rover-v1/</link>
+    <link>http://localhost:61930/platforms/rover/alter-rover-v1/</link>
     <description>Recent content in ALTER Rover V1 on BRACU ALTER</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:53745/platforms/rover/alter-rover-v1/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61930/platforms/rover/alter-rover-v1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Field Tests &amp; Validation</title>
-      <link>http://localhost:53745/platforms/rover/alter-rover-v1/field-tests/</link>
+      <link>http://localhost:61930/platforms/rover/alter-rover-v1/field-tests/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53745/platforms/rover/alter-rover-v1/field-tests/</guid>
+      <guid>http://localhost:61930/platforms/rover/alter-rover-v1/field-tests/</guid>
       <description>&lt;p&gt;ALTER Rover V1 has been evaluated in multiple environments to validate mobility, autonomy, and robustness.&lt;/p&gt;&#xA;&lt;h2 id=&#34;test-scenarios&#34;&gt;Test Scenarios&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Rough terrain navigation&lt;/li&gt;&#xA;&lt;li&gt;Obstacle traversal&lt;/li&gt;&#xA;&lt;li&gt;Communication reliability under interference&lt;/li&gt;&#xA;&lt;li&gt;Sensor performance in low-visibility conditions&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Gallery</title>
-      <link>http://localhost:53745/platforms/rover/alter-rover-v1/gallery/</link>
+      <link>http://localhost:61930/platforms/rover/alter-rover-v1/gallery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53745/platforms/rover/alter-rover-v1/gallery/</guid>
+      <guid>http://localhost:61930/platforms/rover/alter-rover-v1/gallery/</guid>
       <description>&lt;p&gt;&lt;em&gt;(Images will be added here)&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hardware Architecture</title>
-      <link>http://localhost:53745/platforms/rover/alter-rover-v1/hardware/</link>
+      <link>http://localhost:61930/platforms/rover/alter-rover-v1/hardware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53745/platforms/rover/alter-rover-v1/hardware/</guid>
+      <guid>http://localhost:61930/platforms/rover/alter-rover-v1/hardware/</guid>
       <description>&lt;h2 id=&#34;chassis--mobility&#34;&gt;Chassis &amp;amp; Mobility&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Modular aluminum frame with reinforced mounts&lt;/li&gt;&#xA;&lt;li&gt;All-terrain wheel system optimized for rubble and uneven surfaces&lt;/li&gt;&#xA;&lt;li&gt;Suspension designed for stability during obstacle traversal&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;sensors&#34;&gt;Sensors&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;2D/3D LiDAR for mapping and obstacle detection&lt;/li&gt;&#xA;&lt;li&gt;Depth &amp;amp; RGB cameras for perception&lt;/li&gt;&#xA;&lt;li&gt;IMU and wheel encoders for state estimation&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;compute--power&#34;&gt;Compute &amp;amp; Power&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Embedded compute unit for autonomy and perception&lt;/li&gt;&#xA;&lt;li&gt;Distributed microcontroller system for motor and sensor control&lt;/li&gt;&#xA;&lt;li&gt;Power-efficient battery management system for extended missions&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Software Stack</title>
-      <link>http://localhost:53745/platforms/rover/alter-rover-v1/software/</link>
+      <link>http://localhost:61930/platforms/rover/alter-rover-v1/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53745/platforms/rover/alter-rover-v1/software/</guid>
+      <guid>http://localhost:61930/platforms/rover/alter-rover-v1/software/</guid>
       <description>&lt;h2 id=&#34;core-stack&#34;&gt;Core Stack&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ROS 2-based modular architecture&lt;/li&gt;&#xA;&lt;li&gt;Navigation and mapping pipelines&lt;/li&gt;&#xA;&lt;li&gt;Teleoperation and autonomous modes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;autonomy&#34;&gt;Autonomy&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;SLAM for unknown environments&lt;/li&gt;&#xA;&lt;li&gt;Path planning and obstacle avoidance&lt;/li&gt;&#xA;&lt;li&gt;Fail-safe state handling&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;communication&#34;&gt;Communication&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Real-time telemetry streaming&lt;/li&gt;&#xA;&lt;li&gt;Operator dashboard for situational awareness&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Technical Specifications</title>
-      <link>http://localhost:53745/platforms/rover/alter-rover-v1/specs/</link>
+      <link>http://localhost:61930/platforms/rover/alter-rover-v1/specs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:53745/platforms/rover/alter-rover-v1/specs/</guid>
+      <guid>http://localhost:61930/platforms/rover/alter-rover-v1/specs/</guid>
       <description>&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;Parameter&lt;/th&gt;&#xA;          &lt;th&gt;Value&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Platform Type&lt;/td&gt;&#xA;          &lt;td&gt;Modular Rescue Rover&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Drive System&lt;/td&gt;&#xA;          &lt;td&gt;All-terrain wheeled&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Autonomy&lt;/td&gt;&#xA;          &lt;td&gt;Semi-autonomous / Autonomous&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Sensors&lt;/td&gt;&#xA;          &lt;td&gt;LiDAR, RGB-D Camera, IMU&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Compute&lt;/td&gt;&#xA;          &lt;td&gt;Embedded SBC&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Use Case&lt;/td&gt;&#xA;          &lt;td&gt;Disaster response, inspection, search &amp;amp; rescue&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;</description>
     </item>
   </channel>

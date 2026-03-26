@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RoboCup Rescue 2026 on BRACU ALTER</title>
-    <link>http://localhost:53745/robocup/2026/</link>
+    <link>http://localhost:61930/robocup/2026/</link>
     <description>Recent content in RoboCup Rescue 2026 on BRACU ALTER</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:53745/robocup/2026/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:61930/robocup/2026/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
