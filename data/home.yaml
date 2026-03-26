@@ -3,7 +3,7 @@ hero:
   subtitle: "A multi-tasking autonomous rescue rover team from LaSSET, BRAC University—building modular, power-efficient platforms for disaster response."
   primary:
     label: "Explore Platforms"
-    href: "platforms/"
+    href: "about/"
   secondary:
     label: "Achievements"
     href: "achievements/"
