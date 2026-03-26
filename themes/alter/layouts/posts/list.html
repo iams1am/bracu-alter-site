@@ -23,7 +23,7 @@
         <a class="postcard" href="{{ .RelPermalink }}" style="transition: all .2s ease; text-decoration: none">
           {{ with .Params.featured }}
             <div class="postimg">
-              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+              <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
             </div>
           {{ else }}
             <div class="postimg" style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.2) 100%); display: flex; align-items: center; justify-content: center;">

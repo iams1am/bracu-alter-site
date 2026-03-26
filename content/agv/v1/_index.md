@@ -2,7 +2,7 @@
 title: "ALTER Rover V1"
 description: "The original flagship rescue rover"
 version: "V1"
-image: "/images/posts/pic1.jpg"
+image: "images/posts/pic1.jpg"
 color: "#FF4500"
 dimensions:
   length: "0.75 m"

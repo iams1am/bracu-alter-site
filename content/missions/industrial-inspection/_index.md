@@ -2,7 +2,7 @@
 title: "Industrial Inspection"
 summary: "Remote inspection of high-risk industrial zones, confined spaces, and hazardous facilities."
 description: "Safety-first inspection and monitoring where human access carries unacceptable risk."
-image: "/images/posts/pic4.png"
+image: "images/posts/pic4.png"
 icon: "industry"
 capabilities: ["Inspection", "Telemetry", "Autonomous Navigation", "Sensing", "Gas Detection", "Thermal"]
 objectives:

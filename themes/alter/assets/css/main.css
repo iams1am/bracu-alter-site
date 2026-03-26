@@ -1420,7 +1420,7 @@ body[data-page="home"] .navbar.navbar-transparent .iconbtn{
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url('/images/posts/pic1.jpg') center / cover no-repeat;
+  background: url('../images/posts/pic1.jpg') center / cover no-repeat;
   z-index: 0;
   pointer-events: none;
 }
@@ -2323,22 +2323,22 @@ body[data-page="home"] .navbar.navbar-transparent .iconbtn{
 
 /* Different gradient for each section */
 .explore-banner{
-  background: url('/images/posts/pic11.png');
+  background: url('../images/posts/pic11.png');
   background-size:cover;
   background-position:center;
 }
 .team-banner{
-  background: url('/images/posts/pic14.png');
+  background: url('../images/posts/pic14.png');
   background-size:cover;
   background-position:center;
 }
 .cta-banner{
-  background: url('/images/posts/pic5.png');
+  background: url('../images/posts/pic5.png');
   background-size:cover;
   background-position:center;
 }
 .news-banner{
-  background: url('/images/posts/pic13.png');
+  background: url('../images/posts/pic13.png');
   background-size:cover;
   background-position:center;
 }
@@ -2633,7 +2633,7 @@ body[data-page="home"] .navbar.navbar-transparent .iconbtn{
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   padding: 100px 40px;
-  background: url('/images/posts/pic5.png') center / cover no-repeat;
+  background: url('../images/posts/pic5.png') center / cover no-repeat;
   position: relative;
   text-align: center;
 }
@@ -2736,7 +2736,7 @@ body[data-page="home"] .navbar.navbar-transparent .iconbtn{
 .agv-rover-section-bg{
   position: absolute;
   inset: 0;
-  background: url('/images/posts/pic1.jpg') center / cover no-repeat;
+  background: url('../images/posts/pic1.jpg') center / cover no-repeat;
   filter: brightness(0.2);
   z-index: 0;
 }
@@ -3768,7 +3768,7 @@ body[data-page="home"] .navbar.navbar-transparent .iconbtn{
    HOMEPAGE ACHIEVEMENTS SECTION
    ================================================ */
 .achieve-home-banner{
-  background-image: url('/images/posts/pic1.jpg');
+  background-image: url('../images/posts/pic1.jpg');
   background-size: cover;
   background-position: center;
 }

@@ -4,7 +4,7 @@
 
 <!-- HERO -->
 <section class="sp-hero">
-  <div class="sp-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="sp-hero-bg" style="background-image: url('{{ "images/posts/pic1.jpg" | relURL }}')"></div>
   <div class="sp-hero-overlay"></div>
   <div class="sp-hero-content">
     <h1 class="sp-hero-title">Sponsors</h1>
@@ -106,7 +106,7 @@
         {{ range .sponsors }}
         {{ $bname := .name }}
         <div class="sp-bronze-item">
-          {{ with .logo }}<img src="{{ . }}" alt="{{ $bname }}" loading="lazy">{{ end }}
+          {{ with .logo }}<img src="{{ . | relURL }}" alt="{{ $bname }}" loading="lazy">{{ end }}
           <span>{{ .name }}</span>
         </div>
         {{ end }}
@@ -119,7 +119,7 @@
         <div class="sp-sponsor-card">
           {{ with .logo }}
           <div class="sp-sponsor-logo">
-            <img src="{{ . }}" alt="{{ $sname }}" loading="lazy">
+            <img src="{{ . | relURL }}" alt="{{ $sname }}" loading="lazy">
           </div>
           {{ end }}
           <div class="sp-sponsor-info">

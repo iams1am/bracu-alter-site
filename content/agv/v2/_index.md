@@ -2,7 +2,7 @@
 title: "ALTER Rover V2"
 description: "Enhanced mobility and sensor suite"
 version: "V2"
-image: "/images/posts/pic4.png"
+image: "images/posts/pic4.png"
 color: "#FF6A00"
 dimensions:
   length: "0.82 m"

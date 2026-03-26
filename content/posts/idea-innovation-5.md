@@ -2,7 +2,7 @@
 title: "IDEA Innovation 5.0 — Champion"
 date: 2025-01-10
 summary: "BRACU ALTER became champion among 200+ university teams in Bangladesh."
-featured: "/images/posts/pic3.png"
+featured: "images/posts/pic3.png"
 tags: ["Award", "Innovation", "BRACU"]
 ---
 

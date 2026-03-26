@@ -2,7 +2,7 @@
 title: "Earthquake Response"
 summary: "Collapsed-structure navigation, victim search, and real-time situational awareness in post-earthquake environments."
 description: "Navigating rubble, confined spaces, and unstable terrain to locate survivors and relay critical data to first responders."
-image: "/images/posts/pic1.jpg"
+image: "images/posts/pic1.jpg"
 icon: "earthquake"
 capabilities: ["Hazardous Terrain", "3D Mapping", "SLAM", "Perception", "Telemetry", "Victim Detection"]
 objectives:

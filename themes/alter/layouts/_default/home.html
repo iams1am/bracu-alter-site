@@ -12,7 +12,7 @@
   <!-- HERO: fixed video + scroll-driven text reveal -->
   <div class="hero-fixed-bg" id="hero-fixed-bg">
     <video class="hero-video" autoplay muted loop playsinline>
-      <source src="/videos/hero-background1.mp4.mp4" type="video/mp4">
+      <source src="{{ "videos/hero-background1.mp4.mp4" | relURL }}" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content" id="hero-content">
@@ -87,7 +87,7 @@
             <div class="poke-card-shine"></div>
             <!-- Collapsed state -->
             <div class="rover-card-img">
-              <img src="{{ .image }}" alt="{{ .fullName }}" loading="lazy">
+              <img src="{{ .image | relURL }}" alt="{{ .fullName }}" loading="lazy">
               <div class="rover-version-badge">{{ .name }}</div>
             </div>
             <div class="rover-card-compact">
@@ -128,7 +128,7 @@
           <div class="rover-card-inner">
             <div class="poke-card-shine"></div>
             <div class="rover-card-img">
-              <img src="{{ .image }}" alt="Team {{ .year }}" loading="lazy">
+              <img src="{{ .image | relURL }}" alt="Team {{ .year }}" loading="lazy">
               <div class="rover-version-badge">{{ .year }}</div>
             </div>
             <div class="rover-card-compact">
@@ -239,7 +239,7 @@
         {{ range first 2 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
           <a class="postcard banner-card reveal-child" href="{{ .RelPermalink }}">
             {{ with .Params.featured }}
-              <div class="postimg"><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></div>
+              <div class="postimg"><img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy"></div>
             {{ end }}
             <div class="postbody">
               <div class="postmeta muted">{{ .Date.Format "Jan 2, 2006" }}</div>

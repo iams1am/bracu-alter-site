@@ -10,7 +10,7 @@
 <!-- HERO -->
 <section class="rover-spec-hero" style="--rover-accent: {{ $p.color }}">
   <div class="rover-spec-hero-bg">
-    <img src="{{ $p.image }}" alt="{{ .Title }}" loading="eager">
+    <img src="{{ $p.image | relURL }}" alt="{{ .Title }}" loading="eager">
     <div class="rover-spec-hero-overlay"></div>
   </div>
   <div class="rover-spec-hero-content">
@@ -180,7 +180,7 @@
 <!-- VIDEO HERO -->
 <section class="agv-hero agv-hero-video">
   <video class="agv-hero-vid" autoplay muted loop playsinline>
-    <source src="/videos/vid1.mp4" type="video/mp4">
+    <source src="{{ "videos/vid1.mp4" | relURL }}" type="video/mp4">
   </video>
   <div class="agv-hero-overlay"></div>
   <div class="agv-hero-content">
@@ -204,7 +204,7 @@
         <div class="rover-card-inner">
           <div class="poke-card-shine"></div>
           <div class="rover-card-img">
-            <img src="{{ .image }}" alt="{{ .fullName }}" loading="lazy">
+            <img src="{{ .image | relURL }}" alt="{{ .fullName }}" loading="lazy">
             <div class="rover-version-badge">{{ .name }}</div>
           </div>
           <div class="rover-card-compact">

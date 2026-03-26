@@ -7,7 +7,7 @@
 
 <!-- HERO -->
 <section class="tm-hero">
-  <div class="tm-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="tm-hero-bg" style="background-image: url('{{ "images/posts/pic1.jpg" | relURL }}')"></div>
   <div class="tm-hero-overlay"></div>
   <div class="tm-hero-content">
     <h1 class="tm-hero-title">Our Team</h1>
@@ -30,7 +30,7 @@
 <section class="tm-photo-section">
   <div class="tm-photo-inner">
     <div class="tm-team-photo">
-      <img src="{{ .teamPhoto }}" alt="BRACU ALTER Team {{ $activeYear }}" loading="lazy">
+      <img src="{{ .teamPhoto | relURL }}" alt="BRACU ALTER Team {{ $activeYear }}" loading="lazy">
     </div>
   </div>
 </section>

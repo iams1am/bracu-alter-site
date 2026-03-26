@@ -7,7 +7,7 @@
 <!-- HERO -->
 <section class="mission-detail-hero">
   <div class="mission-detail-hero-bg">
-    <img src="{{ $p.image }}" alt="{{ .Title }}" loading="eager">
+    <img src="{{ $p.image | relURL }}" alt="{{ .Title }}" loading="eager">
     <div class="mission-detail-hero-overlay"></div>
   </div>
   <div class="mission-detail-hero-content">

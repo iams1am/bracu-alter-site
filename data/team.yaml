@@ -1,7 +1,7 @@
 years:
   "2026":
     label: "2026"
-    teamPhoto: "/images/posts/pic7.png"
+    teamPhoto: "images/posts/pic7.png"
     subteams:
       - name: "Leadership"
         stats:
@@ -185,7 +185,7 @@ years:
 
   "2025":
     label: "2025"
-    teamPhoto: "/images/posts/pic7.png"
+    teamPhoto: "images/posts/pic7.png"
     subteams:
       - name: "Leadership"
         stats:
@@ -368,7 +368,7 @@ years:
 
   "2024":
     label: "2024"
-    teamPhoto: "/images/posts/pic7.png"
+    teamPhoto: "images/posts/pic7.png"
     subteams:
       - name: "Leadership"
         stats:
@@ -552,7 +552,7 @@ years:
 
   "2023":
     label: "2023"
-    teamPhoto: "/images/posts/pic7.png"
+    teamPhoto: "images/posts/pic7.png"
     subteams:
       - name: "Leadership"
         stats:

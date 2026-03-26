@@ -5,20 +5,20 @@ years:
       - name: "Title Sponsors"
         sponsors:
           - name: "BRAC University"
-            logo: "/images/sponsors/bracu.png"
+            logo: "images/sponsors/bracu.png"
             description: "BRAC University provides institutional support, lab facilities, and funding that forms the backbone of BRACU ALTER's operations. Our home at the BSRM School of Engineering gives us the infrastructure to innovate."
           - name: "LaSSET"
-            logo: "/images/sponsors/lasset.png"
+            logo: "images/sponsors/lasset.png"
             description: "The Laboratory of Space Systems Engineering & Technology (LaSSET) is our research home, providing dedicated lab space, equipment, mentorship, and the academic framework for our rescue robotics research."
       - name: "Gold Sponsors"
         sponsors:
           - name: "Tornetec"
-            logo: "/images/sponsors/sponsor1.png"
+            logo: "images/sponsors/sponsor1.png"
             description: "Tornetec has supported our team with financial contributions and technical mentorship, helping us accelerate development of our embedded systems and power electronics."
       - name: "Silver Sponsors"
         sponsors:
           - name: "BSRM School of Engineering"
-            logo: "/images/sponsors/sponsor2.png"
+            logo: "images/sponsors/sponsor2.png"
             description: "Cash sponsorship and workshop access for prototyping and fabrication."
       - name: "Bronze Sponsors"
         sponsors:
@@ -32,20 +32,20 @@ years:
       - name: "Title Sponsors"
         sponsors:
           - name: "BRAC University"
-            logo: "/images/sponsors/bracu.png"
+            logo: "images/sponsors/bracu.png"
             description: "BRAC University funded our international travel, competition registration, and rover shipping logistics for RoboCup 2025 in Salvador, Brazil."
           - name: "LaSSET"
-            logo: "/images/sponsors/lasset.png"
+            logo: "images/sponsors/lasset.png"
             description: "LaSSET provided dedicated lab space, equipment, and research mentorship throughout the intensive RoboCup 2025 preparation period."
       - name: "Gold Sponsors"
         sponsors:
           - name: "Tornetec"
-            logo: "/images/sponsors/sponsor1.png"
+            logo: "images/sponsors/sponsor1.png"
             description: "Financial support for competition logistics and component procurement."
       - name: "Silver Sponsors"
         sponsors:
           - name: "BSRM School of Engineering"
-            logo: "/images/sponsors/sponsor2.png"
+            logo: "images/sponsors/sponsor2.png"
             description: "Workshop access and prototyping support."
       - name: "Bronze Sponsors"
         sponsors:
@@ -58,15 +58,15 @@ years:
       - name: "Title Sponsors"
         sponsors:
           - name: "BRAC University"
-            logo: "/images/sponsors/bracu.png"
+            logo: "images/sponsors/bracu.png"
             description: "BRAC University provided the initial funding and institutional backing that made our RoboCup 2024 debut possible."
           - name: "LaSSET"
-            logo: "/images/sponsors/lasset.png"
+            logo: "images/sponsors/lasset.png"
             description: "Lab space, research guidance, and the academic foundation for ALTER's first competition rover."
       - name: "Gold Sponsors"
         sponsors:
           - name: "Tornetec"
-            logo: "/images/sponsors/sponsor1.png"
+            logo: "images/sponsors/sponsor1.png"
             description: "Early-stage financial support for rover component procurement."
       - name: "Bronze Sponsors"
         sponsors:

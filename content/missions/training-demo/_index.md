@@ -2,7 +2,7 @@
 title: "Training & Demos"
 summary: "Controlled trials, operator training, and public demonstrations to validate systems and inspire the next generation."
 description: "Repeatable setups for system validation, operator proficiency, and community outreach."
-image: "/images/posts/pic5.png"
+image: "images/posts/pic5.png"
 icon: "training"
 capabilities: ["Operator Training", "System Reliability", "Outreach", "Benchmarking", "Live Demos"]
 objectives:

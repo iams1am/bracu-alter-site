@@ -20,7 +20,7 @@
     <!-- Featured Image -->
     {{ with .Params.featured }}
       <div class="posthero">
-        <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+        <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
       </div>
     {{ end }}
 

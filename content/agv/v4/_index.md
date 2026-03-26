@@ -2,7 +2,7 @@
 title: "ALTER Rover V4"
 description: "Next-gen autonomous platform"
 version: "V4"
-image: "/images/posts/pic7.png"
+image: "images/posts/pic7.png"
 color: "#FFA500"
 dimensions:
   length: "0.95 m"

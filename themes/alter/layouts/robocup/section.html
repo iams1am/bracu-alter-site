@@ -27,7 +27,7 @@
     <h2 class="rc-section-heading">Competition Vehicle</h2>
     <div class="rc-vehicle-card">
       <div class="rc-vehicle-img">
-        <img src="{{ $p.vehicle.image }}" alt="{{ $p.vehicle.name }}" loading="lazy">
+        <img src="{{ $p.vehicle.image | relURL }}" alt="{{ $p.vehicle.name }}" loading="lazy">
       </div>
       <div class="rc-vehicle-info">
         <h3>{{ $p.vehicle.name }}</h3>
@@ -94,7 +94,7 @@
   <div class="rc-team-inner">
     <h2 class="rc-section-heading">The Team Behind</h2>
     <div class="rc-team-photo">
-      <img src="{{ $p.teamImage }}" alt="BRACU ALTER Team {{ $p.year }}" loading="lazy">
+      <img src="{{ $p.teamImage | relURL }}" alt="BRACU ALTER Team {{ $p.year }}" loading="lazy">
     </div>
     <div class="rc-team-cta">
       <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="/team/{{ $p.year }}/">Meet the {{ $p.year }} Team</a>
@@ -130,7 +130,7 @@
 
 <!-- HERO -->
 <section class="rc-hero">
-  <div class="rc-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="rc-hero-bg" style="background-image: url('{{ "images/posts/pic1.jpg" | relURL }}')"></div>
   <div class="rc-hero-overlay"></div>
   <div class="rc-hero-content">
     <h1 class="rc-hero-title">RoboCup Rescue</h1>
@@ -183,7 +183,7 @@
       {{ range .Pages.ByTitle.Reverse }}
       <a class="rc-year-card" href="{{ .RelPermalink }}" style="--accent: {{ .Params.color }}">
         <div class="rc-year-card-img">
-          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+          <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
           <div class="rc-year-card-overlay"></div>
         </div>
         <div class="rc-year-card-body">

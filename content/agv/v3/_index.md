@@ -2,7 +2,7 @@
 title: "ALTER Rover V3"
 description: "AI-powered search and rescue"
 version: "V3"
-image: "/images/posts/pic5.png"
+image: "images/posts/pic5.png"
 color: "#FF8C00"
 dimensions:
   length: "0.90 m"
