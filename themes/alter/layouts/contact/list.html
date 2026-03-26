@@ -1,0 +1,181 @@
+{{ define "main" }}
+<style>#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }</style>
+
+<!-- HERO -->
+<section class="ct-hero">
+  <div class="ct-hero-bg" style="background-image: url('/images/posts/pic5.png')"></div>
+  <div class="ct-hero-overlay"></div>
+  <div class="ct-hero-content">
+    <h1 class="ct-hero-title">Contact Us</h1>
+    <p class="ct-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="ct-main">
+  <div class="ct-main-inner">
+
+    <!-- LEFT: Contact Info -->
+    <div class="ct-info">
+      <h2 class="ct-info-heading">Let's Connect</h2>
+      <p class="ct-info-text">Whether you're interested in collaboration, sponsorship, media inquiries, or joining the team — we'd love to hear from you.</p>
+
+      <div class="ct-info-cards">
+
+        <div class="ct-info-card">
+          <div class="ct-info-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:bracualter@gmail.com" class="ct-info-link">bracualter@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="ct-info-card">
+          <div class="ct-info-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p class="ct-info-detail">LaSSET, BSRM School of Engineering<br>BRAC University, Dhaka, Bangladesh</p>
+          </div>
+        </div>
+
+        <div class="ct-info-card">
+          <div class="ct-info-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h4>Lab Hours</h4>
+            <p class="ct-info-detail">Sunday — Thursday<br>10:00 AM — 6:00 PM (BST)</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social Links -->
+      <div class="ct-social">
+        <h4 class="ct-social-heading">Follow Us</h4>
+        <div class="ct-social-links">
+          <a class="ct-social-btn" href="https://github.com/bracu-alter" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+            GitHub
+          </a>
+          <a class="ct-social-btn" href="https://www.linkedin.com/company/bracu-alter" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a class="ct-social-btn" href="https://www.facebook.com/bracualter" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Contact Form -->
+    <div class="ct-form-wrap">
+      <div class="ct-form-card">
+        <h2 class="ct-form-title">Send a Message</h2>
+        <p class="ct-form-sub">Fill out the form and we'll get back to you shortly.</p>
+
+        <form
+          class="ct-form"
+          name="contact"
+          action="/contact/"
+          method="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contact">
+          <input type="hidden" name="bot-field" value="">
+
+          <div class="ct-form-row">
+            <div class="ct-field">
+              <label for="ct-name">Name</label>
+              <input type="text" id="ct-name" name="name" required placeholder="Your full name">
+            </div>
+            <div class="ct-field">
+              <label for="ct-email">Email</label>
+              <input type="email" id="ct-email" name="email" required placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div class="ct-field">
+            <label for="ct-interest">I'm interested in</label>
+            <select id="ct-interest" name="interest">
+              <option value="">Select a topic</option>
+              <option value="collaboration">Research Collaboration</option>
+              <option value="sponsorship">Sponsorship</option>
+              <option value="joining">Joining the Team</option>
+              <option value="media">Media Inquiry</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="ct-field">
+            <label for="ct-subject">Subject</label>
+            <input type="text" id="ct-subject" name="subject" required placeholder="What is this about?">
+          </div>
+
+          <div class="ct-field">
+            <label for="ct-message">Message</label>
+            <textarea id="ct-message" name="message" rows="5" required placeholder="Tell us more..."></textarea>
+          </div>
+
+          <button type="submit" class="ct-submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BOTTOM CARDS -->
+<section class="ct-bottom">
+  <div class="ct-bottom-inner">
+    <div class="ct-bottom-card">
+      <div class="ct-bottom-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <h3>Join Our Team</h3>
+      <p>We're always looking for passionate students in robotics, AI, embedded systems, and mechanical engineering.</p>
+      <a href="/team/" class="ct-bottom-link">View Team</a>
+    </div>
+    <div class="ct-bottom-card">
+      <div class="ct-bottom-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </div>
+      <h3>Become a Sponsor</h3>
+      <p>Support cutting-edge rescue robotics and help us compete on the global stage at RoboCup.</p>
+      <a href="/sponsors/" class="ct-bottom-link">Sponsorship Info</a>
+    </div>
+    <div class="ct-bottom-card">
+      <div class="ct-bottom-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <h3>Explore Our Rovers</h3>
+      <p>See the technology behind our modular rescue rovers built for disaster response.</p>
+      <a href="/agv/" class="ct-bottom-link">View AGV</a>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.ct-info-card, .ct-form-card, .ct-bottom-card');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.9){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(reveal); },{passive:true});
+  setTimeout(reveal,100);
+})();
+</script>
+{{ end }}

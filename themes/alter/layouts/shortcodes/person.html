@@ -1,0 +1,24 @@
+{{ $name := .Get "name" }}
+{{ $role := .Get "role" }}
+{{ $focus := .Get "focus" }}
+{{ $initials := .Get "initials" | default "AL" }}
+{{ $img := .Get "img" }}
+{{ $links := .Get "links" }}
+
+<div class="person">
+  {{ if $img }}
+    <img class="avatar-img" src="{{ $img }}" alt="{{ $name }}">
+  {{ else }}
+    <div class="avatar">{{ $initials }}</div>
+  {{ end }}
+
+  <div class="person-body">
+    <div class="person-top">
+      <div class="person-name">{{ $name }}</div>
+      {{ if $role }}<div class="chip">{{ $role }}</div>{{ end }}
+    </div>
+
+    {{ with $focus }}<div class="muted person-focus">{{ . }}</div>{{ end }}
+    {{ with $links }}<div class="person-links">{{ . }}</div>{{ end }}
+  </div>
+</div>

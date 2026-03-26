@@ -1,0 +1,254 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<style>
+#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }
+</style>
+
+{{ if $p.version }}
+{{/* ===== VERSION SUBPAGE (V1/V2/V3/V4 spec page) ===== */}}
+
+<!-- HERO -->
+<section class="rover-spec-hero" style="--rover-accent: {{ $p.color }}">
+  <div class="rover-spec-hero-bg">
+    <img src="{{ $p.image }}" alt="{{ .Title }}" loading="eager">
+    <div class="rover-spec-hero-overlay"></div>
+  </div>
+  <div class="rover-spec-hero-content">
+    <div class="rover-spec-badge">{{ $p.version }}</div>
+    <h1 class="rover-spec-title">{{ .Title }}</h1>
+    <p class="rover-spec-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- QUICK STATS BAR -->
+<section class="rover-quick-stats">
+  <div class="rover-quick-stats-inner">
+    <div class="rover-quick-stat">
+      <span class="rover-stat-label">Dimensions</span>
+      <span class="rover-stat-value">{{ $p.dimensions.length }} × {{ $p.dimensions.breadth }} × {{ $p.dimensions.height }}</span>
+    </div>
+    <div class="rover-quick-stat">
+      <span class="rover-stat-label">Mass</span>
+      <span class="rover-stat-value">{{ $p.mass }}</span>
+    </div>
+    <div class="rover-quick-stat">
+      <span class="rover-stat-label">Top Speed</span>
+      <span class="rover-stat-value">{{ $p.top_speed }}</span>
+    </div>
+    <div class="rover-quick-stat">
+      <span class="rover-stat-label">DOF</span>
+      <span class="rover-stat-value">{{ $p.dof }}</span>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS GRID -->
+<section class="rover-specs-section">
+  <div class="rover-specs-inner">
+    <div class="rover-spec-group" id="specs">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg>
+        Compute Stack
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.compute }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        Sensors
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.sensors }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Propulsion
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.propulsion }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Navigation
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.navigation }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        Vision Equipment
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.vision }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Communication
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.communication }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        Manipulators
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.manipulators }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="6" width="18" height="12" rx="2"/><line x1="23" y1="13" x2="23" y2="11"/></svg>
+        Power System
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.power }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="rover-spec-group" id="software">
+      <h2 class="rover-spec-group-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Software Architecture
+      </h2>
+      <div class="rover-spec-items">
+        {{ range $p.software }}<div class="rover-spec-item">{{ . }}</div>{{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPANDABLE SECTIONS -->
+<section class="rover-expand-sections">
+  <div class="rover-expand-inner">
+    <a class="rover-expand-card" href="#mechanical" id="mechanical">
+      <h2>Mechanical Structure</h2>
+      <span>Click here!</span>
+    </a>
+    <a class="rover-expand-card" href="#electrical">
+      <h2>Electrical Architecture</h2>
+      <span>Click here!</span>
+    </a>
+    <a class="rover-expand-card" href="#software-system">
+      <h2>Software System</h2>
+      <span>Click here!</span>
+    </a>
+  </div>
+</section>
+
+<!-- BACK NAV -->
+<section class="rover-back-nav">
+  <a class="btn" href="/agv/">← Back to All Rovers</a>
+</section>
+
+<script>
+(function(){
+  var groups = document.querySelectorAll('.rover-spec-group, .rover-expand-card');
+  groups.forEach(function(g){ g.style.opacity='0'; g.style.transform='translateY(40px)'; });
+  function reveal(){
+    var vh = window.innerHeight;
+    groups.forEach(function(g){
+      if(g.style.opacity==='1') return;
+      if(g.getBoundingClientRect().top < vh * 0.9){
+        setTimeout(function(){
+          g.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+          g.style.opacity='1'; g.style.transform='translateY(0)';
+        }, 60);
+      }
+    });
+  }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(reveal); }, {passive:true});
+  reveal();
+})();
+</script>
+
+{{ else }}
+{{/* ===== AGV LISTING PAGE (/agv/) ===== */}}
+{{ $h := site.Data.home }}
+
+<!-- VIDEO HERO -->
+<section class="agv-hero agv-hero-video">
+  <video class="agv-hero-vid" autoplay muted loop playsinline>
+    <source src="/videos/vid1.mp4" type="video/mp4">
+  </video>
+  <div class="agv-hero-overlay"></div>
+  <div class="agv-hero-content">
+    <h1 class="agv-hero-title">ALTER AGV</h1>
+    <p class="agv-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- ROVER WHEEL (same as homepage) -->
+<section class="agv-rover-section">
+  <div class="agv-rover-section-bg"></div>
+  <div class="container" style="position: relative; z-index: 2">
+    <div style="text-align: center; margin-bottom: 40px">
+      <h2 class="neon-stroke-title" style="font-size: 2.5rem; margin-bottom: 8px">{{ $h.rovers.title }}</h2>
+      <p class="lead" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.rovers.subtitle }}</p>
+    </div>
+
+    <div class="rover-wheel">
+      {{ range $h.rovers.versions }}
+      <div class="rover-card" style="--card-accent: {{ .color }}">
+        <div class="rover-card-inner">
+          <div class="poke-card-shine"></div>
+          <div class="rover-card-img">
+            <img src="{{ .image }}" alt="{{ .fullName }}" loading="lazy">
+            <div class="rover-version-badge">{{ .name }}</div>
+          </div>
+          <div class="rover-card-compact">
+            <span class="rover-card-name">{{ .fullName }}</span>
+            <p class="rover-card-tagline">{{ .tagline }}</p>
+          </div>
+          <div class="rover-card-expand">
+            <p class="rover-expand-desc">{{ .description }}</p>
+            <div class="rover-expand-badges">
+              {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
+            </div>
+            <div class="rover-expand-links">
+              {{ range .links }}<a href="{{ .href }}">{{ .label }}</a>{{ end }}
+            </div>
+            <a class="rover-explore-btn" href="{{ .href }}">Explore {{ .name }} →</a>
+          </div>
+          <div class="poke-card-edge"></div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var section = document.querySelector('.agv-rover-section');
+  if(section){
+    section.style.opacity='0';
+    section.style.transform='translateY(60px) scale(0.97)';
+  }
+  function reveal(){
+    if(!section || section.style.opacity==='1') return;
+    var vh = window.innerHeight;
+    if(section.getBoundingClientRect().top < vh * 0.88){
+      section.style.transition='opacity 1.2s cubic-bezier(0.16,1,0.3,1), transform 1.2s cubic-bezier(0.16,1,0.3,1)';
+      section.style.opacity='1';
+      section.style.transform='translateY(0) scale(1)';
+    }
+  }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(reveal); }, {passive:true});
+  reveal();
+})();
+</script>
+
+{{ end }}
+{{ end }}

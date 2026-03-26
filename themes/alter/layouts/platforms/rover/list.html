@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <!-- Header -->
+  <section style="padding-top: 24px">
+    <h1 style="font-size: 2.2rem; margin-bottom: 12px">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="lead">{{ . }}</p>
+    {{ end }}
+  </section>
+
+  <!-- Content -->
+  {{ if .Content }}
+    <section class="section">
+      <div class="content" style="max-width: 80ch">
+        {{ .Content }}
+      </div>
+    </section>
+  {{ end }}
+
+  <!-- Rover Models -->
+  <section class="section">
+    <h2 style="margin-bottom: 16px">Rover Models</h2>
+    <div class="grid">
+      {{ range .Pages }}
+        <a class="card" href="{{ .RelPermalink }}" style="transition: all .2s ease; text-decoration: none">
+          <h3 style="margin: 0 0 12px">{{ .Title }}</h3>
+          {{ with .Params.summary }}
+            <p class="muted" style="margin: 0 0 12px">{{ . }}</p>
+          {{ end }}
+          <div style="color: var(--accent); font-weight: 600">View details →</div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+
+  <!-- Back Navigation -->
+  <section class="section">
+    <a class="btn btn-outline" href="/platforms/">← Back to Platforms</a>
+  </section>
+{{ end }}

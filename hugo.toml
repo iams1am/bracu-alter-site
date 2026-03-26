@@ -1,0 +1,7 @@
+baseURL = "https://bracu-alter.github.io/"
+languageCode = "en-us"
+title = "BRACU ALTER"
+theme = "alter"
+
+[params]
+  description = "BRAC University Autonomous Lab Team for Engineering & Robotics"

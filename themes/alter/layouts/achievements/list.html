@@ -1,0 +1,121 @@
+{{ define "main" }}
+{{ $h := site.Data.home }}
+<style>#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }</style>
+
+<!-- HERO -->
+<section class="achieve-hero">
+  <div class="achieve-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="achieve-hero-overlay"></div>
+  <div class="achieve-hero-content">
+    <h1 class="achieve-hero-title">Our Achievements</h1>
+    <p class="achieve-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- TAB NAV (Bumblebee-style) -->
+<section class="achieve-tabs-section">
+  <div class="achieve-tabs-inner">
+    <div class="achieve-tabs" id="achieve-tabs">
+      <button class="achieve-tab active" data-tab="robocup">RoboCup Rescue</button>
+      <button class="achieve-tab" data-tab="national">National Awards</button>
+    </div>
+  </div>
+</section>
+
+<!-- ROBOCUP TAB -->
+<section class="achieve-panel active" id="panel-robocup">
+  <div class="achieve-panel-inner">
+    <h2 class="achieve-panel-title">RoboCup Rescue Robot League</h2>
+    <div class="achieve-timeline">
+      <div class="achieve-timeline-item">
+        <div class="achieve-year-badge">2025</div>
+        <div class="achieve-timeline-content">
+          <h3>World Championship Participant</h3>
+          <p class="achieve-location">Salvador, Brazil</p>
+          <ul class="achieve-highlights">
+            <li>Sole team representing Bangladesh</li>
+            <li>Advanced autonomy + teleoperation validation</li>
+            <li>End-to-end rescue mission flow tested</li>
+          </ul>
+        </div>
+      </div>
+      <div class="achieve-timeline-item">
+        <div class="achieve-year-badge">2024</div>
+        <div class="achieve-timeline-content">
+          <h3>Finalist</h3>
+          <p class="achieve-location">Eindhoven, Netherlands</p>
+          <ul class="achieve-highlights">
+            <li>Reached the final round</li>
+            <li>First international RoboCup Rescue appearance for BRACU</li>
+            <li>Validated rescue rover capabilities on global stage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NATIONAL TAB -->
+<section class="achieve-panel" id="panel-national">
+  <div class="achieve-panel-inner">
+    <h2 class="achieve-panel-title">National & Institutional Recognition</h2>
+    <div class="achieve-awards-grid">
+      <div class="achieve-award-card">
+        <div class="achieve-award-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="achieve-award-year">2024</div>
+        <h3>IDEA Innovation 5.0 Champion</h3>
+        <p>Champions among 200+ university teams across Bangladesh in the national technology and innovation competition.</p>
+      </div>
+      <div class="achieve-award-card">
+        <div class="achieve-award-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 6 9 6 9zm12 0h1.5a2.5 2.5 0 000-5C17 4 18 9 18 9zm-9 3v6m6-6v6M8 9h8a4 4 0 01-8 0zm-2 9h12a1 1 0 011 1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1a1 1 0 011-1z"/></svg>
+        </div>
+        <div class="achieve-award-year">2024</div>
+        <h3>VC's Special Recognition Award</h3>
+        <p>Awarded by the BRAC University Vice-Chancellor in Fall 2024 for exceptional contributions to engineering and robotics.</p>
+      </div>
+      <div class="achieve-award-card">
+        <div class="achieve-award-icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><circle cx="12" cy="8" r="5"/><path d="M8 13l-4 8h16l-4-8"/></svg>
+        </div>
+        <div class="achieve-award-year">2024</div>
+        <h3>Hult Prize 1st Runner-Up</h3>
+        <p>Secured 1st Runner-Up position at the Hult Prize campus-level competition at BRAC University.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var tabs = document.querySelectorAll('.achieve-tab');
+  var panels = document.querySelectorAll('.achieve-panel');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.classList.remove('active'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+    });
+  });
+
+  /* Scroll reveal */
+  var revealEls = document.querySelectorAll('.achieve-timeline-item, .achieve-award-card');
+  revealEls.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    revealEls.forEach(function(el){
+      if(el.style.opacity === '1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight * 0.88){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1';
+        el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(reveal); }, {passive:true});
+  setTimeout(reveal, 100);
+})();
+</script>
+{{ end }}

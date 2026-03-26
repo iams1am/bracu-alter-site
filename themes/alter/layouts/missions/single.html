@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<style>
+#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }
+</style>
+
+<!-- HERO -->
+<section class="mission-detail-hero">
+  <div class="mission-detail-hero-bg">
+    <img src="{{ $p.image }}" alt="{{ .Title }}" loading="eager">
+    <div class="mission-detail-hero-overlay"></div>
+  </div>
+  <div class="mission-detail-hero-content">
+    <h1 class="mission-detail-title">{{ .Title }}</h1>
+    <p class="mission-detail-subtitle">{{ $p.description }}</p>
+    {{ with $p.capabilities }}
+    <div class="mission-detail-caps">
+      {{ range . }}<span class="mission-cap-hero">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- METRICS BAR -->
+{{ with $p.metrics }}
+<section class="mission-metrics">
+  <div class="mission-metrics-inner">
+    {{ range . }}
+    <div class="mission-metric">
+      <span class="mission-metric-value">{{ .value }}</span>
+      <span class="mission-metric-label">{{ .label }}</span>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- OBJECTIVES -->
+{{ with $p.objectives }}
+<section class="mission-objectives">
+  <div class="mission-objectives-inner">
+    <h2 class="mission-section-heading">Mission Objectives</h2>
+    <div class="mission-obj-grid">
+      {{ range $i, $obj := . }}
+      <div class="mission-obj-card">
+        <div class="mission-obj-num">{{ add $i 1 | printf "%02d" }}</div>
+        <h3>{{ $obj.title }}</h3>
+        <p>{{ $obj.text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- CONTENT -->
+<section class="mission-content">
+  <div class="mission-content-inner">
+    {{ .Content }}
+  </div>
+</section>
+
+<!-- BACK NAV -->
+<section class="mission-back">
+  <a class="btn" href="/missions/">← Back to Missions</a>
+</section>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.mission-obj-card, .mission-content-inner > h2, .mission-content-inner > p, .mission-content-inner > ul');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(30px)'; });
+  function reveal(){
+    var vh = window.innerHeight;
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < vh * 0.9){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(reveal); }, {passive:true});
+  reveal();
+})();
+</script>
+{{ end }}

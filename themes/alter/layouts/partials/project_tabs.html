@@ -1,0 +1,11 @@
+{{ $base := .CurrentSection.RelPermalink }}
+{{ $cur := .RelPermalink }}
+
+<div class="tabs">
+  <a class="tab {{ if eq $cur $base }}active{{ end }}" href="{{ $base }}">Overview</a>
+  <a class="tab {{ if in $cur "/hardware/" }}active{{ end }}" href="{{ printf "%shardware/" $base }}">Hardware</a>
+  <a class="tab {{ if in $cur "/software/" }}active{{ end }}" href="{{ printf "%ssoftware/" $base }}">Software</a>
+  <a class="tab {{ if in $cur "/specs/" }}active{{ end }}" href="{{ printf "%sspecs/" $base }}">Specs</a>
+  <a class="tab {{ if in $cur "/field-tests/" }}active{{ end }}" href="{{ printf "%sfield-tests/" $base }}">Field Tests</a>
+  <a class="tab {{ if in $cur "/gallery/" }}active{{ end }}" href="{{ printf "%sgallery/" $base }}">Gallery</a>
+</div>

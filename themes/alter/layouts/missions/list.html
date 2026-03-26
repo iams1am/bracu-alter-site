@@ -1,0 +1,91 @@
+{{ define "main" }}
+<style>
+#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }
+</style>
+
+<!-- HERO -->
+<section class="mission-hero">
+  <div class="mission-hero-bg">
+    <img src="/images/posts/pic1.jpg" alt="Missions" loading="eager">
+    <div class="mission-hero-overlay"></div>
+  </div>
+  <div class="mission-hero-content">
+    <h1 class="mission-hero-title">Missions</h1>
+    <p class="mission-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- WHAT WE EVALUATE -->
+<section class="mission-intro">
+  <div class="mission-intro-inner">
+    <h2 class="mission-intro-title">What We Evaluate</h2>
+    <div class="mission-eval-grid">
+      <div class="mission-eval-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <h3>Terrain Mobility</h3>
+        <p>Stability and locomotion across rubble, inclines, and confined spaces</p>
+      </div>
+      <div class="mission-eval-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <h3>Perception & Mapping</h3>
+        <p>SLAM accuracy, 3D reconstruction quality, and sensor fusion reliability</p>
+      </div>
+      <div class="mission-eval-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <h3>Autonomy & Teleop</h3>
+        <p>Autonomous navigation, operator control reliability, and fail-safe behavior</p>
+      </div>
+      <div class="mission-eval-item">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <h3>Real-Time Data</h3>
+        <p>Live streaming performance, latency, and data integrity under stress</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION CARDS -->
+<section class="mission-cards-section">
+  <div class="mission-cards-inner">
+    {{ range .Pages }}
+    <a class="mission-card" href="{{ .RelPermalink }}">
+      <div class="mission-card-img">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+        <div class="mission-card-overlay"></div>
+      </div>
+      <div class="mission-card-body">
+        <h2>{{ .Title }}</h2>
+        <p class="mission-card-summary">{{ .Params.summary }}</p>
+        {{ with .Params.capabilities }}
+        <div class="mission-card-caps">
+          {{ range . }}<span class="mission-cap">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        <span class="mission-card-link">View Mission →</span>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<script>
+(function(){
+  var items = document.querySelectorAll('.mission-eval-item, .mission-card');
+  items.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    var vh = window.innerHeight;
+    items.forEach(function(el, i){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < vh * 0.9){
+        setTimeout(function(){
+          el.style.transition='opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1)';
+          el.style.opacity='1'; el.style.transform='translateY(0)';
+        }, 80 + i * 100);
+      }
+    });
+  }
+  window.addEventListener('scroll', function(){ requestAnimationFrame(reveal); }, {passive:true});
+  reveal();
+})();
+</script>
+{{ end }}

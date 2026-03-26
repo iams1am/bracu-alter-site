@@ -1,0 +1,157 @@
+{{ define "main" }}
+{{ $data := site.Data.sponsors }}
+<style>#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }</style>
+
+<!-- HERO -->
+<section class="sp-hero">
+  <div class="sp-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="sp-hero-overlay"></div>
+  <div class="sp-hero-content">
+    <h1 class="sp-hero-title">Sponsors</h1>
+    <p class="sp-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- ====== SUPPORT US SECTION ====== -->
+<section class="sp-support-section">
+  <div class="sp-support-inner">
+    <h2 class="sp-section-heading">Support Us</h2>
+    <p class="sp-support-text">We believe in the power of partnership. Building autonomous rescue rovers requires significant funding for components, competition travel, and lab operations. Your contribution, no matter the size or form, makes a direct impact on our ability to develop life-saving technology and represent Bangladesh on the global stage.</p>
+    <p class="sp-support-text">If you would like to support us with equipment, testing facilities, or financial sponsorship, please contact us:</p>
+    <p class="sp-support-email"><strong>bracualter@gmail.com</strong></p>
+
+    <div class="sp-support-cards">
+      <div class="sp-support-card">
+        <div class="sp-support-card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Global Impact</h3>
+        <p>Support humanitarian technology that saves lives during disasters and emergencies worldwide.</p>
+      </div>
+      <div class="sp-support-card">
+        <div class="sp-support-card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M6 9H4.5a2.5 2.5 0 010-5C7 4 6 9 6 9zm12 0h1.5a2.5 2.5 0 000-5C17 4 18 9 18 9zm-9 3v6m6-6v6M8 9h8a4 4 0 01-8 0zm-2 9h12a1 1 0 011 1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1a1 1 0 011-1z"/></svg>
+        </div>
+        <h3>Competitive Excellence</h3>
+        <p>Back a team that competes at RoboCup Rescue and has won national championships like IDEA 5.0.</p>
+      </div>
+      <div class="sp-support-card">
+        <div class="sp-support-card-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Student Development</h3>
+        <p>Invest in the next generation of robotics engineers and AI researchers at BRAC University.</p>
+      </div>
+    </div>
+
+    <!-- Donation Options -->
+    <div class="sp-donate-section">
+      <h3 class="sp-donate-heading">One-time / Monthly Donation</h3>
+      <p class="sp-donate-text">Every contribution, no matter the size, makes a difference to our project and charts the course of our future. Support us directly through a one-time or recurring monthly donation.</p>
+      <div class="sp-donate-cards">
+        <a class="sp-donate-card" href="/contact/">
+          <div class="sp-donate-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h4>One-time Donation</h4>
+          <p>Make a single contribution to help fund our next competition or rover build.</p>
+        </a>
+        <a class="sp-donate-card" href="/contact/">
+          <div class="sp-donate-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h4>Monthly Sponsorship</h4>
+          <p>Provide sustained support with a recurring monthly contribution to our operations.</p>
+        </a>
+        <a class="sp-donate-card" href="/contact/">
+          <div class="sp-donate-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h4>Sponsorship Package</h4>
+          <p>Request our full sponsorship package with tier details, benefits, and branding opportunities.</p>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- YEAR NAV -->
+<nav class="sp-year-nav" id="sponsors-by-year">
+  <div class="sp-year-nav-inner">
+    {{ range $data.years }}
+    <a class="sp-year-chip" href="#sp-{{ .year }}">{{ .year }} Sponsors</a>
+    {{ end }}
+  </div>
+</nav>
+
+<!-- ====== YEARLY SPONSORS ====== -->
+{{ range $data.years }}
+<section class="sp-year-section" id="sp-{{ .year }}">
+  <div class="sp-year-inner">
+    <div class="sp-year-header">
+      <h2 class="sp-year-title">{{ .year }} Sponsors</h2>
+      <p class="sp-year-intro">{{ .intro }}</p>
+    </div>
+
+    {{ range .tiers }}
+    <div class="sp-tier">
+      <div class="sp-tier-divider">
+        <span class="sp-tier-name">{{ .name }}</span>
+      </div>
+
+      {{ if eq .name "Bronze Sponsors" }}
+      {{/* Bronze sponsors: simple logo row, no descriptions */}}
+      <div class="sp-bronze-grid">
+        {{ range .sponsors }}
+        {{ $bname := .name }}
+        <div class="sp-bronze-item">
+          {{ with .logo }}<img src="{{ . }}" alt="{{ $bname }}" loading="lazy">{{ end }}
+          <span>{{ .name }}</span>
+        </div>
+        {{ end }}
+      </div>
+      {{ else }}
+      {{/* Title/Gold/Silver sponsors: full cards with description */}}
+      <div class="sp-sponsor-list">
+        {{ range .sponsors }}
+        {{ $sname := .name }}
+        <div class="sp-sponsor-card">
+          {{ with .logo }}
+          <div class="sp-sponsor-logo">
+            <img src="{{ . }}" alt="{{ $sname }}" loading="lazy">
+          </div>
+          {{ end }}
+          <div class="sp-sponsor-info">
+            <h3 class="sp-sponsor-name">{{ .name }}</h3>
+            {{ with .description }}<p class="sp-sponsor-desc">{{ . }}</p>{{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.sp-support-card, .sp-sponsor-card, .sp-bronze-item, .sp-tier-divider, .sp-year-header');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.9){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(reveal); },{passive:true});
+  setTimeout(reveal,100);
+})();
+</script>
+{{ end }}

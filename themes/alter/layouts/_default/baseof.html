@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body{{ if .IsHome }} data-page="home"{{ end }}>
+    {{ partial "navbar.html" . }}
+
+    <main class="container" id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    {{ $theme := resources.Get "js/theme.js" | minify | fingerprint }}
+    <script src="{{ $theme.RelPermalink }}"></script>
+
+    {{ $nav := resources.Get "js/nav.js" | minify | fingerprint }}
+    <script src="{{ $nav.RelPermalink }}" defer></script>
+
+    {{ $cursor := resources.Get "js/cursor.js" | minify | fingerprint }}
+    <script src="{{ $cursor.RelPermalink }}" defer></script>
+
+  </body>
+</html>

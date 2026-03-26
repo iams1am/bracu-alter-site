@@ -1,0 +1,254 @@
+{{ define "main" }}
+  {{ $h := site.Data.home }}
+
+<style>
+#main-content {
+  padding: 0 !important;
+  max-width: none !important;
+  overflow: visible !important;
+}
+</style>
+
+  <!-- HERO: fixed video + scroll-driven text reveal -->
+  <div class="hero-fixed-bg" id="hero-fixed-bg">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="/videos/hero-background1.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content" id="hero-content">
+      <h1 class="hero-banner-title">{{ $h.hero.title }}</h1>
+      <p class="hero-banner-subtitle">{{ $h.hero.subtitle }}</p>
+      <div class="hero-actions">
+        <a class="btn" href="{{ $h.hero.primary.href }}">{{ $h.hero.primary.label }}</a>
+        <a class="btn btn-outline-white" href="{{ $h.hero.secondary.href }}">{{ $h.hero.secondary.label }}</a>
+      </div>
+    </div>
+    <!-- Stats bar pinned to bottom of hero -->
+    <div class="hero-stats-bar" id="hero-stats-bar">
+      <div class="stats-scroll-container">
+        <div class="stats-scroll">
+          {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+          {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+          {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+          {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-spacer"></div>
+
+  <!-- EXPLORE SECTION -->
+  <section class="section-banner explore-banner scroll-reveal">
+    <div class="section-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2">
+      <h2 class="neon-stroke-title reveal-title" style="text-align: center; margin-bottom: 32px; font-size: 2.5rem">Explore</h2>
+      <div class="grid">
+        <a class="card banner-card reveal-child" href="/platforms/">
+          <h3>Platforms</h3>
+          <p class="muted">Rescue rovers and AGVs designed for disaster-response missions.</p>
+        </a>
+        <a class="card banner-card reveal-child" href="/missions/">
+          <h3>Missions</h3>
+          <p class="muted">Scenario-driven validation: earthquake response, inspection, and more.</p>
+        </a>
+        <a class="card banner-card reveal-child" href="/publications/">
+          <h3>Publications</h3>
+          <p class="muted">Reports and technical documents across autonomy, perception, and systems.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENT WHEEL (copy after Explore) -->
+  <section class="stats-bar scroll-reveal scroll-wheel-entrance">
+    <div class="stats-scroll-container">
+      <div class="stats-scroll">
+        {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+        {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+        {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+        {{ range $h.stats }}<div class="stat-item"><div class="stat-value">{{ .value }}</div><div class="stat-label">{{ .label }}</div></div>{{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- ALTER ROVERS - POKEMON CARD LAYOUT -->
+  <section class="featured-banner scroll-reveal">
+    <div class="featured-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2">
+      <div style="text-align: center; margin-bottom: 40px">
+        <h2 class="neon-stroke-title reveal-title" style="font-size: 2.5rem; margin-bottom: 8px">{{ $h.rovers.title }}</h2>
+        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.rovers.subtitle }}</p>
+      </div>
+
+      <div class="rover-wheel">
+        {{ range $h.rovers.versions }}
+        <div class="rover-card" style="--card-accent: {{ .color }}">
+          <div class="rover-card-inner">
+            <div class="poke-card-shine"></div>
+            <!-- Collapsed state -->
+            <div class="rover-card-img">
+              <img src="{{ .image }}" alt="{{ .fullName }}" loading="lazy">
+              <div class="rover-version-badge">{{ .name }}</div>
+            </div>
+            <div class="rover-card-compact">
+              <span class="rover-card-name">{{ .fullName }}</span>
+              <p class="rover-card-tagline">{{ .tagline }}</p>
+            </div>
+            <!-- Expanded details (visible on hover) -->
+            <div class="rover-card-expand">
+              <p class="rover-expand-desc">{{ .description }}</p>
+              <div class="rover-expand-badges">
+                {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
+              </div>
+              <div class="rover-expand-links">
+                {{ range .links }}<a href="{{ .href }}">{{ .label }}</a>{{ end }}
+              </div>
+              <a class="rover-explore-btn" href="{{ .href }}">Explore {{ .name }} →</a>
+            </div>
+            <div class="poke-card-edge"></div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM SHOWCASE - ROVER-STYLE CARDS -->
+  <section class="section-banner team-banner scroll-reveal">
+    <div class="section-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 32px">
+        <h2 class="neon-stroke-title reveal-title" style="margin-bottom: 12px; font-size: 2.5rem">{{ $h.team.title }}</h2>
+        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.team.subtitle }}</p>
+      </div>
+
+      <div class="rover-wheel">
+        {{ range $h.team.years }}
+        <div class="rover-card" style="--card-accent: {{ .color }}">
+          <div class="rover-card-inner">
+            <div class="poke-card-shine"></div>
+            <div class="rover-card-img">
+              <img src="{{ .image }}" alt="Team {{ .year }}" loading="lazy">
+              <div class="rover-version-badge">{{ .year }}</div>
+            </div>
+            <div class="rover-card-compact">
+              <span class="rover-card-name">Team {{ .year }}</span>
+              <p class="rover-card-tagline">{{ .tagline }}</p>
+            </div>
+            <div class="rover-card-expand">
+              <p class="rover-expand-desc">{{ .description }}</p>
+              <div class="rover-expand-badges">
+                {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
+              </div>
+              <a class="rover-explore-btn" href="{{ .href }}">Meet the Team →</a>
+            </div>
+            <div class="poke-card-edge"></div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS SCROLL -->
+  <section class="sponsors-scroll-bar scroll-reveal scroll-wheel-entrance">
+    <div class="sponsors-scroll-container">
+      <div class="sponsors-scroll">
+        <span class="sponsor-item">BRAC University</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">LaSSET</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">Tornetec</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">BRAC University</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">LaSSET</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">Tornetec</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">BRAC University</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">LaSSET</span>
+        <span class="sponsor-diamond">&#9670;</span>
+        <span class="sponsor-item">Tornetec</span>
+        <span class="sponsor-diamond">&#9670;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section-banner cta-banner scroll-reveal">
+    <div class="section-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2">
+      <h2 class="cta-banner-title reveal-title">{{ $h.cta.title }}</h2>
+      <div class="cta reveal-child" style="border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); margin-top: 24px">
+        <div>
+          <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0">{{ $h.cta.text }}</p>
+        </div>
+        <div>
+          <a class="btn" style="background: #FF4500; color: #fff; border: 2px solid #FF4500" href="{{ $h.cta.button.href }}">{{ $h.cta.button.label }}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS (Bumblebee-style) -->
+  <section class="section-banner achieve-home-banner scroll-reveal">
+    <div class="section-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2">
+      <div style="text-align: center; margin-bottom: 40px">
+        <h2 class="neon-stroke-title reveal-title" style="font-size: 2.5rem; margin-bottom: 8px">{{ $h.achievements.title }}</h2>
+        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.achievements.subtitle }}</p>
+      </div>
+
+      <div class="achieve-home-grid">
+        {{ range $h.achievements.categories }}
+        <div class="achieve-home-category reveal-child">
+          <h3 class="achieve-home-cat-title">{{ .name }}</h3>
+          <div class="achieve-home-items">
+            {{ range .items }}
+            <div class="achieve-home-item">
+              <span class="achieve-home-year">{{ .year }}</span>
+              <div class="achieve-home-item-body">
+                <strong>{{ .title }}</strong>
+                <p>{{ .detail }}</p>
+              </div>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+
+      <div style="text-align: center; margin-top: 32px" class="reveal-child">
+        <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="/achievements/">View All Achievements</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST NEWS -->
+  <section class="section-banner news-banner scroll-reveal">
+    <div class="section-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2">
+      <div class="row-head reveal-title">
+        <h2 class="neon-stroke-title" style="font-size: 2.5rem">Latest News</h2>
+        <a class="smalllink" style="color: rgba(255,255,255,0.9); font-weight: 600" href="/posts/">View all →</a>
+      </div>
+
+      <div class="postgrid">
+        {{ range first 2 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+          <a class="postcard banner-card reveal-child" href="{{ .RelPermalink }}">
+            {{ with .Params.featured }}
+              <div class="postimg"><img src="{{ . }}" alt="{{ $.Title }}" loading="lazy"></div>
+            {{ end }}
+            <div class="postbody">
+              <div class="postmeta muted">{{ .Date.Format "Jan 2, 2006" }}</div>
+              <div class="posttitle">{{ .Title }}</div>
+              {{ with .Params.summary }}<div class="muted postsummary">{{ . }}</div>{{ end }}
+            </div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

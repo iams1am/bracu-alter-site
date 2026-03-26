@@ -1,0 +1,72 @@
+{{ define "main" }}
+{{ $pub := site.Data.publications }}
+<style>#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }</style>
+
+<!-- HERO -->
+<section class="pub-hero">
+  <div class="pub-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="pub-hero-overlay"></div>
+  <div class="pub-hero-content">
+    <h1 class="pub-hero-title">Publications</h1>
+    <p class="pub-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- YEAR NAV -->
+<nav class="pub-year-nav">
+  <div class="pub-year-nav-inner">
+    {{ range $pub.years }}
+    <a class="pub-year-chip" href="#y{{ .year }}">{{ .year }}</a>
+    {{ end }}
+  </div>
+</nav>
+
+<!-- PAPERS -->
+<section class="pub-papers-section">
+  <div class="pub-papers-inner">
+    {{ range $pub.years }}
+    <div class="pub-year-group" id="y{{ .year }}">
+      <div class="pub-year-label">{{ .year }}</div>
+
+      {{ range .items }}
+      <article class="pub-paper-card">
+        <h2 class="pub-paper-title">{{ .title }}</h2>
+        <p class="pub-paper-desc">{{ .description }}</p>
+        <div class="pub-paper-meta">
+          <span class="pub-paper-venue">{{ .venue }}</span>
+          <span class="pub-paper-authors">{{ .authors }}</span>
+        </div>
+        {{ with .tags }}
+        <div class="pub-paper-tags">
+          {{ range . }}<span class="pub-tag">{{ . }}</span>{{ end }}
+        </div>
+        {{ end }}
+        {{ with .pdf }}
+        <a class="pub-read-more" href="{{ . }}" target="_blank" rel="noopener">Read more</a>
+        {{ end }}
+      </article>
+      {{ end }}
+
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.pub-paper-card, .pub-year-label');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.88){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(reveal); },{passive:true});
+  setTimeout(reveal,100);
+})();
+</script>
+{{ end }}

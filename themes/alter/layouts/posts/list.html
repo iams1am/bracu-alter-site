@@ -1,0 +1,55 @@
+{{ define "main" }}
+  <!-- Header -->
+  <section style="padding-top: 24px" id="top">
+    <h1 style="font-size: 2.5rem; margin-bottom: 12px">{{ .Title }}</h1>
+    {{ with .Params.description }}
+      <p class="lead">{{ . }}</p>
+    {{ end }}
+  </section>
+
+  <!-- Content -->
+  {{ if .Content }}
+    <section class="section">
+      <div class="content" style="max-width: 80ch">
+        {{ .Content }}
+      </div>
+    </section>
+  {{ end }}
+
+  <!-- Posts Grid -->
+  <section class="section">
+    <div class="postgrid">
+      {{ range .Pages.ByDate.Reverse }}
+        <a class="postcard" href="{{ .RelPermalink }}" style="transition: all .2s ease; text-decoration: none">
+          {{ with .Params.featured }}
+            <div class="postimg">
+              <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+            </div>
+          {{ else }}
+            <div class="postimg" style="background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.2) 100%); display: flex; align-items: center; justify-content: center;">
+            </div>
+          {{ end }}
+
+          <div class="postbody">
+            <div class="postmeta muted">
+              {{ .Date.Format "Jan 2, 2006" }}
+            </div>
+            <div class="posttitle">{{ .Title }}</div>
+
+            {{ with .Params.summary }}
+              <div class="muted postsummary">{{ . }}</div>
+            {{ end }}
+
+            {{ with .Params.tags }}
+              <div class="tagrow" style="margin-top:10px">
+                {{ range . }}
+                  <span class="tag">{{ . }}</span>
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

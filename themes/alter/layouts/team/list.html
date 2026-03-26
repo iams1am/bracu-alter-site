@@ -1,0 +1,110 @@
+{{ define "main" }}
+{{ $td := site.Data.team }}
+<style>#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }</style>
+
+{{ $activeYear := "2026" }}
+{{ $yearData := index $td.years $activeYear }}
+
+<!-- HERO -->
+<section class="tm-hero">
+  <div class="tm-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="tm-hero-overlay"></div>
+  <div class="tm-hero-content">
+    <h1 class="tm-hero-title">Our Team</h1>
+  </div>
+</section>
+
+<!-- YEAR TABS -->
+<nav class="tm-year-tabs">
+  <div class="tm-year-tabs-inner">
+    <a class="tm-year-tab active" href="/team/2026/">2026</a>
+    <a class="tm-year-tab" href="/team/2025/">2025</a>
+    <a class="tm-year-tab" href="/team/2024/">2024</a>
+    <a class="tm-year-tab" href="/team/2023/">2023</a>
+  </div>
+</nav>
+
+{{ with $yearData }}
+
+<!-- TEAM PHOTO -->
+<section class="tm-photo-section">
+  <div class="tm-photo-inner">
+    <div class="tm-team-photo">
+      <img src="{{ .teamPhoto }}" alt="BRACU ALTER Team {{ $activeYear }}" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- SUB-TEAMS -->
+{{ range .subteams }}
+<section class="tm-subteam-section">
+  <div class="tm-subteam-inner">
+
+    <h2 class="tm-subteam-title">{{ .name }}</h2>
+
+    <div class="tm-stats-bar">
+      {{ range .stats }}
+      <div class="tm-stat">
+        <span class="tm-stat-value">{{ .value }}</span>
+        <span class="tm-stat-label">{{ .label }}</span>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="tm-member-grid">
+      {{ range .members }}
+      <div class="tm-member-card">
+        <div class="tm-member-avatar">
+          <span>{{ .initials }}</span>
+        </div>
+        <h5 class="tm-member-name">{{ .name }}</h5>
+        <p class="tm-member-role">{{ .role }}</p>
+        <p class="tm-member-dept">{{ .dept }}</p>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
+
+<!-- JOIN CTA -->
+<section class="tm-cta-section">
+  <div class="tm-cta-inner">
+    <h2>Join BRACU ALTER</h2>
+    <p>We're always looking for passionate students interested in robotics, AI, and humanitarian engineering.</p>
+    <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="/contact/">Get in Touch</a>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.tm-team-photo, .tm-subteam-section, .tm-member-card');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.92){
+        el.style.transition='opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(reveal); },{passive:true});
+  setTimeout(reveal,100);
+  var grids = document.querySelectorAll('.tm-member-grid');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        var cards = e.target.querySelectorAll('.tm-member-card');
+        cards.forEach(function(c, i){ c.style.transitionDelay = (i * 0.06) + 's'; });
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  grids.forEach(function(g){ io.observe(g); });
+})();
+</script>
+{{ end }}

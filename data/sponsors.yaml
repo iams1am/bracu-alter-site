@@ -1,0 +1,73 @@
+years:
+  - year: 2026
+    intro: "Our 2026 sponsors are fueling the next chapter of autonomous rescue robotics at BRACU ALTER. Their support enables us to push the boundaries of what our rovers can achieve on the global stage."
+    tiers:
+      - name: "Title Sponsors"
+        sponsors:
+          - name: "BRAC University"
+            logo: "/images/sponsors/bracu.png"
+            description: "BRAC University provides institutional support, lab facilities, and funding that forms the backbone of BRACU ALTER's operations. Our home at the BSRM School of Engineering gives us the infrastructure to innovate."
+          - name: "LaSSET"
+            logo: "/images/sponsors/lasset.png"
+            description: "The Laboratory of Space Systems Engineering & Technology (LaSSET) is our research home, providing dedicated lab space, equipment, mentorship, and the academic framework for our rescue robotics research."
+      - name: "Gold Sponsors"
+        sponsors:
+          - name: "Tornetec"
+            logo: "/images/sponsors/sponsor1.png"
+            description: "Tornetec has supported our team with financial contributions and technical mentorship, helping us accelerate development of our embedded systems and power electronics."
+      - name: "Silver Sponsors"
+        sponsors:
+          - name: "BSRM School of Engineering"
+            logo: "/images/sponsors/sponsor2.png"
+            description: "Cash sponsorship and workshop access for prototyping and fabrication."
+      - name: "Bronze Sponsors"
+        sponsors:
+          - name: "Dhaka Robotics Club"
+          - name: "TechBD"
+          - name: "RoboticsBD"
+
+  - year: 2025
+    intro: "The sponsors who made our historic RoboCup 2025 campaign in Salvador, Brazil possible. Their belief in our mission carried us to the world stage as Bangladesh's sole representative."
+    tiers:
+      - name: "Title Sponsors"
+        sponsors:
+          - name: "BRAC University"
+            logo: "/images/sponsors/bracu.png"
+            description: "BRAC University funded our international travel, competition registration, and rover shipping logistics for RoboCup 2025 in Salvador, Brazil."
+          - name: "LaSSET"
+            logo: "/images/sponsors/lasset.png"
+            description: "LaSSET provided dedicated lab space, equipment, and research mentorship throughout the intensive RoboCup 2025 preparation period."
+      - name: "Gold Sponsors"
+        sponsors:
+          - name: "Tornetec"
+            logo: "/images/sponsors/sponsor1.png"
+            description: "Financial support for competition logistics and component procurement."
+      - name: "Silver Sponsors"
+        sponsors:
+          - name: "BSRM School of Engineering"
+            logo: "/images/sponsors/sponsor2.png"
+            description: "Workshop access and prototyping support."
+      - name: "Bronze Sponsors"
+        sponsors:
+          - name: "Dhaka Robotics Club"
+          - name: "TechBD"
+
+  - year: 2024
+    intro: "Our first year of international competition sponsorship. These partners enabled BRACU ALTER to reach the finals of RoboCup Rescue 2024 in Eindhoven and win IDEA Innovation 5.0."
+    tiers:
+      - name: "Title Sponsors"
+        sponsors:
+          - name: "BRAC University"
+            logo: "/images/sponsors/bracu.png"
+            description: "BRAC University provided the initial funding and institutional backing that made our RoboCup 2024 debut possible."
+          - name: "LaSSET"
+            logo: "/images/sponsors/lasset.png"
+            description: "Lab space, research guidance, and the academic foundation for ALTER's first competition rover."
+      - name: "Gold Sponsors"
+        sponsors:
+          - name: "Tornetec"
+            logo: "/images/sponsors/sponsor1.png"
+            description: "Early-stage financial support for rover component procurement."
+      - name: "Bronze Sponsors"
+        sponsors:
+          - name: "Dhaka Robotics Club"

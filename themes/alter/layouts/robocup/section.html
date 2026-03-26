@@ -1,0 +1,220 @@
+{{ define "main" }}
+{{ $p := .Params }}
+<style>#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }</style>
+
+{{ if $p.year }}
+{{/* ===== YEAR DETAIL PAGE (2024/2025/2026) ===== */}}
+
+<!-- HERO -->
+<section class="rc-detail-hero">
+  <div class="rc-detail-hero-bg" style="background-image: url('{{ $p.image }}')"></div>
+  <div class="rc-detail-hero-overlay"></div>
+  <div class="rc-detail-hero-content">
+    <span class="rc-detail-result-badge">{{ $p.result }}</span>
+    <h1 class="rc-detail-title">{{ .Title }}</h1>
+    <p class="rc-detail-location">{{ $p.location }}</p>
+    <div class="rc-detail-highlights">
+      {{ range $p.highlights }}
+      <span class="rc-detail-highlight">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- COMPETITION VEHICLE -->
+<section class="rc-vehicle-section">
+  <div class="rc-vehicle-inner">
+    <h2 class="rc-section-heading">Competition Vehicle</h2>
+    <div class="rc-vehicle-card">
+      <div class="rc-vehicle-img">
+        <img src="{{ $p.vehicle.image }}" alt="{{ $p.vehicle.name }}" loading="lazy">
+      </div>
+      <div class="rc-vehicle-info">
+        <h3>{{ $p.vehicle.name }}</h3>
+        <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="{{ $p.vehicle.link }}">View {{ $p.vehicle.name }} Specs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM OVERVIEW -->
+<section class="rc-systems-section">
+  <div class="rc-systems-inner">
+    <h2 class="rc-section-heading">System Overview</h2>
+
+    <div class="rc-system-block">
+      <div class="rc-system-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      </div>
+      <div class="rc-system-content">
+        <h3>{{ $p.mechanical.title }}</h3>
+        <p>{{ $p.mechanical.text }}</p>
+      </div>
+    </div>
+
+    <div class="rc-system-block">
+      <div class="rc-system-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <div class="rc-system-content">
+        <h3>{{ $p.electrical.title }}</h3>
+        <p>{{ $p.electrical.text }}</p>
+      </div>
+    </div>
+
+    <div class="rc-system-block">
+      <div class="rc-system-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="rc-system-content">
+        <h3>{{ $p.software.title }}</h3>
+        <p>{{ $p.software.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section class="rc-focus-section">
+  <div class="rc-focus-inner">
+    <h2 class="rc-section-heading">Key Focus Areas</h2>
+    <div class="rc-focus-grid">
+      {{ range $p.focus }}
+      <div class="rc-focus-card">
+        <h4>{{ .title }}</h4>
+        <p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- TEAM BEHIND (Bumblebee-style) -->
+<section class="rc-team-section">
+  <div class="rc-team-inner">
+    <h2 class="rc-section-heading">The Team Behind</h2>
+    <div class="rc-team-photo">
+      <img src="{{ $p.teamImage }}" alt="BRACU ALTER Team {{ $p.year }}" loading="lazy">
+    </div>
+    <div class="rc-team-cta">
+      <a class="btn" style="background:#FF4500;color:#fff;border:2px solid #FF4500" href="/team/{{ $p.year }}/">Meet the {{ $p.year }} Team</a>
+    </div>
+  </div>
+</section>
+
+<!-- BACK NAV -->
+<div class="rc-back-nav">
+  <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="/robocup/">Back to RoboCup</a>
+</div>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.rc-system-block, .rc-focus-card, .rc-vehicle-card, .rc-team-photo');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.88){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(reveal); },{passive:true});
+  setTimeout(reveal,100);
+})();
+</script>
+
+{{ else }}
+{{/* ===== ROBOCUP LISTING PAGE (/robocup/) ===== */}}
+
+<!-- HERO -->
+<section class="rc-hero">
+  <div class="rc-hero-bg" style="background-image: url('/images/posts/pic1.jpg')"></div>
+  <div class="rc-hero-overlay"></div>
+  <div class="rc-hero-content">
+    <h1 class="rc-hero-title">RoboCup Rescue</h1>
+    <p class="rc-hero-subtitle">{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- ABOUT ROBOCUP -->
+<section class="rc-about-section">
+  <div class="rc-about-inner">
+    <div class="rc-about-block">
+      <h2 class="rc-section-heading">What is RoboCup Rescue?</h2>
+      <p class="rc-about-text">The RoboCup Rescue Robot League is one of the most prestigious robotics competitions in the world. Often referred to as the "World Cup of Robotics," it brings together university teams from across the globe to push the boundaries of autonomous robot capabilities in disaster response scenarios.</p>
+      <p class="rc-about-text">Robots must navigate complex, unstructured environments that simulate the aftermath of earthquakes, building collapses, and industrial accidents. Teams are evaluated on their ability to perform autonomous mapping, victim identification, hazardous material detection, and real-time data relay to human operators &mdash; all under strict time constraints.</p>
+    </div>
+
+    <div class="rc-about-stats">
+      <div class="rc-about-stat">
+        <span class="rc-about-stat-value">20+</span>
+        <span class="rc-about-stat-label">Years Running</span>
+      </div>
+      <div class="rc-about-stat">
+        <span class="rc-about-stat-value">30+</span>
+        <span class="rc-about-stat-label">Countries</span>
+      </div>
+      <div class="rc-about-stat">
+        <span class="rc-about-stat-value">100+</span>
+        <span class="rc-about-stat-label">Teams Worldwide</span>
+      </div>
+    </div>
+
+    <div class="rc-about-block">
+      <h2 class="rc-section-heading">Who Competes?</h2>
+      <p class="rc-about-text">Teams from top research universities and institutions worldwide participate, including groups from Japan, Germany, USA, China, Iran, Thailand, and many others. Each team designs, builds, and programs fully custom robots specifically for disaster response &mdash; testing autonomy, mechanical resilience, perception, and operator tools under real competition pressure.</p>
+    </div>
+
+    <div class="rc-about-block">
+      <h2 class="rc-section-heading">BRACU ALTER at RoboCup</h2>
+      <p class="rc-about-text">BRACU ALTER first appeared at RoboCup Rescue in 2024, reaching the finals in Eindhoven, Netherlands &mdash; a remarkable debut for a team from Bangladesh. In 2025, we returned as the sole team representing Bangladesh at the World Championship in Salvador, Brazil, further cementing our position on the global robotics stage.</p>
+      <p class="rc-about-text">Each year we iterate on our rover design, improve our autonomy stack, and train our operators to perform under the intense pressure of competition day. Explore our campaigns below.</p>
+    </div>
+  </div>
+</section>
+
+<!-- YEAR CARDS -->
+<section class="rc-years-section">
+  <div class="rc-years-inner">
+    <h2 class="rc-section-heading" style="margin-bottom: 40px">Our Campaigns</h2>
+    <div class="rc-years-grid">
+      {{ range .Pages.ByTitle.Reverse }}
+      <a class="rc-year-card" href="{{ .RelPermalink }}" style="--accent: {{ .Params.color }}">
+        <div class="rc-year-card-img">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+          <div class="rc-year-card-overlay"></div>
+        </div>
+        <div class="rc-year-card-body">
+          <span class="rc-year-badge">{{ .Params.year }}</span>
+          <h3 class="rc-year-card-title">{{ .Title }}</h3>
+          <p class="rc-year-card-desc">{{ .Description }}</p>
+          <span class="rc-year-card-result">{{ .Params.result }}</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.rc-about-block, .rc-about-stats, .rc-year-card');
+  els.forEach(function(el){ el.style.opacity='0'; el.style.transform='translateY(40px)'; });
+  function reveal(){
+    els.forEach(function(el){
+      if(el.style.opacity==='1') return;
+      if(el.getBoundingClientRect().top < window.innerHeight*0.88){
+        el.style.transition='opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
+        el.style.opacity='1'; el.style.transform='translateY(0)';
+      }
+    });
+  }
+  window.addEventListener('scroll',function(){ requestAnimationFrame(reveal); },{passive:true});
+  setTimeout(reveal,100);
+})();
+</script>
+
+{{ end }}
+{{ end }}

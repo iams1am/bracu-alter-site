@@ -1,0 +1,33 @@
+years:
+  - year: 2026
+    items:
+      - title: "BRACU ALTER RoboCup Rescue Paper 2026"
+        authors: "BRACU ALTER"
+        venue: "RoboCup Rescue Robot League — Technical Paper"
+        description: "For RoboCup 2026, Team BRACU ALTER is deploying ALTER Rover V3, a major evolution featuring a 7-DOF robotic arm, articulated flipper track system, and AI-powered autonomy stack. Key innovations include foundation model-based scene understanding, multi-robot coordination framework, and a custom SLAM pipeline with visual-inertial odometry. This paper details the mechanical, electrical, and software system upgrades alongside our competition strategy for the upcoming championship."
+        pdf: "/files/papers/alter-2026-rover.pdf"
+        tags: ["RoboCup 2026", "Rescue Robotics", "Foundation Models", "Multi-Robot"]
+
+  - year: 2025
+    items:
+      - title: "BRACU ALTER RoboCup Rescue Paper 2025"
+        authors: "BRACU ALTER"
+        venue: "RoboCup Rescue Robot League — Salvador, Brazil"
+        description: "For RoboCup 2025, Team BRACU ALTER deployed ALTER Rover V2, representing Bangladesh as the sole team at the World Championship in Salvador, Brazil. The rover featured a custom track system with articulated flippers, a 6-DOF Dynamixel robotic arm, and a migrated ROS 2 Humble software stack with Nav2 navigation and deep learning perception. This paper discusses the design improvements over V1, end-to-end rescue mission validation, and lessons learned under competition constraints."
+        pdf: "/files/papers/alter-2025-navigation.pdf"
+        tags: ["RoboCup 2025", "World Championship", "ROS 2", "Autonomy"]
+      - title: "Autonomous Navigation Pipeline for Hazardous Terrain"
+        authors: "BRACU ALTER"
+        venue: "Technical Report"
+        description: "This report details our autonomous navigation architecture built on ROS 2 Humble, featuring SLAM Toolbox for real-time mapping, Nav2 for path planning, and a custom behavior tree mission planner. We evaluate the pipeline's performance across rubble fields, steep inclines, and confined passages, demonstrating reliable waypoint navigation in GPS-denied disaster environments."
+        pdf: "/files/papers/alter-2025-navigation.pdf"
+        tags: ["Navigation", "SLAM", "ROS 2", "Behavior Trees"]
+
+  - year: 2024
+    items:
+      - title: "BRACU ALTER RoboCup Rescue Paper 2024"
+        authors: "BRACU ALTER"
+        venue: "RoboCup Rescue Robot League — Eindhoven, Netherlands"
+        description: "For RoboCup 2024, Team BRACU ALTER made its international debut with ALTER Rover V1, reaching the final round in Eindhoven, Netherlands. The rover featured a modular chassis with mecanum wheels, a 2-DOF robotic arm, and a ROS Noetic software stack with RPLiDAR-based SLAM and Intel RealSense depth perception. This paper presents the complete system architecture, competition performance analysis, and the evaluation of our rescue mission capabilities against global benchmarks."
+        pdf: "/files/papers/alter-2024-robocup.pdf"
+        tags: ["RoboCup 2024", "Finalist", "Perception", "System Design"]

@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=53745&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gamified | BRACU ALTER</title>
+<link rel="icon" type="image/png" href="/images/posts/pic3.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/main.min.32d0f8314c0eeae316cf58d546bc05cebf65997dd96ed7f18a8a4634228f3592.css">
+
+
+<script defer src="/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
+
+  </head>
+  <body>
+    <header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <img src="/images/posts/pic3.png" alt="BRACU ALTER" class="brand-logo">
+      <span>BRACU ALTER</span>
+    </a>
+
+    <ul class="nav-links">
+      <li class="nav-item dropdown" id="nav-about">
+        <a class="nav-link" href="/about/">About</a>
+
+        <div class="dropdown-menu" role="menu">
+          <a class="dropdown-item" href="/about/">About Us</a>
+          <a class="dropdown-item" href="/achievements/">Achievements</a>
+          <a class="dropdown-item" href="/try-rover/">Gamified</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" id="nav-agv">
+        <a class="nav-link" href="/agv/">AGV</a>
+
+        <div class="dropdown-menu" role="menu">
+          <a class="dropdown-item" href="/agv/v1/">ALTER Rover V1</a>
+          <a class="dropdown-item" href="/agv/v2/">ALTER Rover V2</a>
+          <a class="dropdown-item" href="/agv/v3/">ALTER Rover V3</a>
+          <a class="dropdown-item" href="/agv/v4/">ALTER Rover V4</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" id="nav-missions">
+        <a class="nav-link" href="/missions/">Missions</a>
+
+        <div class="dropdown-menu" role="menu">
+          <a class="dropdown-item" href="/missions/earthquake-response/">Earthquake Response</a>
+          <a class="dropdown-item" href="/missions/industrial-inspection/">Industrial Inspection</a>
+          <a class="dropdown-item" href="/missions/training-demo/">Training & Demos</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" id="nav-robocup">
+        <a class="nav-link" href="/robocup/">RoboCup</a>
+
+        <div class="dropdown-menu" role="menu">
+          <a class="dropdown-item" href="/robocup/2026/">RoboCup 2026</a>
+          <a class="dropdown-item" href="/robocup/2025/">RoboCup 2025</a>
+          <a class="dropdown-item" href="/robocup/2024/">RoboCup 2024</a>
+        </div>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="/publications/">Publications</a></li>
+
+      <li class="nav-item dropdown" id="nav-team">
+        <a class="nav-link" href="/team/">Team</a>
+
+        <div class="dropdown-menu" role="menu">
+          <a class="dropdown-item" href="/team/2026/">2026</a>
+          <a class="dropdown-item" href="/team/2025/">2025</a>
+          <a class="dropdown-item" href="/team/2024/">2024</a>
+          <a class="dropdown-item" href="/team/2023/">2023</a>
+        </div>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="/sponsors/">Sponsors</a></li>
+      <li class="nav-item"><a class="nav-link" href="/contact/">Contact Us</a></li>
+    </ul>
+
+    <div class="theme-toggle">
+      <button class="iconbtn theme-toggle-btn" id="theme-toggle" title="Toggle Theme">
+        <span class="theme-icon-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+        <span class="theme-icon-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+    <main class="container" id="main-content">
+      
+<style>
+#main-content { padding: 0 !important; max-width: none !important; overflow: visible !important; }
+</style>
+
+<section class="game-hero">
+  <div class="game-hero-inner">
+    <h1 class="game-hero-title">ALTER Rover Games</h1>
+    <p class="game-hero-subtitle">Try the ALTER Rover! Navigate through obstacles, dodge debris, and survive the mission.</p>
+  </div>
+</section>
+
+<section class="game-section">
+  <div class="game-wrapper">
+    <canvas id="rover-game" width="1600" height="480"></canvas>
+    <div class="game-overlay" id="game-overlay">
+      <div class="game-overlay-inner">
+        <h2 id="game-overlay-title">Press SPACE to Start</h2>
+        <p id="game-overlay-sub">or tap anywhere on the canvas</p>
+      </div>
+    </div>
+    <div class="game-hud">
+      <span class="game-hud-item">Score: <strong id="game-score">0</strong></span>
+      <span class="game-hud-item">Best: <strong id="game-best">0</strong></span>
+    </div>
+  </div>
+</section>
+
+<section class="game-instructions">
+  <div class="game-instructions-inner">
+    <div class="game-instr-card">
+      <div class="game-instr-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <h4>Jump</h4>
+      <p>Press SPACE, UP arrow, or tap to jump over obstacles</p>
+    </div>
+    <div class="game-instr-card">
+      <div class="game-instr-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <h4>Speed Up</h4>
+      <p>The rover accelerates over time. Stay sharp!</p>
+    </div>
+    <div class="game-instr-card">
+      <div class="game-instr-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+      </div>
+      <h4>High Score</h4>
+      <p>Beat your best score! It saves automatically.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var canvas = document.getElementById('rover-game');
+  var ctx = canvas.getContext('2d');
+  var overlay = document.getElementById('game-overlay');
+  var overlayTitle = document.getElementById('game-overlay-title');
+  var overlaySub = document.getElementById('game-overlay-sub');
+  var scoreEl = document.getElementById('game-score');
+  var bestEl = document.getElementById('game-best');
+
+  var W = canvas.width, H = canvas.height;
+  var groundY = H - 60;
+  var gravity = 0.7;
+  var jumpForce = -14;
+  var gameSpeed = 4;
+  var speedInc = 0.001;
+  var running = false;
+  var gameOver = false;
+  var score = 0;
+  var best = parseInt(localStorage.getItem('rover-game-best') || '0', 10);
+  bestEl.textContent = best;
+  var roverArmed = false; 
+
+   
+  var rover = {
+    x: 80, y: groundY - 40, w: 50, h: 40,
+    vy: 0, onGround: true
+  };
+
+   
+  var obstacles = [];
+  var obstacleTimer = 0;
+  var minInterval = 60, maxInterval = 120;
+
+   
+  var groundLines = [];
+  for(var i = 0; i < 30; i++) groundLines.push({ x: i * 45, w: Math.random() * 20 + 5 });
+
+   
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  function getColors(){
+    isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    return {
+      bg: isDark ? '#1a1a1a' : '#f5f0eb',
+      ground: isDark ? '#333' : '#d4c8b8',
+      groundLine: isDark ? '#444' : '#c4b8a8',
+      rover: '#FF4500',
+      roverDark: '#CC3700',
+      wheel: isDark ? '#555' : '#666',
+      obstacle: isDark ? '#666' : '#888',
+      text: isDark ? '#fff' : '#222'
+    };
+  }
+
+  function drawRover(c){
+    ctx.fillStyle = c.rover;
+     
+    var bx = rover.x, by = rover.y;
+    ctx.beginPath();
+    ctx.roundRect(bx, by + 8, rover.w, rover.h - 18, 4);
+    ctx.fill();
+     
+    ctx.fillStyle = c.roverDark;
+    ctx.beginPath();
+    ctx.roundRect(bx + 8, by, 30, 14, 3);
+    ctx.fill();
+     
+    ctx.strokeStyle = c.rover;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(bx + 35, by);
+    ctx.lineTo(bx + 40, by - 10);
+    ctx.stroke();
+    ctx.fillStyle = '#FF6A00';
+    ctx.beginPath();
+    ctx.arc(bx + 40, by - 12, 3, 0, Math.PI * 2);
+    ctx.fill();
+     
+    ctx.fillStyle = c.wheel;
+    var wheelR = 6;
+    ctx.beginPath(); ctx.arc(bx + 10, by + rover.h - 10, wheelR, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.arc(bx + rover.w - 10, by + rover.h - 10, wheelR, 0, Math.PI * 2); ctx.fill();
+     
+    ctx.fillStyle = '#fff';
+    ctx.beginPath(); ctx.arc(bx + rover.w - 6, by + 14, 3, 0, Math.PI * 2); ctx.fill();
+    ctx.fillStyle = '#000';
+    ctx.beginPath(); ctx.arc(bx + rover.w - 5, by + 14, 1.5, 0, Math.PI * 2); ctx.fill();
+  }
+
+  function drawObstacles(c){
+    obstacles.forEach(function(o){
+      ctx.fillStyle = c.obstacle;
+      if(o.type === 'rock'){
+        ctx.beginPath();
+        ctx.moveTo(o.x, groundY);
+        ctx.lineTo(o.x + o.w/2, groundY - o.h);
+        ctx.lineTo(o.x + o.w, groundY);
+        ctx.closePath();
+        ctx.fill();
+      } else {
+        ctx.beginPath();
+        ctx.roundRect(o.x, groundY - o.h, o.w, o.h, 3);
+        ctx.fill();
+         
+        ctx.strokeStyle = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(o.x, groundY - o.h/2);
+        ctx.lineTo(o.x + o.w, groundY - o.h/2);
+        ctx.stroke();
+      }
+    });
+  }
+
+  function spawnObstacle(){
+    var type = Math.random() > 0.5 ? 'rock' : 'crate';
+    var h = type === 'rock' ? 20 + Math.random() * 25 : 25 + Math.random() * 20;
+    var w = type === 'rock' ? 20 + Math.random() * 15 : 18 + Math.random() * 12;
+    obstacles.push({ x: W + 20, w: w, h: h, type: type });
+  }
+
+  function reset(){
+    rover.y = groundY - rover.h;
+    rover.vy = 0;
+    rover.onGround = true;
+    obstacles = [];
+    obstacleTimer = 0;
+    score = 0;
+    gameSpeed = 4;
+    scoreEl.textContent = '0';
+  }
+
+  function checkCollision(o){
+    var rx = rover.x + 5, ry = rover.y + 5, rw = rover.w - 10, rh = rover.h - 10;
+    var ox, oy, ow, oh;
+    if(o.type === 'rock'){
+      ox = o.x + 4; oy = groundY - o.h + 4; ow = o.w - 8; oh = o.h - 4;
+    } else {
+      ox = o.x; oy = groundY - o.h; ow = o.w; oh = o.h;
+    }
+    return rx < ox + ow && rx + rw > ox && ry < oy + oh && ry + rh > oy;
+  }
+
+  function update(){
+     
+    rover.vy += gravity;
+    rover.y += rover.vy;
+    if(rover.y >= groundY - rover.h){
+      rover.y = groundY - rover.h;
+      rover.vy = 0;
+      rover.onGround = true;
+    }
+
+     
+    obstacleTimer++;
+    var interval = minInterval + Math.random() * (maxInterval - minInterval);
+    if(obstacleTimer > interval){
+      spawnObstacle();
+      obstacleTimer = 0;
+    }
+    for(var i = obstacles.length - 1; i >= 0; i--){
+      obstacles[i].x -= gameSpeed;
+      if(obstacles[i].x + obstacles[i].w < 0){
+        obstacles.splice(i, 1);
+        continue;
+      }
+      if(checkCollision(obstacles[i])){
+        gameOver = true;
+        running = false;
+        if(score > best){
+          best = score;
+          localStorage.setItem('rover-game-best', best);
+          bestEl.textContent = best;
+        }
+        overlayTitle.textContent = 'Game Over! Score: ' + score;
+        overlaySub.textContent = 'Press SPACE to try again';
+        overlay.style.display = 'flex';
+        return;
+      }
+    }
+
+     
+    groundLines.forEach(function(g){
+      g.x -= gameSpeed;
+      if(g.x + g.w < 0) g.x = W + Math.random() * 50;
+    });
+
+     
+    gameSpeed += speedInc;
+    score++;
+    scoreEl.textContent = score;
+  }
+
+  function draw(){
+    var c = getColors();
+    ctx.fillStyle = c.bg;
+    ctx.fillRect(0, 0, W, H);
+
+     
+    ctx.fillStyle = c.ground;
+    ctx.fillRect(0, groundY, W, H - groundY);
+    ctx.fillStyle = c.groundLine;
+    groundLines.forEach(function(g){
+      ctx.fillRect(g.x, groundY + 2, g.w, 2);
+    });
+
+    drawObstacles(c);
+    drawRover(c);
+  }
+
+  function loop(){
+    if(!running) return;
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  function jump(){
+    if(rover.onGround){
+      rover.vy = jumpForce;
+      rover.onGround = false;
+    }
+  }
+
+  function startOrRestart(){
+    if(running) return;
+    if(gameOver){ reset(); gameOver = false; }
+    overlay.style.display = 'none';
+    running = true;
+    loop();
+  }
+
+  function handleInput(e){
+    if(e.code === 'Space' || e.code === 'ArrowUp'){
+      e.preventDefault();
+      
+      
+      if(window.tryRoverActiveGame !== 'rover'){
+        if(overlay.style.display !== 'none'){
+          window.tryRoverActiveGame = 'rover';
+          roverArmed = true;
+        } else {
+          return;
+        }
+      }
+      if(!running){ startOrRestart(); } else { jump(); }
+    }
+  }
+
+  document.addEventListener('keydown', handleInput);
+  canvas.addEventListener('click', function(){
+    window.tryRoverActiveGame = 'rover';
+    roverArmed = true;
+    if(!running){ startOrRestart(); } else { jump(); }
+  });
+  canvas.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    window.tryRoverActiveGame = 'rover';
+    roverArmed = true;
+    if(!running){ startOrRestart(); } else { jump(); }
+  }, {passive:false});
+
+  
+  overlay.addEventListener('click', function(){
+    window.tryRoverActiveGame = 'rover';
+    roverArmed = true;
+    if(!running){ startOrRestart(); } else { jump(); }
+  });
+  overlay.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    window.tryRoverActiveGame = 'rover';
+    roverArmed = true;
+    if(!running){ startOrRestart(); } else { jump(); }
+  }, {passive:false});
+
+   
+  draw();
+})();
+</script>
+
+<script>
+(function(){
+  var canvas = document.getElementById('arm-game');
+  if(!canvas) return;
+
+  var ctx = canvas.getContext('2d');
+  var overlay = document.getElementById('arm-overlay');
+  var overlayTitle = document.getElementById('arm-overlay-title');
+  var overlaySub = document.getElementById('arm-overlay-sub');
+  var scoreEl = document.getElementById('arm-score');
+  var bestEl = document.getElementById('arm-best');
+
+  var W = canvas.width, H = canvas.height;
+  var groundY = H - 50;
+  var gravity = 0.7;
+  var running = false;
+  var gameOver = false;
+  var score = 0;
+  var best = parseInt(localStorage.getItem('arm-game-best') || '0', 10);
+  bestEl.textContent = best;
+  var armArmed = false; 
+
+  
+  var arm = {
+    x: W * 0.35,     
+    baseY: groundY,  
+    reachY: groundY - 110
+  };
+
+  
+  var parts = [];
+  var spawnT = 0;
+  var spawnEvery = 35;
+  var speed = 3.1;
+
+  function isDark(){
+    return document.documentElement.getAttribute('data-theme') === 'dark';
+  }
+  function colors(){
+    var dark = isDark();
+    return {
+      bg: dark ? '#1a1a1a' : '#f5f0eb',
+      ground: dark ? '#333' : '#d4c8b8',
+      groundLine: dark ? '#444' : '#c4b8a8',
+      arm: '#FF4500',
+      armDark: '#CC3700',
+      metal: dark ? '#666' : '#777',
+      part: dark ? '#888' : '#999',
+      partAccent: '#FF8C00',
+      text: dark ? '#fff' : '#222'
+    };
+  }
+
+  function reset(){
+    parts = [];
+    spawnT = 0;
+    score = 0;
+    speed = 3.1;
+    arm.x = W * 0.35;
+    running = true;
+    gameOver = false;
+    scoreEl.textContent = '0';
+    overlay.style.display = 'none';
+  }
+
+  function startOrRestart(){
+    if(running) return;
+    if(gameOver){   }
+    reset();
+    loop();
+  }
+
+  function endGame(msg){
+    running = false;
+    gameOver = true;
+    overlayTitle.textContent = msg;
+    overlaySub.textContent = 'Press SPACE to try again';
+    overlay.style.display = 'flex';
+    if(score > best){
+      best = score;
+      localStorage.setItem('arm-game-best', best);
+      bestEl.textContent = best;
+    }
+  }
+
+  function spawnPart(){
+    var w = 24 + Math.random() * 10;
+    var x = 60 + Math.random() * (W - 120 - w);
+    parts.push({
+      x: x,
+      y: -30,
+      w: w,
+      h: 18 + Math.random() * 10,
+      grabbed: false,
+      vy: speed + Math.random() * 1.6
+    });
+  }
+
+  function grab(){
+    
+    var grabX = arm.x;
+    var grabY = arm.reachY;
+    var grabRadiusX = 55;
+    var grabRadiusY = 70;
+
+    for(var i = 0; i < parts.length; i++){
+      var p = parts[i];
+      if(p.grabbed) continue;
+      var within =
+        p.x <= grabX + grabRadiusX &&
+        p.x + p.w >= grabX - grabRadiusX &&
+        p.y <= grabY + grabRadiusY &&
+        p.y + p.h >= grabY - grabRadiusY;
+      if(within){
+        p.grabbed = true;
+        score += 1;
+        scoreEl.textContent = String(score);
+        
+        parts.splice(i, 1);
+        speed += 0.12;
+        return;
+      }
+    }
+    
+    speed += 0.05;
+  }
+
+  function update(){
+    
+    spawnT++;
+    if(spawnT >= spawnEvery){
+      spawnT = 0;
+      spawnEvery = Math.max(18, spawnEvery - 0.2);
+      spawnPart();
+    }
+
+    
+    
+    arm.x = Math.max(50, Math.min(W - 50, arm.x));
+
+    
+    for(var i = parts.length - 1; i >= 0; i--){
+      var p = parts[i];
+      p.y += p.vy;
+      p.vy += gravity * 0.02;
+      if(p.y > groundY + 18){
+        
+        endGame('Game Over! Score: ' + score);
+        return;
+      }
+    }
+  }
+
+  function draw(){
+    var c = colors();
+    ctx.fillStyle = c.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    
+    ctx.fillStyle = c.ground;
+    ctx.fillRect(0, groundY, W, H - groundY);
+    ctx.fillStyle = c.groundLine;
+    ctx.fillRect(0, groundY + 2, W, 2);
+
+    
+    var ax = arm.x;
+    var ay = arm.baseY;
+    var endX = arm.x;
+    var endY = arm.reachY;
+
+    
+    ctx.fillStyle = c.metal;
+    ctx.beginPath();
+    ctx.arc(ax, ay + 4, 18, 0, Math.PI * 2);
+    ctx.fill();
+
+    
+    ctx.strokeStyle = c.arm;
+    ctx.lineWidth = 16;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(ax, ay);
+    ctx.lineTo(endX, endY + 30);
+    ctx.stroke();
+
+    
+    ctx.strokeStyle = c.armDark;
+    ctx.lineWidth = 14;
+    ctx.beginPath();
+    ctx.moveTo(endX, endY + 30);
+    ctx.lineTo(endX, endY);
+    ctx.stroke();
+
+    
+    ctx.fillStyle = c.metal;
+    ctx.fillRect(endX - 8, endY - 6, 16, 12);
+    ctx.strokeStyle = c.arm;
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.moveTo(endX - 18, endY + 2);
+    ctx.lineTo(endX - 26, endY + 18);
+    ctx.moveTo(endX + 18, endY + 2);
+    ctx.lineTo(endX + 26, endY + 18);
+    ctx.stroke();
+
+    
+    for(var i = 0; i < parts.length; i++){
+      var p = parts[i];
+      ctx.fillStyle = c.part;
+      ctx.fillRect(p.x, p.y, p.w, p.h);
+      ctx.fillStyle = c.partAccent;
+      ctx.fillRect(p.x + 6, p.y + 4, Math.max(6, p.w - 12), 3);
+    }
+  }
+
+  function loop(){
+    if(!running) return;
+    update();
+    draw();
+    requestAnimationFrame(loop);
+  }
+
+  function handleInput(e){
+    if(e.code !== 'Space' && e.code !== 'ArrowLeft' && e.code !== 'ArrowRight') return;
+    e.preventDefault();
+    
+    
+    if(window.tryRoverActiveGame !== 'arm'){
+      if(overlay.style.display !== 'none'){
+        window.tryRoverActiveGame = 'arm';
+        armArmed = true;
+      } else {
+        return;
+      }
+    }
+    if(!armArmed) return;
+
+    if(e.code === 'Space'){
+      if(!running) startOrRestart();
+      else grab();
+      return;
+    }
+    if(e.code === 'ArrowLeft') arm.x -= 22;
+    if(e.code === 'ArrowRight') arm.x += 22;
+  }
+
+  document.addEventListener('keydown', handleInput);
+
+  canvas.addEventListener('click', function(){
+    armArmed = true;
+    window.tryRoverActiveGame = 'arm';
+    if(!running){ overlay.style.display = 'none'; startOrRestart(); }
+    else grab();
+  });
+
+  canvas.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    armArmed = true;
+    window.tryRoverActiveGame = 'arm';
+    if(!running){ overlay.style.display = 'none'; startOrRestart(); }
+    else grab();
+  }, {passive:false});
+
+  
+  overlay.addEventListener('click', function(){
+    armArmed = true;
+    window.tryRoverActiveGame = 'arm';
+    if(!running){ overlay.style.display = 'none'; startOrRestart(); }
+    else grab();
+  });
+  overlay.addEventListener('touchstart', function(e){
+    e.preventDefault();
+    armArmed = true;
+    window.tryRoverActiveGame = 'arm';
+    if(!running){ overlay.style.display = 'none'; startOrRestart(); }
+    else grab();
+  }, {passive:false});
+
+  
+  canvas.addEventListener('mousemove', function(e){
+    if(!armArmed) return;
+    var rect = canvas.getBoundingClientRect();
+    var x = e.clientX - rect.left;
+    arm.x = x;
+  });
+
+  
+  draw();
+})();
+</script>
+
+
+    </main>
+
+    <footer class="footer">
+  
+  <div class="footer-accent"></div>
+
+  <div class="footer-inner">
+    
+    <div class="footer-grid">
+
+      
+      <div class="footer-col footer-brand-col">
+        <div class="footer-brand">
+          <img src="/images/posts/pic3.png" alt="BRACU ALTER" class="footer-logo">
+          <h3 class="footer-title">BRACU ALTER</h3>
+        </div>
+        <p class="footer-desc">BRAC University Autonomous Lab Team for Engineering & Robotics — building modular, power-efficient rescue platforms for disaster response.</p>
+        <p class="footer-tagline">Engineering Autonomous Rescue Systems of the Future</p>
+
+        
+        <div class="footer-socials">
+          <a href="https://github.com/bracu-alter" target="_blank" rel="noopener" class="footer-social" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22v3.293c0 .319.21.694.825.576C20.565 21.795 24 17.295 24 12 24 5.37 18.627 0 12 0z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/bracu-alter" target="_blank" rel="noopener" class="footer-social" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/bracualter" target="_blank" rel="noopener" class="footer-social" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="mailto:bracualter@gmail.com" class="footer-social" aria-label="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+
+        
+        <div class="footer-supported">
+          <p class="footer-supported-label">Supported By</p>
+          <div class="footer-supported-logos">
+            <img src="/images/posts/pic2.jpg" alt="BRACU ALTER" loading="lazy">
+            <span class="footer-supported-x">&times;</span>
+            <img src="/images/posts/tornetec.png" alt="Tornetec" loading="lazy">
+          </div>
+          <a href="https://tornetec.com/" target="_blank" rel="noopener" class="footer-tornetec-link">Tornetec — Building solutions that matter.</a>
+          <span class="footer-credit">Built by <a href="https://www.github.com/iams1am" target="_blank" rel="noopener">Siam Abdullah</a></span>
+        </div>
+      </div>
+
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/agv/">AGV</a></li>
+          <li><a href="/achievements/">Achievements</a></li>
+          <li><a href="/robocup/">RoboCup</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="/publications/">Publications</a></li>
+          <li><a href="/missions/">Missions</a></li>
+          <li><a href="/sponsors/">Sponsors</a></li>
+          <li><a href="/team/">Team</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="footer-col">
+        <h4 class="footer-heading">Location</h4>
+        <div class="footer-location">
+          <div class="footer-loc-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="footer-text">LaSSET</p>
+            <p class="footer-text">BSRM School of Engineering</p>
+            <p class="footer-text">BRAC University</p>
+            <p class="footer-text">Dhaka, Bangladesh</p>
+          </div>
+        </div>
+        <div class="footer-location" style="margin-top: 16px">
+          <div class="footer-loc-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <a href="mailto:bracualter@gmail.com" class="footer-email">bracualter@gmail.com</a>
+          </div>
+        </div>
+
+        
+        <div class="footer-inst-logos">
+          <a href="#" class="footer-inst-logo"><img src="/images/posts/lasset.png" alt="LaSSET" loading="lazy"></a>
+          <a href="https://www.bracu.ac.bd" target="_blank" rel="noopener" class="footer-inst-logo"><img src="/images/posts/bracu.png" alt="BRAC University" loading="lazy"></a>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <a href="/try-rover/" class="footer-rover-link" aria-label="Go to Gamified rover game">
+      <div class="footer-rover-track">
+        <div class="footer-rover">
+          <img src="/images/posts/pic3.png" alt="ALTER Rover" class="footer-rover-img">
+        </div>
+      </div>
+    </a>
+
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 BRACU ALTER. All rights reserved.</p>
+      <p class="footer-bottom-sub">Built with precision for rescue robotics.</p>
+    </div>
+  </div>
+</footer>
+
+
+    
+    <script src="/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
+
+    
+    <script src="/js/nav.min.4347a3989d253da0b01b772c5ffed17bdff0787169f050f6590804ecd61260fb.js" defer></script>
+
+    
+    <script src="/js/cursor.min.6a98aaae59d61485d10de4577393210b57f4aa76f913cddbad5af031ba53353b.js" defer></script>
+
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{{ define "main" }}
+  <article class="article">
+    <!-- Header -->
+    <div style="padding-top: 24px">
+      <h1 style="font-size: 2.2rem; margin-bottom: 12px">{{ .Title }}</h1>
+      {{ with .Params.description }}
+        <p class="lead">{{ . }}</p>
+      {{ end }}
+    </div>
+
+    <!-- Navigation Tabs -->
+    {{ partial "project_tabs.html" . }}
+
+    <!-- Content -->
+    <section class="section">
+      <div class="content" style="max-width: 80ch">
+        {{ .Content }}
+      </div>
+    </section>
+
+    <!-- Specifications if available -->
+    {{ if .Params.specs }}
+      <section class="section">
+        <h2>Quick Specifications</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))">
+          {{ range .Params.specs }}
+            <div class="card">
+              <div style="font-weight: 800; margin-bottom: 6px">{{ .label }}</div>
+              <p class="muted" style="margin: 0">{{ .value }}</p>
+            </div>
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    <!-- Back Navigation -->
+    <section class="section">
+      <a class="btn btn-outline" href="{{ .CurrentSection.Parent.RelPermalink }}">← Back to {{ .CurrentSection.Parent.Title }}</a>
+    </section>
+  </article>
+{{ end }}
