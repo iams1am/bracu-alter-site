@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on BRACU ALTER</title>
-    <link>http://localhost:61930/posts/</link>
+    <link>https://iams1am.github.io/bracu-alter-site/posts/</link>
     <description>Recent content in News on BRACU ALTER</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:61930/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iams1am.github.io/bracu-alter-site/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BRACU ALTER at RoboCup Rescue 2025</title>
-      <link>http://localhost:61930/posts/robocup-2025/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/posts/robocup-2025/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/posts/robocup-2025/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/posts/robocup-2025/</guid>
       <description>Represented Bangladesh as the sole team at RoboCup Rescue 2025 in Salvador, Brazil.</description>
     </item>
     <item>
       <title>IDEA Innovation 5.0 — Champion</title>
-      <link>http://localhost:61930/posts/idea-innovation-5/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/posts/idea-innovation-5/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/posts/idea-innovation-5/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/posts/idea-innovation-5/</guid>
       <description>BRACU ALTER became champion among 200+ university teams in Bangladesh.</description>
     </item>
   </channel>

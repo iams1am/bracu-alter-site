@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on BRACU ALTER</title>
-    <link>http://localhost:61930/tags/</link>
+    <link>https://iams1am.github.io/bracu-alter-site/tags/</link>
     <description>Recent content in Tags on BRACU ALTER</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:61930/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iams1am.github.io/bracu-alter-site/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Competition</title>
-      <link>http://localhost:61930/tags/competition/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/tags/competition/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/tags/competition/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/tags/competition/</guid>
       <description></description>
     </item>
     <item>
       <title>Rescue Robotics</title>
-      <link>http://localhost:61930/tags/rescue-robotics/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/tags/rescue-robotics/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/tags/rescue-robotics/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/tags/rescue-robotics/</guid>
       <description></description>
     </item>
     <item>
       <title>RoboCup</title>
-      <link>http://localhost:61930/tags/robocup/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/tags/robocup/</link>
       <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/tags/robocup/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/tags/robocup/</guid>
       <description></description>
     </item>
     <item>
       <title>Award</title>
-      <link>http://localhost:61930/tags/award/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/tags/award/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/tags/award/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/tags/award/</guid>
       <description></description>
     </item>
     <item>
       <title>BRACU</title>
-      <link>http://localhost:61930/tags/bracu/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/tags/bracu/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/tags/bracu/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/tags/bracu/</guid>
       <description></description>
     </item>
     <item>
       <title>Innovation</title>
-      <link>http://localhost:61930/tags/innovation/</link>
+      <link>https://iams1am.github.io/bracu-alter-site/tags/innovation/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:61930/tags/innovation/</guid>
+      <guid>https://iams1am.github.io/bracu-alter-site/tags/innovation/</guid>
       <description></description>
     </item>
   </channel>
