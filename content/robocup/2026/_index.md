@@ -5,7 +5,7 @@ year: "2026"
 location: "TBA"
 result: "In Preparation"
 image: "images/posts/pic5.png"
-color: "#FF6A00"
+color: "#FF5722"
 teamImage: "images/posts/pic7.png"
 highlights:
   - "Next-gen rover with AI-powered autonomy"
@@ -34,3 +34,7 @@ focus:
   - title: "Real-Time 5G Comms"
     text: "Low-latency 5G communication for HD video streaming and remote expert guidance during operations."
 ---
+
+
+
+

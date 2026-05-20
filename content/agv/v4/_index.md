@@ -3,7 +3,7 @@ title: "ALTER Rover V4"
 description: "Next-gen autonomous platform"
 version: "V4"
 image: "images/posts/pic7.png"
-color: "#FFA500"
+color: "#FF8C00"
 dimensions:
   length: "0.95 m"
   breadth: "0.70 m"
@@ -55,3 +55,6 @@ software:
   - "Swarm Intelligence Framework"
   - "Custom Foundation Model for Rescue"
 ---
+
+
+

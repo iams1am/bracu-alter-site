@@ -39,10 +39,10 @@ rovers:
       fullName: "ALTER Rover V2"
       tagline: "Enhanced mobility and sensor suite"
       description: "Second generation with improved chassis design, upgraded sensor array, and enhanced autonomy stack."
-      image: "images/posts/pic4.png"
+      image: "images/posts/pic21.jpg"
       href: "agv/v2/"
       badges: ["6-DOF Arm", "SLAM", "Thermal Imaging", "Modular"]
-      color: "#FF6A00"
+      color: "#FF5722"
       links:
         - label: "Hardware"
           href: "agv/v2/#mechanical"
@@ -54,7 +54,7 @@ rovers:
       fullName: "ALTER Rover V3"
       tagline: "AI-powered search and rescue"
       description: "Third generation featuring deep learning perception, advanced path planning, and multi-robot coordination."
-      image: "images/posts/pic5.png"
+      image: "images/posts/pic17.jpeg"
       href: "agv/v3/"
       badges: ["Deep Learning", "Multi-Robot", "LiDAR", "Edge AI"]
       color: "#FF8C00"
@@ -69,10 +69,10 @@ rovers:
       fullName: "ALTER Rover V4"
       tagline: "Next-gen autonomous platform"
       description: "The latest iteration with full autonomous operation, swarm intelligence, and advanced manipulation capabilities."
-      image: "images/posts/pic7.png"
+      image: "images/posts/pic22.jpg"
       href: "agv/v4/"
       badges: ["Swarm AI", "Manipulation", "5G Comms", "Full Autonomy"]
-      color: "#FFA500"
+      color: "#FF8C00"
       links:
         - label: "Hardware"
           href: "agv/v4/#mechanical"
@@ -84,6 +84,63 @@ rovers:
 team:
   title: "Meet Our Team"
   subtitle: "A multidisciplinary group of engineers and researchers building the future of rescue robotics."
+  eras:
+    - batch: "2022–2023"
+      rover: "V1"
+      roverFull: "ALTER Rover V1"
+      tagline: "Where it all began"
+      description: "The founding batch that established BRACU ALTER under LaSSET, BRAC University. Built the V1 rover from scratch, reached the finals at RoboCup Rescue 2024 in Eindhoven, and won IDEA Innovation 5.0 among 200+ university teams."
+      image: "images/posts/pic1.jpg"
+      teamHref: "team/2023/"
+      roverHref: "agv/v1/"
+      color: "#FF4500"
+      colorRgb: "255,69,0"
+      flip: false
+      roverTags: ["Modular", "Rescue Robotics", "Autonomy", "Telemetry"]
+      teamTags: ["RoboCup 2024 Finalist", "IDEA 5.0 Champion", "VC Award"]
+      subteams: "Mechanical · Embedded · Navigation"
+    - batch: "2023–2024"
+      rover: "V2"
+      roverFull: "ALTER Rover V2"
+      tagline: "Bangladesh at the World Stage"
+      description: "Sole team representing Bangladesh at the RoboCup Rescue World Championship 2025 in Salvador, Brazil. Engineered V2 with enhanced manipulation, SLAM, and thermal imaging under intense resource constraints."
+      image: "images/posts/pic21.jpg"
+      teamHref: "team/2024/"
+      roverHref: "agv/v2/"
+      color: "#FF5722"
+      colorRgb: "255,87,34"
+      flip: true
+      roverTags: ["6-DOF Arm", "SLAM", "Thermal Imaging", "Modular"]
+      teamTags: ["World Championship", "Salvador, Brazil", "Bangladesh"]
+      subteams: "Mechanical · Embedded · AI · Autonomy"
+    - batch: "2024–2025"
+      rover: "V3"
+      roverFull: "ALTER Rover V3"
+      tagline: "Pushing the frontier of rescue AI"
+      description: "The current batch developing V3 with deep learning perception, LiDAR integration, and multi-robot coordination — preparing for RoboCup Rescue 2026 in Incheon, South Korea."
+      image: "images/posts/pic17.jpeg"
+      teamHref: "team/2025/"
+      roverHref: "agv/v3/"
+      color: "#FF8C00"
+      colorRgb: "255,140,0"
+      flip: false
+      roverTags: ["Deep Learning", "LiDAR", "Edge AI", "Multi-Robot"]
+      teamTags: ["RoboCup 2026", "Incheon, South Korea", "In Progress"]
+      subteams: "Mechanical · Embedded · AI/Perception · Autonomy"
+    - batch: "2025–2026"
+      rover: "V4"
+      roverFull: "ALTER Rover V4"
+      tagline: "Next-gen autonomy & swarm intelligence"
+      description: "The upcoming generation engineering V4 — a fully autonomous rescue platform with swarm coordination, advanced manipulation, and 5G-grade communications for complex disaster scenarios."
+      image: "images/posts/pic22.jpg"
+      teamHref: "team/2026/"
+      roverHref: "agv/v4/"
+      color: "#FFAA00"
+      colorRgb: "255,170,0"
+      flip: true
+      roverTags: ["Swarm AI", "Manipulation", "5G Comms", "Full Autonomy"]
+      teamTags: ["RoboCup 2027", "Future Roster", "Concept"]
+      subteams: "Mechanical · Embedded · AI/Perception · Autonomy · Swarm"
   years:
     - year: "2026"
       tagline: "Pushing boundaries at RoboCup 2026"
@@ -97,7 +154,7 @@ team:
       description: "Represented Bangladesh as the only team at the World Championship in Salvador, Brazil. Engineered a competition-ready rover under intense time and resource constraints."
       image: "images/posts/pic7.png"
       href: "team/2025/"
-      color: "#FF6A00"
+      color: "#FF5722"
       badges: ["RoboCup 2025", "Salvador, Brazil", "World Championship"]
     - year: "2024"
       tagline: "RoboCup Rescue finalists in Eindhoven"
@@ -111,7 +168,7 @@ team:
       description: "Where it all began. The inaugural team that established BRACU ALTER under LaSSET, laying the foundation for autonomous rescue robotics research at BRAC University."
       image: "images/posts/pic7.png"
       href: "team/2023/"
-      color: "#FFA500"
+      color: "#FF8C00"
       badges: ["Founded", "LaSSET", "First Rover Prototype"]
 
 achievements:
@@ -144,3 +201,7 @@ cta:
   button:
     label: "View Sponsors"
     href: "sponsors/"
+
+
+
+

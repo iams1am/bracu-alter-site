@@ -51,6 +51,7 @@
   var heroSubtitle = document.querySelector(".hero-banner-subtitle");
   var heroActions = document.querySelector(".hero-actions");
   var statsBar = document.getElementById("hero-stats-bar");
+  var scrollCue = document.getElementById("hero-scroll-cue");
   var revealSections = document.querySelectorAll(".scroll-reveal");
 
   if (navbar) navbar.classList.add("navbar-transparent");
@@ -59,6 +60,7 @@
   if (heroSubtitle) { heroSubtitle.style.opacity = "0"; heroSubtitle.style.transform = "translateY(80px)"; }
   if (heroActions) { heroActions.style.opacity = "0"; heroActions.style.transform = "translateY(80px)"; }
   if (statsBar) { statsBar.style.opacity = "0"; statsBar.style.transform = "translateY(40px)"; }
+  if (scrollCue) { scrollCue.style.opacity = "0"; }
 
   var ease = function(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; };
 
@@ -108,6 +110,12 @@
     if (statsBar) {
       statsBar.style.opacity = String(statsOp);
       statsBar.style.transform = "translateY(" + (40 * (1 - ease(statsInP))) + "px)";
+    }
+
+    // Scroll cue: appears ON the dark stats bar only AFTER all hero text has faded out
+    if (scrollCue) {
+      var cueInP = Math.max(0, Math.min((progress - 0.92) / 0.06, 1));
+      scrollCue.style.opacity = String(ease(cueInP));
     }
 
     // Hide fixed hero once scrolled past spacer

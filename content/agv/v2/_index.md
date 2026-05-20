@@ -3,7 +3,7 @@ title: "ALTER Rover V2"
 description: "Enhanced mobility and sensor suite"
 version: "V2"
 image: "images/posts/pic4.png"
-color: "#FF6A00"
+color: "#FF5722"
 dimensions:
   length: "0.82 m"
   breadth: "0.60 m"
@@ -51,3 +51,7 @@ software:
   - "Python 3.10 / C++17"
   - "SLAM Toolbox / Nav2"
 ---
+
+
+
+

@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.154.5">
+	<meta name="generator" content="Hugo 0.154.5"><script src="/bracu-alter-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bracu-alter-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Test | BRACU ALTER</title>
 <link rel="icon" type="image/png" href="/bracu-alter-site/images/posts/pic3.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/bracu-alter-site/css/main.min.9d786529ea16e5fb5cab7b74a454f356f0611d6ec80ae3c549125d5cc22f0bc7.css">
+<link rel="stylesheet" href="/bracu-alter-site/css/main.min.0c1fc7b177f4ed22564bc66f48b759ccd026501b09906841a0ad47a036ee1ef6.css">
 
 
 <script defer src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
@@ -21,6 +21,8 @@
     <header class="navbar">
   <div class="nav-inner">
     <a class="brand" href="/bracu-alter-site/">
+      <img src="/bracu-alter-site/images/posts/bracu.png" alt="BRAC University" class="brand-logo brand-logo-bracu">
+      <span class="brand-x">&times;</span>
       <img src="/bracu-alter-site/images/posts/pic3.png" alt="BRACU ALTER" class="brand-logo">
       <span>BRACU ALTER</span>
       <img src="/bracu-alter-site/images/posts/logo_b.png" alt="BRACU ALTER Badge" class="brand-logo brand-logo-secondary">
@@ -110,16 +112,24 @@
   
   <div class="hero-fixed-bg" id="hero-fixed-bg">
     <video class="hero-video" autoplay muted loop playsinline>
-      <source src="/bracu-alter-site/videos/hero-background1.mp4.mp4" type="video/mp4">
+      <source src="/bracu-alter-site/videos/hero-background1.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content" id="hero-content">
-      <h1 class="hero-banner-title">BRACU ALTER</h1>
+      <h1 class="hero-banner-title" data-text="BRACU ALTER">BRACU ALTER</h1>
       <p class="hero-banner-subtitle">A multi-tasking autonomous rescue rover team from LaSSET, BRAC University—building modular, power-efficient platforms for disaster response.</p>
       <div class="hero-actions">
         <a class="btn" href="/bracu-alter-site/about/">Explore Platforms</a>
         <a class="btn btn-outline-white" href="/bracu-alter-site/achievements/">Achievements</a>
       </div>
+    </div>
+    
+    <div class="hero-scroll-cue" id="hero-scroll-cue" aria-hidden="true">
+      <span class="hero-scroll-label">Scroll</span>
+      <svg class="hero-scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+        <polyline points="6 15 12 21 18 15"/>
+      </svg>
     </div>
     
     <div class="hero-stats-bar" id="hero-stats-bar">
@@ -136,23 +146,111 @@
   <div class="hero-scroll-spacer"></div>
 
   
-  <section class="section-banner explore-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <h2 class="neon-stroke-title reveal-title" style="text-align: center; margin-bottom: 32px; font-size: 2.5rem">Explore</h2>
-      <div class="grid">
-        <a class="card banner-card reveal-child" href="/bracu-alter-site/about/">
-          <h3>Platforms</h3>
-          <p class="muted">Rescue rovers and AGVs designed for disaster-response missions.</p>
-        </a>
-        <a class="card banner-card reveal-child" href="/bracu-alter-site/missions/">
-          <h3>Missions</h3>
-          <p class="muted">Scenario-driven validation: earthquake response, inspection, and more.</p>
-        </a>
-        <a class="card banner-card reveal-child" href="/bracu-alter-site/publications/">
-          <h3>Publications</h3>
-          <p class="muted">Reports and technical documents across autonomy, perception, and systems.</p>
-        </a>
+  <section class="section-banner about-us-banner scroll-reveal">
+    <div class="about-us-split">
+      
+      <div class="about-us-vid-col">
+        <div class="avp" id="avp">
+          <video class="about-us-vid" id="about-vid" autoplay muted loop playsinline>
+            <source src="/bracu-alter-site/videos/vid2.mp4" type="video/mp4">
+          </video>
+          <div class="avp-blend"></div>
+          <div class="avp-ui" id="avp-ui">
+            
+            <div class="avp-seek-row">
+              <div class="avp-seek-bg">
+                <div class="avp-seek-prog" id="avp-prog"></div>
+              </div>
+              <input class="avp-seek-input" id="avp-seek" type="range" min="0" max="100" step="0.01" value="0">
+            </div>
+            
+            <div class="avp-ctrls-row">
+              <div class="avp-ctrls-l">
+                <button class="avp-btn" id="avp-pp" title="Play / Pause">
+                  <svg id="avp-ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <svg id="avp-ico-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+                </button>
+                <span class="avp-time" id="avp-time">0:00 / 0:00</span>
+              </div>
+              <div class="avp-ctrls-r">
+                <button class="avp-btn" id="avp-vol-btn" title="Toggle mute">
+                  <svg id="avp-ico-vol-hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                  </svg>
+                  <svg id="avp-ico-vol-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+                  </svg>
+                </button>
+                <div class="avp-vol-wrap">
+                  <div class="avp-vol-bg"><div class="avp-vol-prog" id="avp-vol-prog" style="width:70%"></div></div>
+                  <input class="avp-vol-input" id="avp-vol" type="range" min="0" max="1" step="0.02" value="0.7">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-us-awards-col reveal-child">
+        <div>
+          <h2 class="about-us-heading">About Us</h2>
+          <p class="about-us-sub">A multi-tasking autonomous rescue rover team from LaSSET, BRAC University—building modular, power-efficient platforms for disaster response.</p>
+        </div>
+        <div class="about-us-divider"></div>
+        <div>
+          <h3 class="about-us-awards-label">Awards</h3>
+          <div class="about-us-awards-list">
+            
+              
+              <div class="about-us-award-item">
+                <span class="achieve-home-year">2025</span>
+                <div class="about-us-award-body">
+                  <strong>World Championship Participant</strong>
+                  <p>Sole team representing Bangladesh at RoboCup Rescue, Salvador, Brazil</p>
+                </div>
+              </div>
+              
+              <div class="about-us-award-item">
+                <span class="achieve-home-year">2024</span>
+                <div class="about-us-award-body">
+                  <strong>Finalist</strong>
+                  <p>Reached the final round at RoboCup Rescue Robot League, Eindhoven, Netherlands</p>
+                </div>
+              </div>
+              
+            
+              
+              <div class="about-us-award-item">
+                <span class="achieve-home-year">2024</span>
+                <div class="about-us-award-body">
+                  <strong>IDEA Innovation 5.0 Champion</strong>
+                  <p>Champions among 200&#43; university teams across Bangladesh</p>
+                </div>
+              </div>
+              
+              <div class="about-us-award-item">
+                <span class="achieve-home-year">2024</span>
+                <div class="about-us-award-body">
+                  <strong>VC&#39;s Special Recognition Award</strong>
+                  <p>Awarded by BRAC University Vice-Chancellor for outstanding engineering contributions</p>
+                </div>
+              </div>
+              
+              <div class="about-us-award-item">
+                <span class="achieve-home-year">2024</span>
+                <div class="about-us-award-body">
+                  <strong>Hult Prize 1st Runner-Up</strong>
+                  <p>Campus-level competition at BRAC University</p>
+                </div>
+              </div>
+              
+            
+          </div>
+        </div>
+        <a class="btn about-us-cta" href="/bracu-alter-site/achievements/">View All Achievements →</a>
       </div>
     </div>
   </section>
@@ -170,227 +268,18 @@
   </section>
 
   
-  <section class="featured-banner scroll-reveal">
-    <div class="featured-overlay"></div>
+  <section class="section-banner cta-banner scroll-reveal">
+    <div class="cta-banner-overlay"></div>
     <div class="container" style="position: relative; z-index: 2">
-      <div style="text-align: center; margin-bottom: 40px">
-        <h2 class="neon-stroke-title reveal-title" style="font-size: 2.5rem; margin-bottom: 8px">ALTER Rovers</h2>
-        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">Our lineup of modular rescue rovers engineered for disaster response.</p>
-      </div>
-
-      <div class="rover-wheel">
-        
-        <div class="rover-card" style="--card-accent: #FF4500">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic1.jpg" alt="ALTER Rover V1" loading="lazy">
-              <div class="rover-version-badge">V1</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">ALTER Rover V1</span>
-              <p class="rover-card-tagline">The original flagship rescue rover</p>
-            </div>
-            
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">Our first modular rescue rover designed for hazardous terrain navigation and real-time situational awareness.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">Modular</span><span class="feature-badge">Rescue Robotics</span><span class="feature-badge">Autonomy</span><span class="feature-badge">Telemetry</span>
-              </div>
-              <div class="rover-expand-links">
-                <a href="/bracu-alter-site/agv/v1/#mechanical">Hardware</a><a href="/bracu-alter-site/agv/v1/#software">Software</a><a href="/bracu-alter-site/agv/v1/#specs">Specs</a>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/agv/v1/">Explore V1 →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
+      <div class="cta-block reveal-child">
+        <p class="cta-overline">Partnership &amp; Collaboration</p>
+        <h2 class="cta-block-title">Partner with BRACU ALTER</h2>
+        <div class="cta-rule"></div>
+        <p class="cta-block-text">Sponsor or collaborate to help us build disaster-response technology and represent Bangladesh globally.</p>
+        <div class="cta-block-actions">
+          <a class="cta-btn-primary" href="/bracu-alter-site/sponsors/">View Sponsors</a>
+          <a class="cta-btn-secondary" href="/bracu-alter-site/contact/">Get in Touch →</a>
         </div>
-        
-        <div class="rover-card" style="--card-accent: #FF6A00">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic4.png" alt="ALTER Rover V2" loading="lazy">
-              <div class="rover-version-badge">V2</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">ALTER Rover V2</span>
-              <p class="rover-card-tagline">Enhanced mobility and sensor suite</p>
-            </div>
-            
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">Second generation with improved chassis design, upgraded sensor array, and enhanced autonomy stack.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">6-DOF Arm</span><span class="feature-badge">SLAM</span><span class="feature-badge">Thermal Imaging</span><span class="feature-badge">Modular</span>
-              </div>
-              <div class="rover-expand-links">
-                <a href="/bracu-alter-site/agv/v2/#mechanical">Hardware</a><a href="/bracu-alter-site/agv/v2/#software">Software</a><a href="/bracu-alter-site/agv/v2/#specs">Specs</a>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/agv/v2/">Explore V2 →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
-        <div class="rover-card" style="--card-accent: #FF8C00">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic5.png" alt="ALTER Rover V3" loading="lazy">
-              <div class="rover-version-badge">V3</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">ALTER Rover V3</span>
-              <p class="rover-card-tagline">AI-powered search and rescue</p>
-            </div>
-            
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">Third generation featuring deep learning perception, advanced path planning, and multi-robot coordination.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">Deep Learning</span><span class="feature-badge">Multi-Robot</span><span class="feature-badge">LiDAR</span><span class="feature-badge">Edge AI</span>
-              </div>
-              <div class="rover-expand-links">
-                <a href="/bracu-alter-site/agv/v3/#mechanical">Hardware</a><a href="/bracu-alter-site/agv/v3/#software">Software</a><a href="/bracu-alter-site/agv/v3/#specs">Specs</a>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/agv/v3/">Explore V3 →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
-        <div class="rover-card" style="--card-accent: #FFA500">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic7.png" alt="ALTER Rover V4" loading="lazy">
-              <div class="rover-version-badge">V4</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">ALTER Rover V4</span>
-              <p class="rover-card-tagline">Next-gen autonomous platform</p>
-            </div>
-            
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">The latest iteration with full autonomous operation, swarm intelligence, and advanced manipulation capabilities.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">Swarm AI</span><span class="feature-badge">Manipulation</span><span class="feature-badge">5G Comms</span><span class="feature-badge">Full Autonomy</span>
-              </div>
-              <div class="rover-expand-links">
-                <a href="/bracu-alter-site/agv/v4/#mechanical">Hardware</a><a href="/bracu-alter-site/agv/v4/#software">Software</a><a href="/bracu-alter-site/agv/v4/#specs">Specs</a>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/agv/v4/">Explore V4 →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="section-banner team-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 32px">
-        <h2 class="neon-stroke-title reveal-title" style="margin-bottom: 12px; font-size: 2.5rem">Meet Our Team</h2>
-        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">A multidisciplinary group of engineers and researchers building the future of rescue robotics.</p>
-      </div>
-
-      <div class="rover-wheel">
-        
-        <div class="rover-card" style="--card-accent: #FF4500">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic7.png" alt="Team 2026" loading="lazy">
-              <div class="rover-version-badge">2026</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">Team 2026</span>
-              <p class="rover-card-tagline">Pushing boundaries at RoboCup 2026</p>
-            </div>
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">The current roster preparing for the next global stage, combining veteran experience with fresh talent across mechanical, embedded, AI, and autonomy sub-teams.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">Mechanical</span><span class="feature-badge">Embedded</span><span class="feature-badge">AI/Perception</span><span class="feature-badge">Autonomy</span>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/team/2026/">Meet the Team →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
-        <div class="rover-card" style="--card-accent: #FF6A00">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic7.png" alt="Team 2025" loading="lazy">
-              <div class="rover-version-badge">2025</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">Team 2025</span>
-              <p class="rover-card-tagline">Bangladesh&#39;s sole team at RoboCup Rescue, Brazil</p>
-            </div>
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">Represented Bangladesh as the only team at the World Championship in Salvador, Brazil. Engineered a competition-ready rover under intense time and resource constraints.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">RoboCup 2025</span><span class="feature-badge">Salvador, Brazil</span><span class="feature-badge">World Championship</span>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/team/2025/">Meet the Team →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
-        <div class="rover-card" style="--card-accent: #FF8C00">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic7.png" alt="Team 2024" loading="lazy">
-              <div class="rover-version-badge">2024</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">Team 2024</span>
-              <p class="rover-card-tagline">RoboCup Rescue finalists in Eindhoven</p>
-            </div>
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">Reached the finals of RoboCup Rescue Robot League 2024 in Eindhoven, Netherlands. Won IDEA Innovation 5.0 and received the VC&#39;s Special Recognition Award.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">RoboCup Finals</span><span class="feature-badge">IDEA Champion</span><span class="feature-badge">VC Award</span>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/team/2024/">Meet the Team →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
-        <div class="rover-card" style="--card-accent: #FFA500">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            <div class="rover-card-img">
-              <img src="/bracu-alter-site/images/posts/pic7.png" alt="Team 2023" loading="lazy">
-              <div class="rover-version-badge">2023</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">Team 2023</span>
-              <p class="rover-card-tagline">The founding year of BRACU ALTER</p>
-            </div>
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">Where it all began. The inaugural team that established BRACU ALTER under LaSSET, laying the foundation for autonomous rescue robotics research at BRAC University.</p>
-              <div class="rover-expand-badges">
-                <span class="feature-badge">Founded</span><span class="feature-badge">LaSSET</span><span class="feature-badge">First Rover Prototype</span>
-              </div>
-              <a class="rover-explore-btn" href="/bracu-alter-site/team/2023/">Meet the Team →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        
       </div>
     </div>
   </section>
@@ -422,130 +311,366 @@
   </section>
 
   
-  <section class="section-banner cta-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <h2 class="cta-banner-title reveal-title">Partner with BRACU ALTER</h2>
-      <div class="cta reveal-child" style="border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); margin-top: 24px">
-        <div>
-          <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0">Sponsor or collaborate to help us build disaster-response technology and represent Bangladesh globally.</p>
-        </div>
-        <div>
-          <a class="btn" style="background: #FF4500; color: #fff; border: 2px solid #FF4500" href="/bracu-alter-site/sponsors/">View Sponsors</a>
+  <section class="team-era-section scroll-reveal">
+    <div class="team-era-bg-glow"></div>
+    <div class="team-era-inner">
+
+      
+      <div class="container" style="position:relative;z-index:2">
+        <div class="team-era-header">
+          <p class="team-era-overline reveal-title">Generations of Innovation</p>
+          <h2 class="neon-stroke-title reveal-title" style="font-size:2.8rem;margin-bottom:10px">Meet Our Team</h2>
+          <p class="team-era-subtitle reveal-subtitle">Four generations of engineers, one mission — autonomous rescue robotics.</p>
         </div>
       </div>
+
+      
+      
+      <div class="era-row reveal-child " style="--era-color:#FF4500;--era-rgb:255,69,0">
+        
+        <div class="era-row-media">
+          <img src="/bracu-alter-site/images/posts/pic1.jpg" alt="ALTER Rover V1" loading="lazy">
+          <div class="era-row-fade"></div>
+          <span class="era-version-pill">V1</span>
+        </div>
+        
+        <div class="era-row-info" data-rover="V1">
+          <div class="era-row-info-inner">
+            <p class="era-batch-lbl">Batch 2022–2023</p>
+            <h3 class="era-row-title">ALTER Rover V1</h3>
+            <div class="era-row-rule"></div>
+            <p class="era-row-tagline"><em>Where it all began</em></p>
+            <p class="era-row-desc">The founding batch that established BRACU ALTER under LaSSET, BRAC University. Built the V1 rover from scratch, reached the finals at RoboCup Rescue 2024 in Eindhoven, and won IDEA Innovation 5.0 among 200&#43; university teams.</p>
+            
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Rover</span>
+              <div class="era-tags">
+                <span class="era-tag">Modular</span><span class="era-tag">Rescue Robotics</span><span class="era-tag">Autonomy</span><span class="era-tag">Telemetry</span>
+              </div>
+            </div>
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Team</span>
+              <div class="era-tags">
+                <span class="era-tag era-tag-team">RoboCup 2024 Finalist</span><span class="era-tag era-tag-team">IDEA 5.0 Champion</span><span class="era-tag era-tag-team">VC Award</span>
+              </div>
+            </div>
+            <p class="era-subteams">Mechanical · Embedded · Navigation</p>
+            <div class="era-row-btns">
+              <a class="era-btn-team" href="/bracu-alter-site/team/2023/">Meet the Team</a>
+              <a class="era-btn-rover" href="/bracu-alter-site/agv/v1/">Explore V1 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="era-row reveal-child era-row-flip" style="--era-color:#FF5722;--era-rgb:255,87,34">
+        
+        <div class="era-row-media">
+          <img src="/bracu-alter-site/images/posts/pic21.jpg" alt="ALTER Rover V2" loading="lazy">
+          <div class="era-row-fade"></div>
+          <span class="era-version-pill">V2</span>
+        </div>
+        
+        <div class="era-row-info" data-rover="V2">
+          <div class="era-row-info-inner">
+            <p class="era-batch-lbl">Batch 2023–2024</p>
+            <h3 class="era-row-title">ALTER Rover V2</h3>
+            <div class="era-row-rule"></div>
+            <p class="era-row-tagline"><em>Bangladesh at the World Stage</em></p>
+            <p class="era-row-desc">Sole team representing Bangladesh at the RoboCup Rescue World Championship 2025 in Salvador, Brazil. Engineered V2 with enhanced manipulation, SLAM, and thermal imaging under intense resource constraints.</p>
+            
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Rover</span>
+              <div class="era-tags">
+                <span class="era-tag">6-DOF Arm</span><span class="era-tag">SLAM</span><span class="era-tag">Thermal Imaging</span><span class="era-tag">Modular</span>
+              </div>
+            </div>
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Team</span>
+              <div class="era-tags">
+                <span class="era-tag era-tag-team">World Championship</span><span class="era-tag era-tag-team">Salvador, Brazil</span><span class="era-tag era-tag-team">Bangladesh</span>
+              </div>
+            </div>
+            <p class="era-subteams">Mechanical · Embedded · AI · Autonomy</p>
+            <div class="era-row-btns">
+              <a class="era-btn-team" href="/bracu-alter-site/team/2024/">Meet the Team</a>
+              <a class="era-btn-rover" href="/bracu-alter-site/agv/v2/">Explore V2 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="era-row reveal-child " style="--era-color:#FF8C00;--era-rgb:255,140,0">
+        
+        <div class="era-row-media">
+          <img src="/bracu-alter-site/images/posts/pic17.jpeg" alt="ALTER Rover V3" loading="lazy">
+          <div class="era-row-fade"></div>
+          <span class="era-version-pill">V3</span>
+        </div>
+        
+        <div class="era-row-info" data-rover="V3">
+          <div class="era-row-info-inner">
+            <p class="era-batch-lbl">Batch 2024–2025</p>
+            <h3 class="era-row-title">ALTER Rover V3</h3>
+            <div class="era-row-rule"></div>
+            <p class="era-row-tagline"><em>Pushing the frontier of rescue AI</em></p>
+            <p class="era-row-desc">The current batch developing V3 with deep learning perception, LiDAR integration, and multi-robot coordination — preparing for RoboCup Rescue 2026 in Incheon, South Korea.</p>
+            
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Rover</span>
+              <div class="era-tags">
+                <span class="era-tag">Deep Learning</span><span class="era-tag">LiDAR</span><span class="era-tag">Edge AI</span><span class="era-tag">Multi-Robot</span>
+              </div>
+            </div>
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Team</span>
+              <div class="era-tags">
+                <span class="era-tag era-tag-team">RoboCup 2026</span><span class="era-tag era-tag-team">Incheon, South Korea</span><span class="era-tag era-tag-team">In Progress</span>
+              </div>
+            </div>
+            <p class="era-subteams">Mechanical · Embedded · AI/Perception · Autonomy</p>
+            <div class="era-row-btns">
+              <a class="era-btn-team" href="/bracu-alter-site/team/2025/">Meet the Team</a>
+              <a class="era-btn-rover" href="/bracu-alter-site/agv/v3/">Explore V3 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="era-row reveal-child era-row-flip" style="--era-color:#FFAA00;--era-rgb:255,170,0">
+        
+        <div class="era-row-media">
+          <img src="/bracu-alter-site/images/posts/pic22.jpg" alt="ALTER Rover V4" loading="lazy">
+          <div class="era-row-fade"></div>
+          <span class="era-version-pill">V4</span>
+        </div>
+        
+        <div class="era-row-info" data-rover="V4">
+          <div class="era-row-info-inner">
+            <p class="era-batch-lbl">Batch 2025–2026</p>
+            <h3 class="era-row-title">ALTER Rover V4</h3>
+            <div class="era-row-rule"></div>
+            <p class="era-row-tagline"><em>Next-gen autonomy &amp; swarm intelligence</em></p>
+            <p class="era-row-desc">The upcoming generation engineering V4 — a fully autonomous rescue platform with swarm coordination, advanced manipulation, and 5G-grade communications for complex disaster scenarios.</p>
+            
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Rover</span>
+              <div class="era-tags">
+                <span class="era-tag">Swarm AI</span><span class="era-tag">Manipulation</span><span class="era-tag">5G Comms</span><span class="era-tag">Full Autonomy</span>
+              </div>
+            </div>
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Team</span>
+              <div class="era-tags">
+                <span class="era-tag era-tag-team">RoboCup 2027</span><span class="era-tag era-tag-team">Future Roster</span><span class="era-tag era-tag-team">Concept</span>
+              </div>
+            </div>
+            <p class="era-subteams">Mechanical · Embedded · AI/Perception · Autonomy · Swarm</p>
+            <div class="era-row-btns">
+              <a class="era-btn-team" href="/bracu-alter-site/team/2026/">Meet the Team</a>
+              <a class="era-btn-rover" href="/bracu-alter-site/agv/v4/">Explore V4 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
     </div>
   </section>
 
   
-  <section class="section-banner achieve-home-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <div style="text-align: center; margin-bottom: 40px">
-        <h2 class="neon-stroke-title reveal-title" style="font-size: 2.5rem; margin-bottom: 8px">Our Achievements</h2>
-        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">Awards and recognition that define our journey.</p>
+  <section class="news-section scroll-reveal">
+    <div class="container" style="position:relative;z-index:2">
+
+      <div class="news-header">
+        <div>
+          <p class="news-overline reveal-title">From The Lab</p>
+          <h2 class="neon-stroke-title reveal-title" style="font-size:2.8rem;margin-bottom:0">Latest News</h2>
+        </div>
+        <a class="news-view-all reveal-title" href="/bracu-alter-site/posts/">View all posts →</a>
       </div>
 
-      <div class="achieve-home-grid">
+      <div class="news-grid">
         
-        <div class="achieve-home-category reveal-child">
-          <h3 class="achieve-home-cat-title">RoboCup Rescue</h3>
-          <div class="achieve-home-items">
-            
-            <div class="achieve-home-item">
-              <span class="achieve-home-year">2025</span>
-              <div class="achieve-home-item-body">
-                <strong>World Championship Participant</strong>
-                <p>Sole team representing Bangladesh at RoboCup Rescue, Salvador, Brazil</p>
-              </div>
-            </div>
-            
-            <div class="achieve-home-item">
-              <span class="achieve-home-year">2024</span>
-              <div class="achieve-home-item-body">
-                <strong>Finalist</strong>
-                <p>Reached the final round at RoboCup Rescue Robot League, Eindhoven, Netherlands</p>
-              </div>
-            </div>
-            
+        <a class="news-card reveal-child" href="/bracu-alter-site/posts/robocup-2026/">
+          
+          <div class="news-card-img">
+            <img src="/bracu-alter-site/images/posts/pic24.png" alt="Test" loading="lazy">
           </div>
-        </div>
+          
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">RoboCup</span>
+              <span class="news-date">May 1, 2026</span>
+            </div>
+            <h3 class="news-card-title">BRACU ALTER at RoboCup Rescue Incheon 2026</h3>
+            <p class="news-card-summary">Heading to Incheon, South Korea for RoboCup Rescue 2026 with the ALTER Rover V3.</p>
+            <span class="news-read-more">Read more →</span>
+          </div>
+        </a>
         
-        <div class="achieve-home-category reveal-child">
-          <h3 class="achieve-home-cat-title">National Awards</h3>
-          <div class="achieve-home-items">
-            
-            <div class="achieve-home-item">
-              <span class="achieve-home-year">2024</span>
-              <div class="achieve-home-item-body">
-                <strong>IDEA Innovation 5.0 Champion</strong>
-                <p>Champions among 200&#43; university teams across Bangladesh</p>
-              </div>
-            </div>
-            
-            <div class="achieve-home-item">
-              <span class="achieve-home-year">2024</span>
-              <div class="achieve-home-item-body">
-                <strong>VC&#39;s Special Recognition Award</strong>
-                <p>Awarded by BRAC University Vice-Chancellor for outstanding engineering contributions</p>
-              </div>
-            </div>
-            
-            <div class="achieve-home-item">
-              <span class="achieve-home-year">2024</span>
-              <div class="achieve-home-item-body">
-                <strong>Hult Prize 1st Runner-Up</strong>
-                <p>Campus-level competition at BRAC University</p>
-              </div>
-            </div>
-            
+        <a class="news-card reveal-child" href="/bracu-alter-site/posts/idea-innovation-5/">
+          
+          <div class="news-card-img">
+            <img src="/bracu-alter-site/images/posts/pic19.JPG" alt="Test" loading="lazy">
           </div>
-        </div>
+          
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">Award</span>
+              <span class="news-date">Jun 23, 2025</span>
+            </div>
+            <h3 class="news-card-title">IDEA Innovation 5.0 — Champion</h3>
+            <p class="news-card-summary">BRACU ALTER became champion among 200&#43; university teams in Bangladesh.</p>
+            <span class="news-read-more">Read more →</span>
+          </div>
+        </a>
+        
+        <a class="news-card reveal-child" href="/bracu-alter-site/posts/robocup-2024/">
+          
+          <div class="news-card-img">
+            <img src="/bracu-alter-site/images/posts/pic24.jpg" alt="Test" loading="lazy">
+          </div>
+          
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              <span class="news-tag">RoboCup</span>
+              <span class="news-date">Jul 15, 2024</span>
+            </div>
+            <h3 class="news-card-title">BRACU ALTER at RoboCup Rescue League 2024 — Netherlands</h3>
+            <p class="news-card-summary">Reached the finals at RoboCup Rescue Robot League 2024 in Eindhoven, Netherlands.</p>
+            <span class="news-read-more">Read more →</span>
+          </div>
+        </a>
         
       </div>
 
-      <div style="text-align: center; margin-top: 32px" class="reveal-child">
-        <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="/bracu-alter-site/achievements/">View All Achievements</a>
-      </div>
     </div>
   </section>
+
+  <script>
+  (function(){
+    var video  = document.querySelector('.hero-video');
+    var panel  = document.getElementById('hero-content');
+    var navbar = document.querySelector('.navbar');
+    var ticking = false;
+
+    function update(){
+      var scroll = window.scrollY;
+      var vh     = window.innerHeight;
+
+      if (video) {
+        if (scroll <= 90) {
+          if (video.paused) video.play().catch(function(){});
+        } else {
+          if (!video.paused) video.pause();
+        }
+      }
+
+      if (panel) {
+        if (scroll > 90 && scroll < vh * 1.3) {
+          panel.classList.add('hero-panel-active');
+        } else {
+          panel.classList.remove('hero-panel-active');
+        }
+      }
+
+      if (navbar) {
+        if (scroll > 80) {
+          navbar.classList.add('navbar-scrolled');
+          navbar.classList.remove('navbar-transparent');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+          navbar.classList.add('navbar-transparent');
+        }
+      }
+
+      ticking = false;
+    }
+
+     
+    if (navbar) {
+      if (window.scrollY > 80) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.add('navbar-transparent');
+      }
+    }
+
+    window.addEventListener('scroll', function(){
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }, { passive: true });
+  })();
 
   
-  <section class="section-banner news-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <div class="row-head reveal-title">
-        <h2 class="neon-stroke-title" style="font-size: 2.5rem">Latest News</h2>
-        <a class="smalllink" style="color: rgba(255,255,255,0.9); font-weight: 600" href="/bracu-alter-site/posts/">View all →</a>
-      </div>
+  (function(){
+    var vid      = document.getElementById('about-vid');
+    if (!vid) return;
+    var ppBtn    = document.getElementById('avp-pp');
+    var icoPlay  = document.getElementById('avp-ico-play');
+    var icoPause = document.getElementById('avp-ico-pause');
+    var seekInp  = document.getElementById('avp-seek');
+    var seekProg = document.getElementById('avp-prog');
+    var timeEl   = document.getElementById('avp-time');
+    var volBtn   = document.getElementById('avp-vol-btn');
+    var icoVolHi = document.getElementById('avp-ico-vol-hi');
+    var icoVolOf = document.getElementById('avp-ico-vol-off');
+    var volInp   = document.getElementById('avp-vol');
+    var volProg  = document.getElementById('avp-vol-prog');
 
-      <div class="postgrid">
-        
-          <a class="postcard banner-card reveal-child" href="/bracu-alter-site/posts/robocup-2025/">
-            
-              <div class="postimg"><img src="/bracu-alter-site/images/posts/pic3.png" alt="Test" loading="lazy"></div>
-            
-            <div class="postbody">
-              <div class="postmeta muted">Jul 1, 2025</div>
-              <div class="posttitle">BRACU ALTER at RoboCup Rescue 2025</div>
-              <div class="muted postsummary">Represented Bangladesh as the sole team at RoboCup Rescue 2025 in Salvador, Brazil.</div>
-            </div>
-          </a>
-        
-          <a class="postcard banner-card reveal-child" href="/bracu-alter-site/posts/idea-innovation-5/">
-            
-              <div class="postimg"><img src="/bracu-alter-site/images/posts/pic3.png" alt="Test" loading="lazy"></div>
-            
-            <div class="postbody">
-              <div class="postmeta muted">Jan 10, 2025</div>
-              <div class="posttitle">IDEA Innovation 5.0 — Champion</div>
-              <div class="muted postsummary">BRACU ALTER became champion among 200&#43; university teams in Bangladesh.</div>
-            </div>
-          </a>
-        
-      </div>
-    </div>
-  </section>
+    function fmt(s){ var m=Math.floor(s/60),sec=Math.floor(s%60); return m+':'+(sec<10?'0':'')+sec; }
+
+    function setPlayUI(){
+      icoPlay.style.display  = vid.paused ? 'block' : 'none';
+      icoPause.style.display = vid.paused ? 'none'  : 'block';
+    }
+    function setVolUI(){
+      var muted = vid.muted || vid.volume===0;
+      icoVolHi.style.display = muted ? 'none'  : 'block';
+      icoVolOf.style.display = muted ? 'block' : 'none';
+      volProg.style.width    = (muted ? 0 : vid.volume*100) + '%';
+      if (!muted) volInp.value = vid.volume;
+    }
+
+    vid.volume = parseFloat(volInp.value);
+    setPlayUI(); setVolUI();
+
+    ppBtn.addEventListener('click', function(){ vid.paused ? vid.play() : vid.pause(); });
+    vid.addEventListener('play',  setPlayUI);
+    vid.addEventListener('pause', setPlayUI);
+
+    vid.addEventListener('loadedmetadata', function(){
+      timeEl.textContent = fmt(0)+' / '+fmt(vid.duration);
+      setPlayUI();
+    });
+    vid.addEventListener('timeupdate', function(){
+      if (!vid.duration) return;
+      var pct = vid.currentTime/vid.duration*100;
+      seekProg.style.width = pct+'%';
+      seekInp.value        = pct;
+      timeEl.textContent   = fmt(vid.currentTime)+' / '+fmt(vid.duration);
+    });
+    seekInp.addEventListener('input', function(){
+      var pct = parseFloat(seekInp.value);
+      seekProg.style.width = pct+'%';
+      if (vid.duration) vid.currentTime = pct/100*vid.duration;
+    });
+
+    volBtn.addEventListener('click', function(){
+      if (vid.muted || vid.volume===0){ vid.muted=false; if(vid.volume===0){vid.volume=0.7;volInp.value=0.7;} }
+      else { vid.muted=true; }
+      setVolUI();
+    });
+    volInp.addEventListener('input', function(){
+      vid.volume = parseFloat(volInp.value);
+      vid.muted  = vid.volume===0;
+      volProg.style.width = (vid.volume*100)+'%';
+      setVolUI();
+    });
+  })();
+  </script>
 
     </main>
 
@@ -597,40 +722,23 @@
 
       
       <div class="footer-col">
-        <h4 class="footer-heading">Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="/bracu-alter-site/">Home</a></li>
-          <li><a href="/bracu-alter-site/about/">About</a></li>
-          <li><a href="/bracu-alter-site/agv/">AGV</a></li>
-          <li><a href="/bracu-alter-site/achievements/">Achievements</a></li>
-          <li><a href="/bracu-alter-site/robocup/">RoboCup</a></li>
-        </ul>
-      </div>
-
-      
-      <div class="footer-col">
-        <h4 class="footer-heading">Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/bracu-alter-site/publications/">Publications</a></li>
-          <li><a href="/bracu-alter-site/missions/">Missions</a></li>
-          <li><a href="/bracu-alter-site/sponsors/">Sponsors</a></li>
-          <li><a href="/bracu-alter-site/team/">Team</a></li>
-          <li><a href="/bracu-alter-site/contact/">Contact</a></li>
-        </ul>
-      </div>
-
-      
-      <div class="footer-col">
         <h4 class="footer-heading">Location</h4>
-        <div class="footer-location">
-          <div class="footer-loc-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="footer-location-grid">
+          <div class="footer-location-block">
+            <div class="footer-location">
+              <div class="footer-loc-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF4500" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <a class="footer-map-address" href="https://www.google.com/maps/search/?api=1&query=BRAC%20University" target="_blank" rel="noopener">
+                <p class="footer-text">BRAC University, Room 12B,16L</p>
+                <p class="footer-text">LaSSET - BSRM School of Engineering</p>
+                <p class="footer-text">Kha 224, Bir Uttam Rafiqul Islam Ave</p>
+                <p class="footer-text">Dhaka-1212, Bangladesh</p>
+              </a>
+            </div>
           </div>
-          <div>
-            <p class="footer-text">LaSSET</p>
-            <p class="footer-text">BSRM School of Engineering</p>
-            <p class="footer-text">BRAC University</p>
-            <p class="footer-text">Dhaka, Bangladesh</p>
+          <div class="footer-location-map" aria-hidden="true">
+            <iframe class="footer-map-embed" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBVizdQeh3udy11xDc5Ao2YStR2gLc-rfc&amp;q=brac%20university&amp;maptype=satellite&amp;zoom=14"></iframe>
           </div>
         </div>
         <div class="footer-location" style="margin-top: 16px">
@@ -648,7 +756,7 @@
             <a href="https://www.bracu.ac.bd" target="_blank" rel="noopener" class="footer-inst-logo"><img src="/bracu-alter-site/images/posts/bracu.png" alt="BRAC University" loading="lazy"></a>
         </div>
         <div class="footer-inst-logos footer-inst-logos-below">
-            <a href="#" class="footer-inst-logo"><img src="/bracu-alter-site/images/posts/logo_b.png" alt="BRACU ALTER Badge" loading="lazy"></a>
+            <a href="#" class="footer-inst-logo"><img src="/bracu-alter-site/images/posts/rc2026.png" alt="RoboCup 2026" loading="lazy"></a>
         </div>
       </div>
 
@@ -672,11 +780,15 @@
 </footer>
 
 
+
+
+
+
     
     <script src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
 
     
-    <script src="/bracu-alter-site/js/nav.min.4347a3989d253da0b01b772c5ffed17bdff0787169f050f6590804ecd61260fb.js" defer></script>
+    <script src="/bracu-alter-site/js/nav.min.047af7b2e599e1b226a6a6053c754f5787058a946e1734d581e0194575d363a0.js" defer></script>
 
     
     <script src="/bracu-alter-site/js/cursor.min.6a98aaae59d61485d10de4577393210b57f4aa76f913cddbad5af031ba53353b.js" defer></script>

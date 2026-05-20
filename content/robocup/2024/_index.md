@@ -34,3 +34,7 @@ focus:
   - title: "Operator Interface"
     text: "Custom web-based control panel with live video feeds, sensor overlays, and one-click emergency stop."
 ---
+
+
+
+

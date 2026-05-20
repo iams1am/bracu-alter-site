@@ -12,16 +12,24 @@
   <!-- HERO: fixed video + scroll-driven text reveal -->
   <div class="hero-fixed-bg" id="hero-fixed-bg">
     <video class="hero-video" autoplay muted loop playsinline>
-      <source src="{{ "videos/hero-background1.mp4.mp4" | relURL }}" type="video/mp4">
+      <source src="{{ "videos/hero-background1.mp4" | relURL }}" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content" id="hero-content">
-      <h1 class="hero-banner-title">{{ $h.hero.title }}</h1>
+      <h1 class="hero-banner-title" data-text="{{ $h.hero.title }}">{{ $h.hero.title }}</h1>
       <p class="hero-banner-subtitle">{{ $h.hero.subtitle }}</p>
       <div class="hero-actions">
         <a class="btn" href="{{ $h.hero.primary.href | relURL }}">{{ $h.hero.primary.label }}</a>
         <a class="btn btn-outline-white" href="{{ $h.hero.secondary.href | relURL }}">{{ $h.hero.secondary.label }}</a>
       </div>
+    </div>
+    <!-- Scroll-down cue: appears once hero text has settled -->
+    <div class="hero-scroll-cue" id="hero-scroll-cue" aria-hidden="true">
+      <span class="hero-scroll-label">Scroll</span>
+      <svg class="hero-scroll-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+        <polyline points="6 15 12 21 18 15"/>
+      </svg>
     </div>
     <!-- Stats bar pinned to bottom of hero -->
     <div class="hero-stats-bar" id="hero-stats-bar">
@@ -37,24 +45,78 @@
   </div>
   <div class="hero-scroll-spacer"></div>
 
-  <!-- EXPLORE SECTION -->
-  <section class="section-banner explore-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <h2 class="neon-stroke-title reveal-title" style="text-align: center; margin-bottom: 32px; font-size: 2.5rem">Explore</h2>
-      <div class="grid">
-        <a class="card banner-card reveal-child" href="{{ "about/" | relURL }}">
-          <h3>Platforms</h3>
-          <p class="muted">Rescue rovers and AGVs designed for disaster-response missions.</p>
-        </a>
-        <a class="card banner-card reveal-child" href="{{ "missions/" | relURL }}">
-          <h3>Missions</h3>
-          <p class="muted">Scenario-driven validation: earthquake response, inspection, and more.</p>
-        </a>
-        <a class="card banner-card reveal-child" href="{{ "publications/" | relURL }}">
-          <h3>Publications</h3>
-          <p class="muted">Reports and technical documents across autonomy, perception, and systems.</p>
-        </a>
+  <!-- ABOUT US SECTION -->
+  <section class="section-banner about-us-banner scroll-reveal">
+    <div class="about-us-split">
+      <!-- Left: custom video player -->
+      <div class="about-us-vid-col">
+        <div class="avp" id="avp">
+          <video class="about-us-vid" id="about-vid" autoplay muted loop playsinline>
+            <source src="{{ "videos/vid2.mp4" | relURL }}" type="video/mp4">
+          </video>
+          <div class="avp-blend"></div>
+          <div class="avp-ui" id="avp-ui">
+            <!-- Seek bar -->
+            <div class="avp-seek-row">
+              <div class="avp-seek-bg">
+                <div class="avp-seek-prog" id="avp-prog"></div>
+              </div>
+              <input class="avp-seek-input" id="avp-seek" type="range" min="0" max="100" step="0.01" value="0">
+            </div>
+            <!-- Controls bar -->
+            <div class="avp-ctrls-row">
+              <div class="avp-ctrls-l">
+                <button class="avp-btn" id="avp-pp" title="Play / Pause">
+                  <svg id="avp-ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                  <svg id="avp-ico-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>
+                </button>
+                <span class="avp-time" id="avp-time">0:00 / 0:00</span>
+              </div>
+              <div class="avp-ctrls-r">
+                <button class="avp-btn" id="avp-vol-btn" title="Toggle mute">
+                  <svg id="avp-ico-vol-hi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                  </svg>
+                  <svg id="avp-ico-vol-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+                  </svg>
+                </button>
+                <div class="avp-vol-wrap">
+                  <div class="avp-vol-bg"><div class="avp-vol-prog" id="avp-vol-prog" style="width:70%"></div></div>
+                  <input class="avp-vol-input" id="avp-vol" type="range" min="0" max="1" step="0.02" value="0.7">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: about text + awards -->
+      <div class="about-us-awards-col reveal-child">
+        <div>
+          <h2 class="about-us-heading">About Us</h2>
+          <p class="about-us-sub">A multi-tasking autonomous rescue rover team from LaSSET, BRAC University—building modular, power-efficient platforms for disaster response.</p>
+        </div>
+        <div class="about-us-divider"></div>
+        <div>
+          <h3 class="about-us-awards-label">Awards</h3>
+          <div class="about-us-awards-list">
+            {{ range $h.achievements.categories }}
+              {{ range .items }}
+              <div class="about-us-award-item">
+                <span class="achieve-home-year">{{ .year }}</span>
+                <div class="about-us-award-body">
+                  <strong>{{ .title }}</strong>
+                  <p>{{ .detail }}</p>
+                </div>
+              </div>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        <a class="btn about-us-cta" href="{{ "achievements/" | relURL }}">View All Achievements →</a>
       </div>
     </div>
   </section>
@@ -71,86 +133,24 @@
     </div>
   </section>
 
-  <!-- ALTER ROVERS - POKEMON CARD LAYOUT -->
-  <section class="featured-banner scroll-reveal">
-    <div class="featured-overlay"></div>
+  <!-- PARTNER CTA -->
+  <section class="section-banner cta-banner scroll-reveal">
+    <div class="cta-banner-overlay"></div>
     <div class="container" style="position: relative; z-index: 2">
-      <div style="text-align: center; margin-bottom: 40px">
-        <h2 class="neon-stroke-title reveal-title" style="font-size: 2.5rem; margin-bottom: 8px">{{ $h.rovers.title }}</h2>
-        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.rovers.subtitle }}</p>
-      </div>
-
-      <div class="rover-wheel">
-        {{ range $h.rovers.versions }}
-        <div class="rover-card" style="--card-accent: {{ .color }}">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            <!-- Collapsed state -->
-            <div class="rover-card-img">
-              <img src="{{ .image | relURL }}" alt="{{ .fullName }}" loading="lazy">
-              <div class="rover-version-badge">{{ .name }}</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">{{ .fullName }}</span>
-              <p class="rover-card-tagline">{{ .tagline }}</p>
-            </div>
-            <!-- Expanded details (visible on hover) -->
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">{{ .description }}</p>
-              <div class="rover-expand-badges">
-                {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
-              </div>
-              <div class="rover-expand-links">
-                {{ range .links }}<a href="{{ .href | relURL }}">{{ .label }}</a>{{ end }}
-              </div>
-              <a class="rover-explore-btn" href="{{ .href | relURL }}">Explore {{ .name }} →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
+      <div class="cta-block reveal-child">
+        <p class="cta-overline">Partnership &amp; Collaboration</p>
+        <h2 class="cta-block-title">{{ $h.cta.title }}</h2>
+        <div class="cta-rule"></div>
+        <p class="cta-block-text">{{ $h.cta.text }}</p>
+        <div class="cta-block-actions">
+          <a class="cta-btn-primary" href="{{ $h.cta.button.href | relURL }}">{{ $h.cta.button.label }}</a>
+          <a class="cta-btn-secondary" href="{{ "contact/" | relURL }}">Get in Touch →</a>
         </div>
-        {{ end }}
       </div>
     </div>
   </section>
 
-  <!-- TEAM SHOWCASE - ROVER-STYLE CARDS -->
-  <section class="section-banner team-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto 32px">
-        <h2 class="neon-stroke-title reveal-title" style="margin-bottom: 12px; font-size: 2.5rem">{{ $h.team.title }}</h2>
-        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.team.subtitle }}</p>
-      </div>
-
-      <div class="rover-wheel">
-        {{ range $h.team.years }}
-        <div class="rover-card" style="--card-accent: {{ .color }}">
-          <div class="rover-card-inner">
-            <div class="poke-card-shine"></div>
-            <div class="rover-card-img">
-              <img src="{{ .image | relURL }}" alt="Team {{ .year }}" loading="lazy">
-              <div class="rover-version-badge">{{ .year }}</div>
-            </div>
-            <div class="rover-card-compact">
-              <span class="rover-card-name">Team {{ .year }}</span>
-              <p class="rover-card-tagline">{{ .tagline }}</p>
-            </div>
-            <div class="rover-card-expand">
-              <p class="rover-expand-desc">{{ .description }}</p>
-              <div class="rover-expand-badges">
-                {{ range .badges }}<span class="feature-badge">{{ . }}</span>{{ end }}
-              </div>
-              <a class="rover-explore-btn" href="{{ .href | relURL }}">Meet the Team →</a>
-            </div>
-            <div class="poke-card-edge"></div>
-          </div>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-
-  <!-- SPONSORS SCROLL -->
+  <!-- SPONSORS SCROLL (moved up under Partner card) -->
   <section class="sponsors-scroll-bar scroll-reveal scroll-wheel-entrance">
     <div class="sponsors-scroll-container">
       <div class="sponsors-scroll">
@@ -176,79 +176,220 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="section-banner cta-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <h2 class="cta-banner-title reveal-title">{{ $h.cta.title }}</h2>
-      <div class="cta reveal-child" style="border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); margin-top: 24px">
-        <div>
-          <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem; margin: 0">{{ $h.cta.text }}</p>
-        </div>
-        <div>
-          <a class="btn" style="background: #FF4500; color: #fff; border: 2px solid #FF4500" href="{{ $h.cta.button.href | relURL }}">{{ $h.cta.button.label }}</a>
+  <!-- MEET OUR TEAM — horizontal era rows -->
+  <section class="team-era-section scroll-reveal">
+    <div class="team-era-bg-glow"></div>
+    <div class="team-era-inner">
+
+      <!-- Header -->
+      <div class="container" style="position:relative;z-index:2">
+        <div class="team-era-header">
+          <p class="team-era-overline reveal-title">Generations of Innovation</p>
+          <h2 class="neon-stroke-title reveal-title" style="font-size:2.8rem;margin-bottom:10px">{{ $h.team.title }}</h2>
+          <p class="team-era-subtitle reveal-subtitle">Four generations of engineers, one mission — autonomous rescue robotics.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ACHIEVEMENTS (Bumblebee-style) -->
-  <section class="section-banner achieve-home-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <div style="text-align: center; margin-bottom: 40px">
-        <h2 class="neon-stroke-title reveal-title" style="font-size: 2.5rem; margin-bottom: 8px">{{ $h.achievements.title }}</h2>
-        <p class="lead reveal-subtitle" style="margin: 0 auto; color: #FF4500; font-weight: 600; text-shadow: 0 2px 8px rgba(0,0,0,0.5)">{{ $h.achievements.subtitle }}</p>
-      </div>
-
-      <div class="achieve-home-grid">
-        {{ range $h.achievements.categories }}
-        <div class="achieve-home-category reveal-child">
-          <h3 class="achieve-home-cat-title">{{ .name }}</h3>
-          <div class="achieve-home-items">
-            {{ range .items }}
-            <div class="achieve-home-item">
-              <span class="achieve-home-year">{{ .year }}</span>
-              <div class="achieve-home-item-body">
-                <strong>{{ .title }}</strong>
-                <p>{{ .detail }}</p>
+      <!-- Full-width era rows -->
+      {{ range $h.team.eras }}
+      <div class="era-row reveal-child {{ if .flip }}era-row-flip{{ end }}" style="--era-color:{{ .color }};--era-rgb:{{ .colorRgb }}">
+        <!-- Rover image side -->
+        <div class="era-row-media">
+          <img src="{{ .image | relURL }}" alt="{{ .roverFull }}" loading="lazy">
+          <div class="era-row-fade"></div>
+          <span class="era-version-pill">{{ .rover }}</span>
+        </div>
+        <!-- Info side -->
+        <div class="era-row-info" data-rover="{{ .rover }}">
+          <div class="era-row-info-inner">
+            <p class="era-batch-lbl">Batch {{ .batch }}</p>
+            <h3 class="era-row-title">{{ .roverFull }}</h3>
+            <div class="era-row-rule"></div>
+            <p class="era-row-tagline"><em>{{ .tagline }}</em></p>
+            <p class="era-row-desc">{{ .description }}</p>
+            <!-- Two badge rows: rover tech + team achievements -->
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Rover</span>
+              <div class="era-tags">
+                {{ range .roverTags }}<span class="era-tag">{{ . }}</span>{{ end }}
               </div>
             </div>
-            {{ end }}
+            <div class="era-tag-group">
+              <span class="era-tag-group-label">Team</span>
+              <div class="era-tags">
+                {{ range .teamTags }}<span class="era-tag era-tag-team">{{ . }}</span>{{ end }}
+              </div>
+            </div>
+            <p class="era-subteams">{{ .subteams }}</p>
+            <div class="era-row-btns">
+              <a class="era-btn-team" href="{{ .teamHref | relURL }}">Meet the Team</a>
+              <a class="era-btn-rover" href="{{ .roverHref | relURL }}">Explore {{ .rover }} →</a>
+            </div>
           </div>
         </div>
-        {{ end }}
       </div>
+      {{ end }}
 
-      <div style="text-align: center; margin-top: 32px" class="reveal-child">
-        <a class="btn" style="background:transparent;color:#FF4500;border:2px solid #FF4500" href="{{ "achievements/" | relURL }}">View All Achievements</a>
-      </div>
     </div>
   </section>
 
   <!-- LATEST NEWS -->
-  <section class="section-banner news-banner scroll-reveal">
-    <div class="section-overlay"></div>
-    <div class="container" style="position: relative; z-index: 2">
-      <div class="row-head reveal-title">
-        <h2 class="neon-stroke-title" style="font-size: 2.5rem">Latest News</h2>
-        <a class="smalllink" style="color: rgba(255,255,255,0.9); font-weight: 600" href="{{ "posts/" | relURL }}">View all →</a>
+  <section class="news-section scroll-reveal">
+    <div class="container" style="position:relative;z-index:2">
+
+      <div class="news-header">
+        <div>
+          <p class="news-overline reveal-title">From The Lab</p>
+          <h2 class="neon-stroke-title reveal-title" style="font-size:2.8rem;margin-bottom:0">Latest News</h2>
+        </div>
+        <a class="news-view-all reveal-title" href="{{ "posts/" | relURL }}">View all posts →</a>
       </div>
 
-      <div class="postgrid">
-        {{ range first 2 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
-          <a class="postcard banner-card reveal-child" href="{{ .RelPermalink }}">
-            {{ with .Params.featured }}
-              <div class="postimg"><img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy"></div>
-            {{ end }}
-            <div class="postbody">
-              <div class="postmeta muted">{{ .Date.Format "Jan 2, 2006" }}</div>
-              <div class="posttitle">{{ .Title }}</div>
-              {{ with .Params.summary }}<div class="muted postsummary">{{ . }}</div>{{ end }}
+      <div class="news-grid">
+        {{ range first 3 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+        <a class="news-card reveal-child" href="{{ .RelPermalink }}">
+          {{ with .Params.featured }}
+          <div class="news-card-img">
+            <img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+          </div>
+          {{ end }}
+          <div class="news-card-body">
+            <div class="news-card-meta">
+              {{ with .Params.tags }}{{ range first 1 . }}<span class="news-tag">{{ . }}</span>{{ end }}{{ end }}
+              <span class="news-date">{{ .Date.Format "Jan 2, 2006" }}</span>
             </div>
-          </a>
+            <h3 class="news-card-title">{{ .Title }}</h3>
+            {{ with .Params.summary }}<p class="news-card-summary">{{ . }}</p>{{ end }}
+            <span class="news-read-more">Read more →</span>
+          </div>
+        </a>
         {{ end }}
       </div>
+
     </div>
   </section>
+
+  <script>
+  (function(){
+    var video  = document.querySelector('.hero-video');
+    var panel  = document.getElementById('hero-content');
+    var navbar = document.querySelector('.navbar');
+    var ticking = false;
+
+    function update(){
+      var scroll = window.scrollY;
+      var vh     = window.innerHeight;
+
+      if (video) {
+        if (scroll <= 90) {
+          if (video.paused) video.play().catch(function(){});
+        } else {
+          if (!video.paused) video.pause();
+        }
+      }
+
+      if (panel) {
+        if (scroll > 90 && scroll < vh * 1.3) {
+          panel.classList.add('hero-panel-active');
+        } else {
+          panel.classList.remove('hero-panel-active');
+        }
+      }
+
+      if (navbar) {
+        if (scroll > 80) {
+          navbar.classList.add('navbar-scrolled');
+          navbar.classList.remove('navbar-transparent');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+          navbar.classList.add('navbar-transparent');
+        }
+      }
+
+      ticking = false;
+    }
+
+    /* Set initial state without waiting for first scroll */
+    if (navbar) {
+      if (window.scrollY > 80) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.add('navbar-transparent');
+      }
+    }
+
+    window.addEventListener('scroll', function(){
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }, { passive: true });
+  })();
+
+  // ---- About Us video player ----
+  (function(){
+    var vid      = document.getElementById('about-vid');
+    if (!vid) return;
+    var ppBtn    = document.getElementById('avp-pp');
+    var icoPlay  = document.getElementById('avp-ico-play');
+    var icoPause = document.getElementById('avp-ico-pause');
+    var seekInp  = document.getElementById('avp-seek');
+    var seekProg = document.getElementById('avp-prog');
+    var timeEl   = document.getElementById('avp-time');
+    var volBtn   = document.getElementById('avp-vol-btn');
+    var icoVolHi = document.getElementById('avp-ico-vol-hi');
+    var icoVolOf = document.getElementById('avp-ico-vol-off');
+    var volInp   = document.getElementById('avp-vol');
+    var volProg  = document.getElementById('avp-vol-prog');
+
+    function fmt(s){ var m=Math.floor(s/60),sec=Math.floor(s%60); return m+':'+(sec<10?'0':'')+sec; }
+
+    function setPlayUI(){
+      icoPlay.style.display  = vid.paused ? 'block' : 'none';
+      icoPause.style.display = vid.paused ? 'none'  : 'block';
+    }
+    function setVolUI(){
+      var muted = vid.muted || vid.volume===0;
+      icoVolHi.style.display = muted ? 'none'  : 'block';
+      icoVolOf.style.display = muted ? 'block' : 'none';
+      volProg.style.width    = (muted ? 0 : vid.volume*100) + '%';
+      if (!muted) volInp.value = vid.volume;
+    }
+
+    vid.volume = parseFloat(volInp.value);
+    setPlayUI(); setVolUI();
+
+    ppBtn.addEventListener('click', function(){ vid.paused ? vid.play() : vid.pause(); });
+    vid.addEventListener('play',  setPlayUI);
+    vid.addEventListener('pause', setPlayUI);
+
+    vid.addEventListener('loadedmetadata', function(){
+      timeEl.textContent = fmt(0)+' / '+fmt(vid.duration);
+      setPlayUI();
+    });
+    vid.addEventListener('timeupdate', function(){
+      if (!vid.duration) return;
+      var pct = vid.currentTime/vid.duration*100;
+      seekProg.style.width = pct+'%';
+      seekInp.value        = pct;
+      timeEl.textContent   = fmt(vid.currentTime)+' / '+fmt(vid.duration);
+    });
+    seekInp.addEventListener('input', function(){
+      var pct = parseFloat(seekInp.value);
+      seekProg.style.width = pct+'%';
+      if (vid.duration) vid.currentTime = pct/100*vid.duration;
+    });
+
+    volBtn.addEventListener('click', function(){
+      if (vid.muted || vid.volume===0){ vid.muted=false; if(vid.volume===0){vid.volume=0.7;volInp.value=0.7;} }
+      else { vid.muted=true; }
+      setVolUI();
+    });
+    volInp.addEventListener('input', function(){
+      vid.volume = parseFloat(volInp.value);
+      vid.muted  = vid.volume===0;
+      volProg.style.width = (vid.volume*100)+'%';
+      setVolUI();
+    });
+  })();
+  </script>
 {{ end }}
