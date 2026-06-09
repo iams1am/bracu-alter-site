@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/bracu-alter-site/css/main.min.0c1fc7b177f4ed22564bc66f48b759ccd026501b09906841a0ad47a036ee1ef6.css">
+<link rel="stylesheet" href="/bracu-alter-site/css/main.min.d68bc724cc9cc9532c4dd7eba1a3cf73c9240eb368c71f1143e18c42d22789a2.css">
 
 
 <script defer src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
@@ -27,7 +27,13 @@
       <img src="/bracu-alter-site/images/posts/logo_b.png" alt="BRACU ALTER Badge" class="brand-logo brand-logo-secondary">
     </a>
 
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
       <li class="nav-item dropdown" id="nav-about">
         <a class="nav-link" href="/bracu-alter-site/about/">About</a>
 
@@ -39,7 +45,7 @@
       </li>
 
       <li class="nav-item dropdown" id="nav-agv">
-        <a class="nav-link" href="/bracu-alter-site/agv/">AGV</a>
+        <span class="nav-link nav-link-static" role="button" aria-haspopup="menu" tabindex="0">AGV</span>
 
         <div class="dropdown-menu" role="menu">
           <a class="dropdown-item" href="/bracu-alter-site/agv/v1/">ALTER Rover V1</a>
@@ -49,15 +55,7 @@
         </div>
       </li>
 
-      <li class="nav-item dropdown" id="nav-missions">
-        <a class="nav-link" href="/bracu-alter-site/missions/">Missions</a>
-
-        <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/bracu-alter-site/missions/earthquake-response/">Earthquake Response</a>
-          <a class="dropdown-item" href="/bracu-alter-site/missions/industrial-inspection/">Industrial Inspection</a>
-          <a class="dropdown-item" href="/bracu-alter-site/missions/training-demo/">Training & Demos</a>
-        </div>
-      </li>
+      <li class="nav-item"><a class="nav-link" href="/bracu-alter-site/missions/">Missions</a></li>
 
       <li class="nav-item dropdown" id="nav-robocup">
         <a class="nav-link" href="/bracu-alter-site/robocup/">RoboCup</a>
@@ -75,10 +73,10 @@
         <a class="nav-link" href="/bracu-alter-site/team/">Team</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/bracu-alter-site/team/2026/">2026</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2025/">2025</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2024/">2024</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2023/">2023</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2026/">Batch 2025–26</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2025/">Batch 2024–25</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2024/">Batch 2023–24</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2023/">Batch 2022–23</a>
         </div>
       </li>
 
@@ -275,7 +273,7 @@
     <script src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
 
     
-    <script src="/bracu-alter-site/js/nav.min.047af7b2e599e1b226a6a6053c754f5787058a946e1734d581e0194575d363a0.js" defer></script>
+    <script src="/bracu-alter-site/js/nav.min.46953dac500dbf9e723406675bdb0585e06814e709555a641f8109eba73b38bc.js" defer></script>
 
     
     <script src="/bracu-alter-site/js/cursor.min.6a98aaae59d61485d10de4577393210b57f4aa76f913cddbad5af031ba53353b.js" defer></script>

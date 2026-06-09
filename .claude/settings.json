@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(hugo --logLevel info)",
+      "Bash(hugo --minify)",
+      "Bash(hugo --minify -d docs)",
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(hugo --minify -d docs --cleanDestinationDir)",
+      "Bash(Get-Item static\\\\images\\\\posts\\\\2024.jpg, docs\\\\images\\\\posts\\\\2024.jpg)",
+      "Bash(Select-Object FullName, Length, LastWriteTime)",
+      "Bash(Format-List)"
+    ]
+  }
+}

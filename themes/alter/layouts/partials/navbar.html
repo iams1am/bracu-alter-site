@@ -8,7 +8,13 @@
       <img src="{{ "images/posts/logo_b.png" | relURL }}" alt="BRACU ALTER Badge" class="brand-logo brand-logo-secondary">
     </a>
 
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
       <li class="nav-item dropdown" id="nav-about">
         <a class="nav-link" href="{{ "about/" | relURL }}">About</a>
 
@@ -20,7 +26,7 @@
       </li>
 
       <li class="nav-item dropdown" id="nav-agv">
-        <a class="nav-link" href="{{ "agv/" | relURL }}">AGV</a>
+        <span class="nav-link nav-link-static" role="button" aria-haspopup="menu" tabindex="0">AGV</span>
 
         <div class="dropdown-menu" role="menu">
           <a class="dropdown-item" href="{{ "agv/v1/" | relURL }}">ALTER Rover V1</a>
@@ -30,15 +36,7 @@
         </div>
       </li>
 
-      <li class="nav-item dropdown" id="nav-missions">
-        <a class="nav-link" href="{{ "missions/" | relURL }}">Missions</a>
-
-        <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="{{ "missions/earthquake-response/" | relURL }}">Earthquake Response</a>
-          <a class="dropdown-item" href="{{ "missions/industrial-inspection/" | relURL }}">Industrial Inspection</a>
-          <a class="dropdown-item" href="{{ "missions/training-demo/" | relURL }}">Training & Demos</a>
-        </div>
-      </li>
+      <li class="nav-item"><a class="nav-link" href="{{ "missions/" | relURL }}">Missions</a></li>
 
       <li class="nav-item dropdown" id="nav-robocup">
         <a class="nav-link" href="{{ "robocup/" | relURL }}">RoboCup</a>
@@ -56,10 +54,10 @@
         <a class="nav-link" href="{{ "team/" | relURL }}">Team</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="{{ "team/2026/" | relURL }}">2026</a>
-          <a class="dropdown-item" href="{{ "team/2025/" | relURL }}">2025</a>
-          <a class="dropdown-item" href="{{ "team/2024/" | relURL }}">2024</a>
-          <a class="dropdown-item" href="{{ "team/2023/" | relURL }}">2023</a>
+          <a class="dropdown-item" href="{{ "team/2026/" | relURL }}">Batch 2025–26</a>
+          <a class="dropdown-item" href="{{ "team/2025/" | relURL }}">Batch 2024–25</a>
+          <a class="dropdown-item" href="{{ "team/2024/" | relURL }}">Batch 2023–24</a>
+          <a class="dropdown-item" href="{{ "team/2023/" | relURL }}">Batch 2022–23</a>
         </div>
       </li>
 

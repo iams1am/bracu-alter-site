@@ -4,14 +4,14 @@
 	<meta name="generator" content="Hugo 0.154.5"><script src="/bracu-alter-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bracu-alter-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Test | BRACU ALTER</title>
+<title>BRACU ALTER</title>
 <link rel="icon" type="image/png" href="/bracu-alter-site/images/posts/pic3.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/bracu-alter-site/css/main.min.0c1fc7b177f4ed22564bc66f48b759ccd026501b09906841a0ad47a036ee1ef6.css">
+<link rel="stylesheet" href="/bracu-alter-site/css/main.min.d68bc724cc9cc9532c4dd7eba1a3cf73c9240eb368c71f1143e18c42d22789a2.css">
 
 
 <script defer src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
@@ -28,7 +28,13 @@
       <img src="/bracu-alter-site/images/posts/logo_b.png" alt="BRACU ALTER Badge" class="brand-logo brand-logo-secondary">
     </a>
 
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
       <li class="nav-item dropdown" id="nav-about">
         <a class="nav-link" href="/bracu-alter-site/about/">About</a>
 
@@ -40,7 +46,7 @@
       </li>
 
       <li class="nav-item dropdown" id="nav-agv">
-        <a class="nav-link" href="/bracu-alter-site/agv/">AGV</a>
+        <span class="nav-link nav-link-static" role="button" aria-haspopup="menu" tabindex="0">AGV</span>
 
         <div class="dropdown-menu" role="menu">
           <a class="dropdown-item" href="/bracu-alter-site/agv/v1/">ALTER Rover V1</a>
@@ -50,15 +56,7 @@
         </div>
       </li>
 
-      <li class="nav-item dropdown" id="nav-missions">
-        <a class="nav-link" href="/bracu-alter-site/missions/">Missions</a>
-
-        <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/bracu-alter-site/missions/earthquake-response/">Earthquake Response</a>
-          <a class="dropdown-item" href="/bracu-alter-site/missions/industrial-inspection/">Industrial Inspection</a>
-          <a class="dropdown-item" href="/bracu-alter-site/missions/training-demo/">Training & Demos</a>
-        </div>
-      </li>
+      <li class="nav-item"><a class="nav-link" href="/bracu-alter-site/missions/">Missions</a></li>
 
       <li class="nav-item dropdown" id="nav-robocup">
         <a class="nav-link" href="/bracu-alter-site/robocup/">RoboCup</a>
@@ -76,10 +74,10 @@
         <a class="nav-link" href="/bracu-alter-site/team/">Team</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/bracu-alter-site/team/2026/">2026</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2025/">2025</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2024/">2024</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2023/">2023</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2026/">Batch 2025–26</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2025/">Batch 2024–25</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2024/">Batch 2023–24</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2023/">Batch 2022–23</a>
         </div>
       </li>
 
@@ -135,10 +133,10 @@
     <div class="hero-stats-bar" id="hero-stats-bar">
       <div class="stats-scroll-container">
         <div class="stats-scroll">
-          <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
-          <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
-          <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
-          <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
+          <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
+          <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
+          <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
+          <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
         </div>
       </div>
     </div>
@@ -259,10 +257,10 @@
   <section class="stats-bar scroll-reveal scroll-wheel-entrance">
     <div class="stats-scroll-container">
       <div class="stats-scroll">
-        <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
-        <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
-        <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
-        <div class="stat-item"><div class="stat-value">RoboCup</div><div class="stat-label">Rescue Finalist (2024)</div></div><div class="stat-item"><div class="stat-value">Bangladesh</div><div class="stat-label">Represented at RoboCup 2025</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">Champion (200&#43; teams)</div></div>
+        <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
+        <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
+        <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
+        <div class="stat-item"><div class="stat-value">RoboCup 2024</div><div class="stat-label">Finalist · Eindhoven, Netherlands</div></div><div class="stat-item"><div class="stat-value">Hult Prize</div><div class="stat-label">1st Runner-Up · 2024–25</div></div><div class="stat-item"><div class="stat-value">IDEA 5.0</div><div class="stat-label">National Champion · 2025</div></div><div class="stat-item"><div class="stat-value">RoboCup 2025</div><div class="stat-label">Qualified · Salvador, Brazil</div></div><div class="stat-item"><div class="stat-value">RoboCup 2026</div><div class="stat-label">Selected · Incheon, South Korea</div></div>
       </div>
     </div>
   </section>
@@ -495,7 +493,7 @@
         <a class="news-card reveal-child" href="/bracu-alter-site/posts/robocup-2026/">
           
           <div class="news-card-img">
-            <img src="/bracu-alter-site/images/posts/pic24.png" alt="Test" loading="lazy">
+            <img src="/bracu-alter-site/images/posts/pic24.png" alt="" loading="lazy">
           </div>
           
           <div class="news-card-body">
@@ -512,7 +510,7 @@
         <a class="news-card reveal-child" href="/bracu-alter-site/posts/idea-innovation-5/">
           
           <div class="news-card-img">
-            <img src="/bracu-alter-site/images/posts/pic19.JPG" alt="Test" loading="lazy">
+            <img src="/bracu-alter-site/images/posts/pic19.JPG" alt="" loading="lazy">
           </div>
           
           <div class="news-card-body">
@@ -529,7 +527,7 @@
         <a class="news-card reveal-child" href="/bracu-alter-site/posts/robocup-2024/">
           
           <div class="news-card-img">
-            <img src="/bracu-alter-site/images/posts/pic24.jpg" alt="Test" loading="lazy">
+            <img src="/bracu-alter-site/images/posts/pic24.jpg" alt="" loading="lazy">
           </div>
           
           <div class="news-card-body">
@@ -669,6 +667,37 @@
       volProg.style.width = (vid.volume*100)+'%';
       setVolUI();
     });
+
+    
+    var userPaused = false;
+    ppBtn.addEventListener('click', function(){
+      
+      userPaused = vid.paused;
+    });
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+            if (!userPaused && vid.paused) vid.play().catch(function(){});
+          } else {
+            if (!vid.paused) vid.pause();
+          }
+        });
+      }, { threshold: [0, 0.35, 0.6] });
+      io.observe(vid);
+    } else {
+      
+      window.addEventListener('scroll', function(){
+        var r = vid.getBoundingClientRect();
+        var visible = r.bottom > 0 && r.top < window.innerHeight * 0.65;
+        if (visible) {
+          if (!userPaused && vid.paused) vid.play().catch(function(){});
+        } else {
+          if (!vid.paused) vid.pause();
+        }
+      }, { passive: true });
+    }
   })();
   </script>
 
@@ -788,7 +817,7 @@
     <script src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
 
     
-    <script src="/bracu-alter-site/js/nav.min.047af7b2e599e1b226a6a6053c754f5787058a946e1734d581e0194575d363a0.js" defer></script>
+    <script src="/bracu-alter-site/js/nav.min.46953dac500dbf9e723406675bdb0585e06814e709555a641f8109eba73b38bc.js" defer></script>
 
     
     <script src="/bracu-alter-site/js/cursor.min.6a98aaae59d61485d10de4577393210b57f4aa76f913cddbad5af031ba53353b.js" defer></script>

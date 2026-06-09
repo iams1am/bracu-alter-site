@@ -186,7 +186,7 @@
           <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}" loading="lazy">
           <div class="rc-year-card-overlay"></div>
         </div>
-        <div class="rc-year-card-body">
+        <div class="rc-year-card-body" data-year="{{ .Params.year }}">
           <span class="rc-year-badge">{{ .Params.year }}</span>
           <h3 class="rc-year-card-title">{{ .Title }}</h3>
           <p class="rc-year-card-desc">{{ .Description }}</p>

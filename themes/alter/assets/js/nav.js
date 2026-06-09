@@ -40,6 +40,53 @@
     }
   });
 
+  // --- Mobile hamburger menu ---
+  const hamburger = document.getElementById("nav-hamburger");
+  const navLinks = document.getElementById("nav-links");
+  if (hamburger && navLinks) {
+    function closeMobileMenu() {
+      hamburger.classList.remove("is-open");
+      navLinks.classList.remove("is-open");
+      hamburger.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-menu-open");
+    }
+    function openMobileMenu() {
+      hamburger.classList.add("is-open");
+      navLinks.classList.add("is-open");
+      hamburger.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-menu-open");
+    }
+    hamburger.addEventListener("click", function(e){
+      e.stopPropagation();
+      if (navLinks.classList.contains("is-open")) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+    // Close on outside click (backdrop)
+    document.addEventListener("click", function(e){
+      if (!navLinks.classList.contains("is-open")) return;
+      if (navLinks.contains(e.target) || hamburger.contains(e.target)) return;
+      closeMobileMenu();
+    });
+    // Close on escape
+    document.addEventListener("keydown", function(e){
+      if (e.key === "Escape") closeMobileMenu();
+    });
+    // Close after nav-link click (so user lands on the new page with closed menu)
+    navLinks.querySelectorAll(".nav-link, .dropdown-item").forEach(function(link){
+      link.addEventListener("click", function(){
+        // small delay so navigation triggers first
+        setTimeout(closeMobileMenu, 100);
+      });
+    });
+    // Close on resize past breakpoint
+    window.addEventListener("resize", function(){
+      if (window.innerWidth > 980) closeMobileMenu();
+    });
+  }
+
   // --- Homepage scroll animations ---
   var isHome = document.body.getAttribute("data-page") === "home";
   if (!isHome) return;

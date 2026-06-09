@@ -3,14 +3,14 @@
   <head><script src="/bracu-alter-site/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=bracu-alter-site/livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Team 2026 | BRACU ALTER</title>
+<title>Team — Batch 2025–26 | BRACU ALTER</title>
 <link rel="icon" type="image/png" href="/bracu-alter-site/images/posts/pic3.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Roboto:wght@400;500;700;900&family=Teko:wght@700&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="/bracu-alter-site/css/main.min.0c1fc7b177f4ed22564bc66f48b759ccd026501b09906841a0ad47a036ee1ef6.css">
+<link rel="stylesheet" href="/bracu-alter-site/css/main.min.d68bc724cc9cc9532c4dd7eba1a3cf73c9240eb368c71f1143e18c42d22789a2.css">
 
 
 <script defer src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
@@ -27,7 +27,13 @@
       <img src="/bracu-alter-site/images/posts/logo_b.png" alt="BRACU ALTER Badge" class="brand-logo brand-logo-secondary">
     </a>
 
-    <ul class="nav-links">
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+      <span class="nav-hamburger-bar"></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links">
       <li class="nav-item dropdown" id="nav-about">
         <a class="nav-link" href="/bracu-alter-site/about/">About</a>
 
@@ -39,7 +45,7 @@
       </li>
 
       <li class="nav-item dropdown" id="nav-agv">
-        <a class="nav-link" href="/bracu-alter-site/agv/">AGV</a>
+        <span class="nav-link nav-link-static" role="button" aria-haspopup="menu" tabindex="0">AGV</span>
 
         <div class="dropdown-menu" role="menu">
           <a class="dropdown-item" href="/bracu-alter-site/agv/v1/">ALTER Rover V1</a>
@@ -49,15 +55,7 @@
         </div>
       </li>
 
-      <li class="nav-item dropdown" id="nav-missions">
-        <a class="nav-link" href="/bracu-alter-site/missions/">Missions</a>
-
-        <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/bracu-alter-site/missions/earthquake-response/">Earthquake Response</a>
-          <a class="dropdown-item" href="/bracu-alter-site/missions/industrial-inspection/">Industrial Inspection</a>
-          <a class="dropdown-item" href="/bracu-alter-site/missions/training-demo/">Training & Demos</a>
-        </div>
-      </li>
+      <li class="nav-item"><a class="nav-link" href="/bracu-alter-site/missions/">Missions</a></li>
 
       <li class="nav-item dropdown" id="nav-robocup">
         <a class="nav-link" href="/bracu-alter-site/robocup/">RoboCup</a>
@@ -75,10 +73,10 @@
         <a class="nav-link" href="/bracu-alter-site/team/">Team</a>
 
         <div class="dropdown-menu" role="menu">
-          <a class="dropdown-item" href="/bracu-alter-site/team/2026/">2026</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2025/">2025</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2024/">2024</a>
-          <a class="dropdown-item" href="/bracu-alter-site/team/2023/">2023</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2026/">Batch 2025–26</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2025/">Batch 2024–25</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2024/">Batch 2023–24</a>
+          <a class="dropdown-item" href="/bracu-alter-site/team/2023/">Batch 2022–23</a>
         </div>
       </li>
 
@@ -112,6 +110,7 @@
   <div class="tm-hero-bg" style="background-image: url('/bracu-alter-site/images/posts/pic1.jpg')"></div>
   <div class="tm-hero-overlay"></div>
   <div class="tm-hero-content">
+    <p class="tm-hero-eyebrow">Batch 2025–26 · ALTER Rover V4</p>
     <h1 class="tm-hero-title">Our Team</h1>
   </div>
 </section>
@@ -119,10 +118,10 @@
 
 <nav class="tm-year-tabs">
   <div class="tm-year-tabs-inner">
-    <a class="tm-year-tab active" href="/bracu-alter-site/team/2026/">2026</a>
-    <a class="tm-year-tab" href="/bracu-alter-site/team/2025/">2025</a>
-    <a class="tm-year-tab" href="/bracu-alter-site/team/2024/">2024</a>
-    <a class="tm-year-tab" href="/bracu-alter-site/team/2023/">2023</a>
+    <a class="tm-year-tab active" href="/bracu-alter-site/team/2026/">2025–26</a>
+    <a class="tm-year-tab" href="/bracu-alter-site/team/2025/">2024–25</a>
+    <a class="tm-year-tab" href="/bracu-alter-site/team/2024/">2023–24</a>
+    <a class="tm-year-tab" href="/bracu-alter-site/team/2023/">2022–23</a>
   </div>
 </nav>
 
@@ -144,6 +143,7 @@
 
     <h2 class="tm-subteam-title">Leadership</h2>
 
+    
     
     <div class="tm-stats-bar">
       
@@ -168,9 +168,34 @@
       </div>
       
     </div>
+    
 
     
     <div class="tm-member-grid">
+      
+      <div class="tm-member-card">
+        <div class="tm-member-avatar">
+          <span>AMO</span>
+        </div>
+        <h5 class="tm-member-name">Atib Mohammad Oni</h5>
+        <p class="tm-member-role">Advisor</p>
+        <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/in/atiboni/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:atib.mohammad@bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
+      </div>
       
       <div class="tm-member-card">
         <div class="tm-member-avatar">
@@ -179,6 +204,21 @@
         <h5 class="tm-member-name">Abdulla Hil Kafi</h5>
         <p class="tm-member-role">Advisor</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/in/abdulla-hil-kafi/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:abdulla.kafi@bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -188,15 +228,21 @@
         <h5 class="tm-member-name">Raihana Shams Islam Antara</h5>
         <p class="tm-member-role">Advisor</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
-      </div>
-      
-      <div class="tm-member-card">
-        <div class="tm-member-avatar">
-          <span>PH</span>
+        
+        <div class="tm-member-socials">
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/in/raihana-shams-islam-antara/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:raihanashams.antara@bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
         </div>
-        <h5 class="tm-member-name">Priti Hasan</h5>
-        <p class="tm-member-role">Project Manager</p>
-        <p class="tm-member-dept">CSE, BRAC University</p>
+        
       </div>
       
       <div class="tm-member-card">
@@ -206,15 +252,53 @@
         <h5 class="tm-member-name">Mehedi Hasan</h5>
         <p class="tm-member-role">Team Lead</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:mehedi.hasan@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
         <div class="tm-member-avatar">
-          <span>SA</span>
+          <span>PH</span>
         </div>
-        <h5 class="tm-member-name">None</h5>
-        <p class="tm-member-role">AI &amp; Control</p>
+        <h5 class="tm-member-name">Priti Hasan</h5>
+        <p class="tm-member-role">Project Manager</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:priti.hasan@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -222,17 +306,39 @@
           <span>SJ</span>
         </div>
         <h5 class="tm-member-name">None</h5>
-        <p class="tm-member-role">Mechanical</p>
+        <p class="tm-member-role">Mechanical Lead</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
       </div>
       
       <div class="tm-member-card">
         <div class="tm-member-avatar">
-          <span>Hi</span>
+          <span>EL</span>
         </div>
         <h5 class="tm-member-name">None</h5>
-        <p class="tm-member-role">Electronics</p>
+        <p class="tm-member-role">Electronics Lead</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+      </div>
+      
+      <div class="tm-member-card">
+        <div class="tm-member-avatar">
+          <span>AI</span>
+        </div>
+        <h5 class="tm-member-name">None</h5>
+        <p class="tm-member-role">AI Lead</p>
+        <p class="tm-member-dept">CSE, BRAC University</p>
+        
+      </div>
+      
+      <div class="tm-member-card">
+        <div class="tm-member-avatar">
+          <span>CL</span>
+        </div>
+        <h5 class="tm-member-name">None</h5>
+        <p class="tm-member-role">Control Lead</p>
+        <p class="tm-member-dept">CSE, BRAC University</p>
+        
       </div>
       
       <div class="tm-member-card">
@@ -240,8 +346,9 @@
           <span>FS</span>
         </div>
         <h5 class="tm-member-name">None</h5>
-        <p class="tm-member-role">Research &amp; Project</p>
+        <p class="tm-member-role">Project Management(PR) Lead</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
       </div>
       
     </div>
@@ -254,6 +361,7 @@
 
     <h2 class="tm-subteam-title">AI &amp; Control</h2>
 
+    
     
     <div class="tm-stats-bar">
       
@@ -278,6 +386,7 @@
       </div>
       
     </div>
+    
 
     
     <div class="tm-member-grid">
@@ -289,6 +398,25 @@
         <h5 class="tm-member-name">Mehedi Hasan</h5>
         <p class="tm-member-role">Slam Navigation and controller</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:mehedi.hasan@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -298,6 +426,25 @@
         <h5 class="tm-member-name">Siam Abdullah</h5>
         <p class="tm-member-role">SLAM Navigation &amp; Mapping</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:siam.abdullah@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -307,6 +454,25 @@
         <h5 class="tm-member-name">Nehal Mahfuz</h5>
         <p class="tm-member-role">Perception / CV</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:nehal.mahfuz@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -316,6 +482,25 @@
         <h5 class="tm-member-name">Mahadiat Maria</h5>
         <p class="tm-member-role">Deep Learning</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:mahadiat.maria@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -325,6 +510,25 @@
         <h5 class="tm-member-name">Jeriba Tabassum</h5>
         <p class="tm-member-role">ROS 2 Integration</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:jeriba.tabassum@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -334,6 +538,25 @@
         <h5 class="tm-member-name">Soumen Barua</h5>
         <p class="tm-member-role">Operation UI</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:soumen.barua@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -343,6 +566,25 @@
         <h5 class="tm-member-name">Obayed Reza</h5>
         <p class="tm-member-role">Operator and control</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:obayed.reza@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -352,6 +594,25 @@
         <h5 class="tm-member-name">E.A. Akash</h5>
         <p class="tm-member-role">Learner</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:akash@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
     </div>
@@ -364,6 +625,7 @@
 
     <h2 class="tm-subteam-title">Mechanical</h2>
 
+    
     
     <div class="tm-stats-bar">
       
@@ -388,6 +650,7 @@
       </div>
       
     </div>
+    
 
     
     <div class="tm-member-grid">
@@ -399,6 +662,25 @@
         <h5 class="tm-member-name">Shakib Jomaddar</h5>
         <p class="tm-member-role">Main Engineer</p>
         <p class="tm-member-dept">CS, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:shakib.jomaddar@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -408,15 +690,53 @@
         <h5 class="tm-member-name">Kazi Helal</h5>
         <p class="tm-member-role">Arm &amp; Manipulation</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:kazi.helal@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
         <div class="tm-member-avatar">
-          <span>TI</span>
+          <span>F</span>
         </div>
         <h5 class="tm-member-name">Farid</h5>
         <p class="tm-member-role">Mobility &amp; Tracks</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:farid@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -426,6 +746,25 @@
         <h5 class="tm-member-name">Tanvir Inan</h5>
         <p class="tm-member-role">Mobility &amp; Tracks</p>
         <p class="tm-member-dept">CSE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:tanvir.inan@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
     </div>
@@ -438,6 +777,7 @@
 
     <h2 class="tm-subteam-title">Electrical &amp; Embedded</h2>
 
+    
     
     <div class="tm-stats-bar">
       
@@ -462,6 +802,7 @@
       </div>
       
     </div>
+    
 
     
     <div class="tm-member-grid">
@@ -473,6 +814,25 @@
         <h5 class="tm-member-name">Priti Hassan</h5>
         <p class="tm-member-role">Electronics</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:priti.hasan@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -482,6 +842,25 @@
         <h5 class="tm-member-name">Farhad Molla</h5>
         <p class="tm-member-role">Power Systems</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:farhad.molla@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -491,6 +870,25 @@
         <h5 class="tm-member-name">Rubab Mubarrat</h5>
         <p class="tm-member-role">PCB Designer</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:rubab.mubarrat@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -500,6 +898,25 @@
         <h5 class="tm-member-name">Rahman Toslim</h5>
         <p class="tm-member-role">Sensor Integration</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:rahman.toslim@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
     </div>
@@ -512,6 +929,7 @@
 
     <h2 class="tm-subteam-title">Research &amp; Project Management</h2>
 
+    
     
     <div class="tm-stats-bar">
       
@@ -536,6 +954,7 @@
       </div>
       
     </div>
+    
 
     
     <div class="tm-member-grid">
@@ -547,6 +966,25 @@
         <h5 class="tm-member-name">Priti Hassan</h5>
         <p class="tm-member-role">Project Manager</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:priti.hasan@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -556,6 +994,25 @@
         <h5 class="tm-member-name">Suha Masnun</h5>
         <p class="tm-member-role">Outreach &amp; Media</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:suha.masnun@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -565,15 +1022,53 @@
         <h5 class="tm-member-name">Raisa Anjum</h5>
         <p class="tm-member-role">Content &amp; Design</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:raisa.anjum@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
         <div class="tm-member-avatar">
-          <span>JT</span>
+          <span>JeT</span>
         </div>
         <h5 class="tm-member-name">Jerin Tasnim</h5>
         <p class="tm-member-role">Content &amp; Design</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:jerin.tasnim@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -583,6 +1078,25 @@
         <h5 class="tm-member-name">Shaberiah Nowshin Nubala</h5>
         <p class="tm-member-role">Content &amp; Design</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:shaberiah.nubala@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
       <div class="tm-member-card">
@@ -592,6 +1106,25 @@
         <h5 class="tm-member-name">Obayed Reza</h5>
         <p class="tm-member-role">Content &amp; Design</p>
         <p class="tm-member-dept">EEE, BRAC University</p>
+        
+        <div class="tm-member-socials">
+          
+          <a class="tm-social-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zM7.119 20.452H3.554V9h3.565v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          
+          
+          <a class="tm-social-btn" href="mailto:obayed.reza@g.bracu.ac.bd" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,7 12,13 2,7"/></svg>
+          </a>
+          
+        </div>
+        
       </div>
       
     </div>
@@ -762,7 +1295,7 @@
     <script src="/bracu-alter-site/js/theme.min.f2cb1c4cf1d34b8a97451e239d1be1f5476926b507d34a22cd6cb322f4b209ac.js"></script>
 
     
-    <script src="/bracu-alter-site/js/nav.min.047af7b2e599e1b226a6a6053c754f5787058a946e1734d581e0194575d363a0.js" defer></script>
+    <script src="/bracu-alter-site/js/nav.min.46953dac500dbf9e723406675bdb0585e06814e709555a641f8109eba73b38bc.js" defer></script>
 
     
     <script src="/bracu-alter-site/js/cursor.min.6a98aaae59d61485d10de4577393210b57f4aa76f913cddbad5af031ba53353b.js" defer></script>

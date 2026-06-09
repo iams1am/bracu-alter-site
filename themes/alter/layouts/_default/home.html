@@ -390,6 +390,37 @@
       volProg.style.width = (vid.volume*100)+'%';
       setVolUI();
     });
+
+    // Auto pause/play based on visibility — only run while the About Us card is on screen.
+    var userPaused = false;
+    ppBtn.addEventListener('click', function(){
+      // After the play/pause toggle above runs, remember if the user wanted it paused.
+      userPaused = vid.paused;
+    });
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
+            if (!userPaused && vid.paused) vid.play().catch(function(){});
+          } else {
+            if (!vid.paused) vid.pause();
+          }
+        });
+      }, { threshold: [0, 0.35, 0.6] });
+      io.observe(vid);
+    } else {
+      // Fallback: rect-based check on scroll.
+      window.addEventListener('scroll', function(){
+        var r = vid.getBoundingClientRect();
+        var visible = r.bottom > 0 && r.top < window.innerHeight * 0.65;
+        if (visible) {
+          if (!userPaused && vid.paused) vid.play().catch(function(){});
+        } else {
+          if (!vid.paused) vid.pause();
+        }
+      }, { passive: true });
+    }
   })();
   </script>
 {{ end }}
